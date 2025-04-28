@@ -61,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -69,7 +69,7 @@
             android:drawablePadding="20dp"
             android:ems="10"
             android:padding="15dp"
-            android:drawableLeft="@drawable/ic_mail"
+            android:drawableLeft="@drawable/custom_mail_ic"
             android:textColorHint="#9E9F9F"
             android:inputType="textEmailAddress"
             android:hint="@string/email"

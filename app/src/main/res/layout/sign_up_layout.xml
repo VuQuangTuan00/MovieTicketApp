@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryGray"
-    tools:context=".activity.SignInActivity">
+    tools:context=".activity.SignUpActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -61,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -69,7 +69,7 @@
             android:drawablePadding="20dp"
             android:ems="10"
             android:padding="15dp"
-            android:drawableLeft="@drawable/ic_mail"
+            android:drawableLeft="@drawable/custom_mail_ic"
             android:textColorHint="#9E9F9F"
             android:inputType="textEmailAddress"
             android:hint="@string/email"
@@ -85,14 +85,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <EditText
-            android:id="@+id/editTextPassword"
+        <com.example.movieticketsapp.custom_view.CustomEditText
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/style_edittext"
-            android:drawableLeft="@drawable/img"
-            android:drawableRight="@drawable/ic_disable"
             android:drawablePadding="20dp"
             android:ems="10"
             android:hint="@string/password"
@@ -115,10 +113,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPassword">
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword">
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/ckbAgree"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -126,9 +124,9 @@
                 android:buttonTint="@color/primaryOrange"
                 android:shadowColor="@color/primaryOrange"
                 android:text="@string/agree"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                />
 
             <TextView
                 android:id="@+id/textView5"
@@ -138,9 +136,8 @@
                 android:gravity="left"
                 android:paddingStart="5dp"
                 android:text="@string/condition"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textColor="@color/primaryOrange"
-                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.521" />
         </LinearLayout>
@@ -158,16 +155,17 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_weight="1.5"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:gravity="right"
                 android:text="@string/ready_account"
                 />
             <TextView
+                android:id="@+id/tvSignIn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.8"
+                android:layout_weight="0.45"
                 android:textSize="16sp"
 
                 android:textColor="@color/primaryOrange"
@@ -193,6 +191,7 @@
         app:layout_constraintVertical_bias="0.92">
 
         <Button
+            android:id="@+id/btn_signUp"
             style="@style/orange_btn"
             android:layout_marginStart="26dp"
             android:layout_marginEnd="25dp"

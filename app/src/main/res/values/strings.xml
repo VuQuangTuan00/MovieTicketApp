@@ -20,7 +20,7 @@
     <string name="new_password">New password</string>
     <string name="cf_new_password">New password</string>
     <string name="resend">Resend OTP</string>
-    <string name="notify_otp">Didn`t receive the OTP</string>
+    <string name="notify_otp">Didn\'t receive the OTP</string>
     <string name="content_screen_create">Create your new password if you forgot it, then you have to do forgot password</string>
     <string name="create_new_pass">Create new password</string>
     <string name="new_pass">New password</string>
@@ -36,4 +36,14 @@
     <string name="full_name">Full name</string>
     <string name="phone_number">Phone number</string>
     <string name="date_of_birth">Date of birth</string>
+    <string name="finish">Finish</string>
+    <string name="let_s_start">Let\'s Start Watching</string>
+    <string name="success_image">Success Image</string>
+    <string name="content_success">Start exploring the latest movies, showtimes, and ticket options</string>
+    <string name="u_all_set">You\'re All Set!</string>
+    <string name="don_t_have_an_account">Don`t have an account?</string>
+    <string name="ins">Continue with Instagram</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_apple">Continue with Apple</string>
+    <string name="continue_with_google">Continue with Google</string>
 </resources>

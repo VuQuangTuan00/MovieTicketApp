@@ -104,7 +104,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/tv_forgotPass"
             style="@style/lable_tv2"
             android:layout_marginTop="24dp"
             android:text="@string/date_of_birth"
@@ -112,7 +112,7 @@
             app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumber" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -127,7 +127,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_forgotPass" />
 
         <FrameLayout
             android:id="@+id/frmlayout"
@@ -167,7 +167,7 @@
             style="@style/orange_btn"
             android:layout_marginStart="26dp"
             android:layout_marginEnd="25dp"
-            android:text="@string/sign_in"
+            android:text="@string/finish"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"

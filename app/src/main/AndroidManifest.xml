@@ -12,10 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
+            android:name=".activity.ResetPassWordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SignUpSuccessfulActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ProfieActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.CreateAccountActivity"
+            android:name=".activity.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".activity.CreateNewPassActivity"
@@ -35,10 +41,16 @@
         <activity
             android:name=".activity.SaverActivity"
             android:exported="true">
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="movieticketsapp-9a88f.firebaseapp.com"
+                    android:pathPrefix="/__/auth/links" />
             </intent-filter>
         </activity>
         <activity
