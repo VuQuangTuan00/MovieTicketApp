@@ -46,10 +46,18 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    // okhttp
+    implementation (libs.okhttp)
+    implementation (libs.logging.interceptor)
+
     // firebase
     implementation(platform(libs.firebase.bom.v33130))
     implementation(libs.firebase.auth)
     implementation(libs.play.services.auth)
+    implementation(libs.firebase.functions)
+    implementation(libs.firebase.firestore)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

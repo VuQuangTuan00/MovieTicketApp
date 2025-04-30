@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.SaverLayoutBinding
+import com.example.movieticketsapp.utils.navigateTo
 
 class SaverActivity : AppCompatActivity() {
     private lateinit var binding: SaverLayoutBinding
@@ -17,8 +18,7 @@ class SaverActivity : AppCompatActivity() {
         binding = SaverLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Handler(Looper.getMainLooper()).postDelayed({
-           val intent = Intent(this, GetStartedActivity::class.java)
-            startActivity(intent)
+           navigateTo(GetStartedActivity::class.java)
             finish()
         }, 1400)
        setAnimationForLogo()

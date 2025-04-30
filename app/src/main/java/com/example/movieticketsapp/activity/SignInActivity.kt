@@ -1,13 +1,16 @@
 package com.example.movieticketsapp.activity
 
-import android.content.Intent
+import android.app.Dialog
+import android.os.Handler
+import android.os.Looper
 import android.os.Bundle
 import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.SignInLayoutBinding
-
+import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.Firebase
@@ -17,9 +20,10 @@ import com.google.firebase.Firebase
 class SignInActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var binding: SignInLayoutBinding
+    private lateinit var dialog:Dialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        dialog = Dialog(this)
         auth = Firebase.auth
         binding = SignInLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -32,15 +36,18 @@ class SignInActivity : AppCompatActivity() {
             reload()
         }
     }
-    private fun navigateTo(destination: Class<*>) {
-        startActivity(Intent(this, destination))
-    }
     private fun setEvent(){
         binding.apply {
             imBack.setOnClickListener {finish()}
             tvForgotPass.setOnClickListener { navigateTo(ResetPassWordActivity::class.java)}
             tvSignUp.setOnClickListener {navigateTo(SignUpActivity::class.java)}
-            btnSignIn.setOnClickListener {signInToFireBase(edtMail,edtPass)}
+            btnSignIn.setOnClickListener {
+                when{
+                    edtMail.text.toString().isEmpty() -> edtMail.error = "Vui lòng nhập email"
+                    edtPass.text.toString().isEmpty() -> edtPass.error = "Vui lòng nhập mật khẩu"
+                    else -> signInToFireBase(edtMail, edtPass)
+                }
+            }
         }
     }
 
@@ -55,9 +62,15 @@ class SignInActivity : AppCompatActivity() {
                 val user = auth.currentUser
                 user?.reload()?.addOnSuccessListener {
                     if (user.isEmailVerified) {
-                        // Đã xác thực email -> Cho vào app
-                        startActivity(Intent(this, LoginActivity::class.java))
-                        finish()
+                        dialog.setContentView(R.layout.popup_sign_in_success_layout)
+                        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+                        dialog.show()
+                        if (dialog.isShowing){
+                            Handler(Looper.getMainLooper()).postDelayed({
+                                navigateTo(SaverActivity::class.java)
+                                finish()
+                            }, 1400)
+                        }
                     } else {
                         // Email chưa xác thực
                         Toast.makeText(this, "Vui lòng xác thực email để đăng nhập.", Toast.LENGTH_LONG).show()

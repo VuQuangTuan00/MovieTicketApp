@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.SignUpLayoutBinding
+import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -54,8 +55,7 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
             tvSignIn.setOnClickListener{
-                startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
-                finish()
+                navigateTo (SignInActivity::class.java)
             }
         }
     }
