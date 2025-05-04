@@ -58,6 +58,15 @@ dependencies {
     implementation(libs.firebase.functions)
     implementation(libs.firebase.firestore)
 
+    // Image slider
+    implementation (libs.imageslideshow)
+
+    implementation ("com.google.android.material:material:1.11.0")
+
+    // Glide
+    implementation (libs.glide)
+    annotationProcessor (libs.compiler)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

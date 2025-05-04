@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.movieticketsapp.databinding.LoginLayoutBinding
+import com.example.movieticketsapp.utils.navigateTo
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: LoginLayoutBinding
@@ -14,13 +15,11 @@ class LoginActivity : AppCompatActivity() {
 
         binding.apply {
             btnLogin.setOnClickListener {
-                val intent = Intent(this@LoginActivity, SignInActivity::class.java)
-                startActivity(intent)
+                navigateTo(SignInActivity::class.java,flag = false)
             }
 
             tvSignIn.setOnClickListener {
-                val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
-                startActivity(intent)
+                navigateTo(SignUpActivity::class.java,flag = false)
             }
         }
     }

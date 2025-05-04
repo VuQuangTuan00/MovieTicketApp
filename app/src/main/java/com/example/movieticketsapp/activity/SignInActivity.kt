@@ -1,6 +1,7 @@
 package com.example.movieticketsapp.activity
 
 import android.app.Dialog
+import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.os.Bundle
@@ -39,8 +40,8 @@ class SignInActivity : AppCompatActivity() {
     private fun setEvent(){
         binding.apply {
             imBack.setOnClickListener {finish()}
-            tvForgotPass.setOnClickListener { navigateTo(ResetPassWordActivity::class.java)}
-            tvSignUp.setOnClickListener {navigateTo(SignUpActivity::class.java)}
+            tvForgotPass.setOnClickListener { navigateTo(ResetPassWordActivity::class.java,flag = false)}
+            tvSignUp.setOnClickListener {navigateTo(SignUpActivity::class.java,flag = false)}
             btnSignIn.setOnClickListener {
                 when{
                     edtMail.text.toString().isEmpty() -> edtMail.error = "Vui lòng nhập email"
@@ -67,8 +68,7 @@ class SignInActivity : AppCompatActivity() {
                         dialog.show()
                         if (dialog.isShowing){
                             Handler(Looper.getMainLooper()).postDelayed({
-                                navigateTo(SaverActivity::class.java)
-                                finish()
+                                navigateTo(HomaPageActivity::class.java,flag = true)
                             }, 1400)
                         }
                     } else {

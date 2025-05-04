@@ -52,4 +52,12 @@
     <string name="please_wait">Please wait..</string>
     <string name="you_will_be_directed_to_the_homepage">You will be directed to the homepage.</string>
     <string name="sign_in_successful">Sign in successful!</string>
+    <string name="name_user">Vu Quang Tuan</string>
+    <string name="img_back_ground">Img Back Ground</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="view_all">view all</string>
+    <string name="movie">movie</string>
+    <string name="book_now">Book Now</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
 </resources>

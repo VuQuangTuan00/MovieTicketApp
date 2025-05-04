@@ -9,4 +9,5 @@
     <color name="primaryBox">#1F222A</color>
     <color name="primaryWhite">#D8D8D9</color>
     <color name="primaryEnableGray">#49454F</color>
+    <color name="primaryBoderBGGray">#212121</color>
 </resources>

@@ -55,7 +55,7 @@ class SignUpActivity : AppCompatActivity() {
                 }
             }
             tvSignIn.setOnClickListener{
-                navigateTo (SignInActivity::class.java)
+                navigateTo (SignInActivity::class.java,flag = false)
             }
         }
     }

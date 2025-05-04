@@ -42,7 +42,7 @@ class ResetPassWordActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d("Email sent SC", "Email sent.")
-                    navigateTo(SignInActivity::class.java)
+                    navigateTo(SignInActivity::class.java,flag = false)
                 }
             }
     }

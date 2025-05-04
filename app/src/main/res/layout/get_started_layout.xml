@@ -4,12 +4,13 @@
     android:layout_height="match_parent"
     android:background="@color/primaryOrange">
 
-    <!-- Mockup Image (ảnh điện thoại) -->
+
     <ImageView
         android:id="@+id/mockupImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/img_back_ground"
         android:paddingTop="50dp"
         android:scaleType="fitCenter"
         android:src="@drawable/bg_walkthrough"

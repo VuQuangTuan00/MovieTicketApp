@@ -18,8 +18,7 @@ class SaverActivity : AppCompatActivity() {
         binding = SaverLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Handler(Looper.getMainLooper()).postDelayed({
-           navigateTo(GetStartedActivity::class.java)
-            finish()
+           navigateTo(GetStartedActivity::class.java,flag = false)
         }, 1400)
        setAnimationForLogo()
     }
