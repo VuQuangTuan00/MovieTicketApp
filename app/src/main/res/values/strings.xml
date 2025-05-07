@@ -60,4 +60,9 @@
     <string name="book_now">Book Now</string>
     <string name="home">Home</string>
     <string name="search">Search</string>
+    <string name="duration">Duration</string>
+    <string name="director">Director</string>
+    <string name="gener">Gener</string>
+    <string name="space">:</string>
+    <string name="watch_trailer">Watch Trailer</string>
 </resources>

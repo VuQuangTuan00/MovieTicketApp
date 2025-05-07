@@ -51,7 +51,8 @@ class HomaPageActivity : AppCompatActivity() {
     private fun setEvent() {
         binding.apply {
             tvViewAllNowPlaying.setOnClickListener {
-                navigateTo(ViewAllMovie::class.java, flag = false)
+//                navigateTo(ViewAllMovie::class.java, flag = false)
+                navigateTo(DetailsMovieActivity::class.java, flag = false)
             }
         }
     }

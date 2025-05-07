@@ -1,10 +1,13 @@
 package com.example.movieticketsapp.activity
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieticketsapp.R
@@ -29,10 +32,12 @@ class ViewAllMovie : AppCompatActivity() {
         initialize()
         setContentView(binding.root)
         setEvent()
+        loadMoviesWithGenres()
         setAdapterGenerMovie()
         setAdapterMovie()
-        listenToGenerMovieCollectionRealtime()
-        listenToMovieCollectionRealtime()
+        searchMovie()
+        filterMovieByGener()
+//        listenToGenerMovieCollectionRealtime()
     }
 
     private fun initialize() {
@@ -50,6 +55,7 @@ class ViewAllMovie : AppCompatActivity() {
             }
         }
     }
+
     private fun setAdapterMovie() {
         val layoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
         binding.rcvMovie.layoutManager = layoutManager
@@ -60,92 +66,88 @@ class ViewAllMovie : AppCompatActivity() {
     private fun setAdapterGenerMovie() {
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rcvGenerMovie.layoutManager = layoutManager
-        adapterGenerMovie = ItemGenerMovieAdapter(listGenerMovie)
+        adapterGenerMovie = ItemGenerMovieAdapter(listGenerMovie) { _ -> }
         binding.rcvGenerMovie.adapter = adapterGenerMovie
     }
 
-    private fun listenToMovieCollectionRealtime() {
-        db.collection("movie")
-            .addSnapshotListener { snapshots, e ->
-                if (e != null) {
-                    Log.w("MovieRealtime", "Listen failed.", e)
-                    return@addSnapshotListener
-                }
-                if (snapshots != null) {
-                    listMovie.clear()
-                    for (doc in snapshots) {
-                        val data = doc.data
-                        val imgMovie = data["img_movie"] as? String
-                        val title = data["title"] as? String
+    private fun searchMovie() {
+        binding.edtSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-                        if (!imgMovie.isNullOrEmpty() && !title.isNullOrEmpty()) {
-                            listMovie.add(
-                                Movie(
-                                    title,
-                                    "",
-                                    0,
-                                    listOf(),
-                                    imgMovie,
-                                    listOf(),
-                                    "",
-                                    0.0,
-                                    ""
-                                )
-                            )
-                        }
-                    }
-                    adapterMovie.notifyDataSetChanged()
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val keyword = s.toString().trim().lowercase()
+
+                val filteredList = listMovie.filter { movie ->
+                    movie.title.lowercase().contains(keyword)
                 }
+                adapterMovie.updateData(filteredList)
             }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
     }
-    private fun listenToGenerMovieCollectionRealtime() {
+
+    private fun loadMoviesWithGenres() {
+        val genreMap = mutableMapOf<String, String>()
         db.collection("gener")
-            .addSnapshotListener { snapshots, e ->
-                if (e != null) {
-                    Log.w("GenerMovieRealtime", "Listen failed.", e)
-                    return@addSnapshotListener
-                }
-                if (snapshots != null) {
-                    listGenerMovie.clear()
-                    for (doc in snapshots) {
-                        val data = doc.data
-                        val name = data["name"] as? String
-                        if (!name.isNullOrEmpty()) {
-                            listGenerMovie.add(GenerMovie(name))
-                            adapterGenerMovie.notifyDataSetChanged()
-                        }
+            .get()
+            .addOnSuccessListener { genreSnapshot ->
+                for (doc in genreSnapshot) {
+                    val genreId = doc.id
+                    val name = doc.getString("name") ?: ""
+                    genreMap[genreId] = name
+                    if (name.isNotEmpty()) {
+                        listGenerMovie.add(GenerMovie(doc.id, name))
+                        adapterGenerMovie.notifyDataSetChanged()
                     }
                 }
+                db.collection("movie")
+                    .addSnapshotListener { snapshots, e ->
+                        if (e != null) {
+                            Log.w("MovieRealtime", "Listen failed.", e)
+                            return@addSnapshotListener
+                        }
+                        if (snapshots != null) {
+                            listMovie.clear()
+                            for (doc in snapshots) {
+                                val data = doc.data
+                                val imgMovie = data["img_movie"] as? String
+                                val title = data["title"] as? String
+                                val generMovie = data["gener_movie"] as? List<String>?: listOf()
+                                if (!imgMovie.isNullOrEmpty() && !title.isNullOrEmpty()) {
+                                    listMovie.add(
+                                        Movie(
+                                            title,
+                                            "",
+                                            0,
+                                            generMovie,
+                                            imgMovie,
+                                            listOf(),
+                                            "",
+                                            0.0,
+                                            ""
+                                        )
+                                    )
+                                }
+                            }
+                            adapterMovie.notifyDataSetChanged()
+                        }
+                    }
             }
+            .addOnFailureListener { e ->
+                Log.e("GenreLoad", "Failed to load genres", e)
+            }
+
     }
-//    private fun listenToGenerMovieCollectionRealtime() {
-//        val movieId = "LUBKF4fj8IZSh24HdNTp"
-//        val generMovieRef = db.collection("movie").document(movieId).collection("gener_movie")
-//
-//        generMovieRef.addSnapshotListener { querySnapshot, error ->
-//            if (error != null) {
-//                Log.e("FIRESTORE", "Error listening to gener_movie", error)
-//                return@addSnapshotListener
-//            }
-//
-//            if (querySnapshot != null) {
-//                for (doc in querySnapshot.documents) {
-//                    val genreId = doc.id
-//                    db.collection("gener").document(genreId)
-//                        .addSnapshotListener { genreSnapshot, genreError ->
-//                            if (genreError != null) {
-//                                Log.e("GENRE_ERROR", "Error listening to genre $genreId", genreError)
-//                            }
-//                            if (genreSnapshot != null && genreSnapshot.exists()) {
-//                                val genreData = genreSnapshot.data
-//                                val name = genreData?.get("name") as? String
-//                                if (!name.isNullOrEmpty()) {
-//                                    listGenerMovie.add(GenerMovie(name))
-//                                    adapterGenerMovie.notifyDataSetChanged()
-//                                }
-//                            }
-//                        }
-//                }
-//            }
-//        }
+    private fun filterMovieByGener() {
+        adapterGenerMovie = ItemGenerMovieAdapter(listGenerMovie) { selectedGenre ->
+            val genreId = selectedGenre.id
+            val filteredMovies = listMovie.filter { movie ->
+                movie.gener_movie.contains(genreId)
+            }
+            adapterMovie.updateData(filteredMovies)
+        }
+        binding.rcvGenerMovie.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rcvGenerMovie.adapter = adapterGenerMovie
+    }
 }

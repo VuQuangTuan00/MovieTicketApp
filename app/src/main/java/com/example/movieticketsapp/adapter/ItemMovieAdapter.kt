@@ -9,7 +9,7 @@ import com.example.movieticketsapp.databinding.ItemMovieLayoutBinding
 import com.example.movieticketsapp.model.Movie
 
 
-class ItemMovieAdapter(private val listMovie: List<Movie>): RecyclerView.Adapter<ItemMovieAdapter.MyViewHolder>() {
+class ItemMovieAdapter(private var listMovie: List<Movie>): RecyclerView.Adapter<ItemMovieAdapter.MyViewHolder>() {
     inner class MyViewHolder(val binding: ItemMovieLayoutBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -30,5 +30,9 @@ class ItemMovieAdapter(private val listMovie: List<Movie>): RecyclerView.Adapter
             .into(holder.binding.imgMovie)
         holder.binding.tvTitleMovie.text = movie.title
 
+    }
+    fun updateData(newList: List<Movie>) {
+        listMovie = newList
+        notifyDataSetChanged()
     }
 }
