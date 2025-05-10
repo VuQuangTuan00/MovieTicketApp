@@ -65,4 +65,8 @@
     <string name="gener">Gener</string>
     <string name="space">:</string>
     <string name="watch_trailer">Watch Trailer</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="videos">Videos</string>
+    <string name="cast">Cast</string>
+    <string name="photos">Photos</string>
 </resources>

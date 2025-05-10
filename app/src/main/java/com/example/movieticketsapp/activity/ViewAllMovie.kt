@@ -1,24 +1,26 @@
 package com.example.movieticketsapp.activity
 
+import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.movieticketsapp.R
 import com.example.movieticketsapp.adapter.ItemGenerMovieAdapter
 import com.example.movieticketsapp.adapter.ItemMovieAdapter
 import com.example.movieticketsapp.databinding.ViewAllMovieLayoutBinding
 import com.example.movieticketsapp.model.GenerMovie
 import com.example.movieticketsapp.model.Movie
+import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.Firebase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.firestore
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class ViewAllMovie : AppCompatActivity() {
     private lateinit var binding: ViewAllMovieLayoutBinding
@@ -27,17 +29,19 @@ class ViewAllMovie : AppCompatActivity() {
     private lateinit var adapterMovie: ItemMovieAdapter
     private lateinit var listMovie: ArrayList<Movie>
     private lateinit var db: FirebaseFirestore
+    private var selectedGenreId: String? = null
+    private var searchKeyword: String = ""
+    private var searchQuery: String = ""
+    private var searchJob: Job? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initialize()
         setContentView(binding.root)
         setEvent()
         loadMoviesWithGenres()
-        setAdapterGenerMovie()
         setAdapterMovie()
         searchMovie()
         filterMovieByGener()
-//        listenToGenerMovieCollectionRealtime()
     }
 
     private fun initialize() {
@@ -59,32 +63,32 @@ class ViewAllMovie : AppCompatActivity() {
     private fun setAdapterMovie() {
         val layoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
         binding.rcvMovie.layoutManager = layoutManager
-        adapterMovie = ItemMovieAdapter(listMovie)
+        adapterMovie = ItemMovieAdapter(listMovie){event ->
+            val intent = Intent(this, DetailsMovieActivity::class.java)
+            intent.putExtra("movie_id", event.id)
+            startActivity(intent)
+        }
         binding.rcvMovie.adapter = adapterMovie
     }
 
-    private fun setAdapterGenerMovie() {
-        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        binding.rcvGenerMovie.layoutManager = layoutManager
-        adapterGenerMovie = ItemGenerMovieAdapter(listGenerMovie) { _ -> }
+    private fun filterMovieByGener() {
+        adapterGenerMovie = ItemGenerMovieAdapter(listGenerMovie) { selectedGenre ->
+            selectedGenreId = selectedGenre.id
+            filterAndSearchMovies()
+        }
+        binding.rcvGenerMovie.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rcvGenerMovie.adapter = adapterGenerMovie
     }
 
     private fun searchMovie() {
-        binding.edtSearch.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val keyword = s.toString().trim().lowercase()
-
-                val filteredList = listMovie.filter { movie ->
-                    movie.title.lowercase().contains(keyword)
-                }
-                adapterMovie.updateData(filteredList)
+        binding.edtSearch.addTextChangedListener { editable ->
+            searchJob?.cancel()
+            searchJob = CoroutineScope(Dispatchers.Main).launch {
+                delay(300)
+                searchQuery = editable.toString().trim()
+                filterAndSearchMovies()
             }
-
-            override fun afterTextChanged(s: Editable?) {}
-        })
+        }
     }
 
     private fun loadMoviesWithGenres() {
@@ -117,6 +121,7 @@ class ViewAllMovie : AppCompatActivity() {
                                 if (!imgMovie.isNullOrEmpty() && !title.isNullOrEmpty()) {
                                     listMovie.add(
                                         Movie(
+                                            doc.id,
                                             title,
                                             "",
                                             0,
@@ -137,17 +142,13 @@ class ViewAllMovie : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Log.e("GenreLoad", "Failed to load genres", e)
             }
-
     }
-    private fun filterMovieByGener() {
-        adapterGenerMovie = ItemGenerMovieAdapter(listGenerMovie) { selectedGenre ->
-            val genreId = selectedGenre.id
-            val filteredMovies = listMovie.filter { movie ->
-                movie.gener_movie.contains(genreId)
-            }
-            adapterMovie.updateData(filteredMovies)
+    private fun filterAndSearchMovies() {
+        val filtered = listMovie.filter { movie ->
+            val matchGenre = selectedGenreId == null || movie.gener_movie.contains(selectedGenreId)
+            val matchTitle = movie.title.lowercase().contains(searchKeyword)
+            matchGenre && matchTitle
         }
-        binding.rcvGenerMovie.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        binding.rcvGenerMovie.adapter = adapterGenerMovie
+        adapterMovie.updateData(filtered)
     }
 }
