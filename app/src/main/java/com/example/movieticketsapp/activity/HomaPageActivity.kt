@@ -1,5 +1,6 @@
 package com.example.movieticketsapp.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -35,7 +36,11 @@ class HomaPageActivity : AppCompatActivity() {
     private fun setAdapterMovie() {
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rcvMovie.layoutManager = layoutManager
-        adapterMovie = ItemMovieAdapter(listMovie)
+        adapterMovie = ItemMovieAdapter(listMovie){event ->
+            val intent = Intent(this, DetailsMovieActivity::class.java)
+            intent.putExtra("movie_id", event.id)
+            startActivity(intent)
+        }
         binding.rcvMovie.adapter = adapterMovie
     }
 
@@ -51,8 +56,7 @@ class HomaPageActivity : AppCompatActivity() {
     private fun setEvent() {
         binding.apply {
             tvViewAllNowPlaying.setOnClickListener {
-//                navigateTo(ViewAllMovie::class.java, flag = false)
-                navigateTo(DetailsMovieActivity::class.java, flag = false)
+                navigateTo(ViewAllMovie::class.java, flag = false)
             }
         }
     }
@@ -76,6 +80,7 @@ class HomaPageActivity : AppCompatActivity() {
                         if (!imgMovie.isNullOrEmpty() && !title.isNullOrEmpty()) {
                             listMovie.add(
                                 Movie(
+                                    doc.id,
                                     title,
                                     "",
                                     0,
