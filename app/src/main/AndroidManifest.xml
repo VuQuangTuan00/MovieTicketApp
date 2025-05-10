@@ -22,7 +22,7 @@
             android:name=".activity.ViewAllMovie"
             android:exported="false" />
         <activity
-            android:name=".activity.SaverActivity"
+            android:name=".activity.HomaPageActivity"
             android:exported="false" />
         <activity
             android:name=".activity.PopupSignInSuccess"
@@ -55,7 +55,7 @@
             android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomaPageActivity"
+            android:name=".activity.SaverActivity"
             android:exported="true">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />
