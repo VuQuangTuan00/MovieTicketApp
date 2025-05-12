@@ -69,4 +69,14 @@
     <string name="videos">Videos</string>
     <string name="cast">Cast</string>
     <string name="photos">Photos</string>
+    <string name="back">back</string>
+    <string name="choose_seat_s">Choose Seat(s)</string>
+    <string name="available">Available</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="selected">selected</string>
+    <string name="_0">0$</string>
+    <string name="_0_seat_selected">0 Seat Selected</string>
+    <string name="line">-</string>
+    <string name="dash_line_black">dash line black</string>
+    <string name="time">time</string>
 </resources>

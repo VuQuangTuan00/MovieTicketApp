@@ -1,3 +1,3 @@
 package com.example.movieticketsapp.model
 
-class ImgSlide(val img:String)
+data class ImgSlide(val img:String)

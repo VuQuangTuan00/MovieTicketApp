@@ -313,7 +313,7 @@
                 app:layout_constraintVertical_bias="0.92">
 
                 <Button
-                    android:id="@+id/btn_signIn"
+                    android:id="@+id/btnBookNow"
                     style="@style/orange_btn"
                     android:layout_marginStart="26dp"
                     android:layout_marginEnd="25dp"

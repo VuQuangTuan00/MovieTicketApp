@@ -29,7 +29,6 @@ class CustomEditText @JvmOverloads constructor(
         passIcon = ContextCompat.getDrawable(context, R.drawable.custom_pass_ic)
         setCompoundDrawablesWithIntrinsicBounds(null, null, hiddenIcon, null)
     }
-
     private fun setPasswordVisibility(visible: Boolean) {
         isPasswordVisible = visible
         inputType = if (visible) {

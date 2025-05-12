@@ -111,8 +111,6 @@ class SignUpActivity : AppCompatActivity() {
     ) {
         val user = auth.currentUser
         val handler = android.os.Handler()
-
-
         val checkRunnable = object : Runnable {
             override fun run() {
                 user?.reload()?.addOnSuccessListener {
@@ -121,7 +119,7 @@ class SignUpActivity : AppCompatActivity() {
                         progressBar.visibility = View.GONE
                         dialog.dismiss()
                         Toast.makeText(this@SignUpActivity, "Xác thực thành công!", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+                        startActivity(Intent(this@SignUpActivity, ProfileActivity::class.java))
                         finish()
                     } else {
                         handler.postDelayed(this, 3000)

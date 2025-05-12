@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
@@ -16,13 +17,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
+            android:name=".activity.SeatActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DetailsMovieActivity"
             android:exported="false" />
         <activity
             android:name=".activity.ViewAllMovie"
             android:exported="false" />
         <activity
-            android:name=".activity.HomaPageActivity"
+            android:name=".activity.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".activity.PopupSignInSuccess"
@@ -34,7 +38,7 @@
             android:name=".activity.SignUpSuccessfulActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ProfieActivity"
+            android:name=".activity.HomaPageActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SignUpActivity"

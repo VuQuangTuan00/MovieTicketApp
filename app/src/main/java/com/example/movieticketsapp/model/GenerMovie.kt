@@ -1,3 +1,3 @@
 package com.example.movieticketsapp.model
 
-class GenerMovie(val id:String,val name:String)
+data class GenerMovie(val id:String,val name:String)
