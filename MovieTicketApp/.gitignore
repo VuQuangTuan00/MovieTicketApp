@@ -1,0 +1,34 @@
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# IDE & build system
+*.iml
+.gradle/
+local.properties
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Mac
+.DS_Store
+
+# Android Studio/Gradle
+/build/
+/captures/
+/externalNativeBuild/
+/.cxx/

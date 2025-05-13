@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvBlockTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate this Movie"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvBlockMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You can’t give a score now.\n\nDue to our policy, currently only those who successfully purchased ticket(s) for this movie can give a score."
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnBlockOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OKAY"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>

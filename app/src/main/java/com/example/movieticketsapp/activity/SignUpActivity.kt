@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.SignUpLayoutBinding
 import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.auth.FirebaseAuth

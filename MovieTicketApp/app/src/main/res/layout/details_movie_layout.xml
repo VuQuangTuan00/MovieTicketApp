@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryGray"
+    tools:context=".activity.DetailsMovieActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_arrow_forward_ios_16" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_arrow_back_24" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/baseline_arrow_back_24" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgMovie"
+                        android:layout_width="170dp"
+                        android:layout_height="250dp"
+                        android:layout_marginEnd="10dp"
+                        android:contentDescription="@string/movie"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/comic"
+                        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvTitleMovie"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:text="@string/duration"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp"
+                                tools:ignore="NestedWeights"
+
+                                />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:text="@string/space"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tvDuration"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:text="@string/director"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp"
+                                tools:ignore="NestedWeights" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:text="@string/space"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tvDirector"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:text="@string/gener"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp"
+                                tools:ignore="NestedWeights" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.1"
+                                android:text="@string/space"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tvGener"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textColor="@color/primaryWhite"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:text="@string/watch_trailer"
+                    android:textColor="@color/primaryWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <VideoView
+                        android:id="@+id/vdvTrailer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:text="@string/synopsis"
+                    android:textColor="@color/primaryWhite"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSynopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watch_trailer"
+                    android:textColor="@color/primaryWhite" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="@string/cast"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/view_all"
+                            android:textColor="@color/primaryOrange"
+                            android:textSize="14sp"
+                            app:drawableRightCompat="@drawable/baseline_arrow_forward_ios_16" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvCasts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:text="@string/photos"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/view_all"
+                            android:textColor="@color/primaryOrange"
+                            android:textSize="14sp"
+                            app:drawableRightCompat="@drawable/baseline_arrow_forward_ios_16" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.example.movieticketsapp.custom.RatingSectionView
+                android:id="@+id/ratingSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvReviewsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reviews"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/line_top"
+                android:padding="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.92">
+
+                <Button
+                    android:id="@+id/btn_signIn"
+                    style="@style/orange_btn"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="25dp"
+                    android:text="@string/book_now"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="631dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

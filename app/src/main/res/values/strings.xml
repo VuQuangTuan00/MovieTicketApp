@@ -49,10 +49,10 @@
     <string name="resetpass">Reset Password</string>
     <string name="reset_password_success">Reset password success</string>
     <string name="successful">Successful!</string>
-    <string name="please_wait">Please wait..</string>
+    <string name="please_wait">Please wait...</string>
     <string name="you_will_be_directed_to_the_homepage">You will be directed to the homepage.</string>
     <string name="sign_in_successful">Sign in successful!</string>
-    <string name="name_user">Vu Quang Tuan</string>
+    <string name="name_user">Loading...</string>
     <string name="img_back_ground">Img Back Ground</string>
     <string name="now_playing">Now Playing</string>
     <string name="view_all">view all</string>
