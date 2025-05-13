@@ -15,6 +15,7 @@ import com.example.movieticketsapp.databinding.ChooseDateAndTimeLayoutBinding
 import com.example.movieticketsapp.databinding.DetailsMovieLayoutBinding
 import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
@@ -31,7 +32,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private val db = Firebase.firestore
     private lateinit var movieId: String
     private var showtimeStartDate: LocalDate? = null
-
+    private var timelineListener: ListenerRegistration? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ChooseDateAndTimeLayoutBinding.inflate(layoutInflater)
@@ -110,37 +111,51 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private fun fetchTimelinesByMovieId(movieId: String, selectedDate: LocalDate) {
         db.collection("showtimes")
             .whereEqualTo("movie_id", movieId)
-            .get()
-            .addOnSuccessListener { showtimeDocs ->
-                if (showtimeDocs.isEmpty) return@addOnSuccessListener
+            .get() // Dùng get thay vì listener để tránh leak
+            .addOnSuccessListener { showtimeSnapshots ->
+                if (showtimeSnapshots == null || showtimeSnapshots.isEmpty) {
+                    Log.d("Timeline", "No showtime found for movieId: $movieId")
+                    return@addOnSuccessListener
+                }
 
                 val allTimelineItems = mutableListOf<Pair<String, String>>()
                 val formatter = DateTimeFormatter.ofPattern("hh:mm a")
 
-                for (showtimeDoc in showtimeDocs) {
+                for (showtimeDoc in showtimeSnapshots) {
                     val showtimeId = showtimeDoc.id
+                    val startTimeTimestamp = showtimeDoc.getTimestamp("start_time") ?: continue
+
+                    val startDate = startTimeTimestamp.toDate().toInstant()
+                        .atZone(TimeZone.getDefault().toZoneId())
+                        .toLocalDate()
+
+                    if (selectedDate.isBefore(startDate)) {
+                        continue
+                    }
 
                     db.collection("showtimes")
                         .document(showtimeId)
                         .collection("timelines")
                         .get()
-                        .addOnSuccessListener { timelineDocs ->
-                            allTimelineItems.clear()
-                            for (doc in timelineDocs) {
-                                val time = doc.getTimestamp("time") ?: continue
-                                val localTime = time.toDate().toInstant()
-                                    .atZone(ZoneId.systemDefault())
+                        .addOnSuccessListener { timelineSnapshots ->
+                            for (timelineDoc in timelineSnapshots) {
+                                val timelineId = timelineDoc.id
+                                val timestamp = timelineDoc.getTimestamp("time") ?: continue
+
+                                val localTime = timestamp.toDate().toInstant()
+                                    .atZone(TimeZone.getDefault().toZoneId())
                                     .toLocalTime()
-                                val formatted = localTime.format(formatter)
-                                allTimelineItems.add(doc.id to formatted)
+                                val timeFormatted = localTime.format(formatter)
+                                allTimelineItems.add(timelineId to timeFormatted)
                             }
 
+                            // Cập nhật adapter chỉ 1 lần sau khi load tất cả
                             binding.rcvTime.layoutManager = LinearLayoutManager(
-                                this,
-                                LinearLayoutManager.HORIZONTAL,
-                                false
+                                this, LinearLayoutManager.HORIZONTAL, false
                             )
-                            binding.rcvTime.adapter = ItemTimeAdapter(allTimelineItems.map { it.second }) { index ->
+                            binding.rcvTime.adapter = ItemTimeAdapter(
+                                allTimelineItems.map { it.second }
+                            ) { index ->
                                 val selectedTimelineId = allTimelineItems[index].first
                                 val selectedTime = allTimelineItems[index].second
                                 Log.d("Selected", "Timeline ID: $selectedTimelineId, Time: $selectedTime")
@@ -148,5 +163,14 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
                         }
                 }
             }
+            .addOnFailureListener {
+                Log.e("Showtime", "Error fetching showtimes", it)
+            }
+    }
+
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        timelineListener?.remove()
     }
 }
