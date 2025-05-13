@@ -11,6 +11,7 @@ class ItemSeatAdapter(
     private val seatList: List<Seat>,
     private val selected:SelectedSeat
     ) : RecyclerView.Adapter<ItemSeatAdapter.ViewHolder>(){
+    private val seatData = seatList.toMutableList()
         private var selectedSeatName = mutableListOf<String>()
 
 
@@ -20,10 +21,10 @@ class ItemSeatAdapter(
         return ViewHolder(ItemSeatLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
-    override fun getItemCount(): Int {return seatList.size}
+    override fun getItemCount(): Int {return seatData.size}
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val seat = seatList[position]
+        val seat = seatData[position]
         holder.binding.seat.text = seat.code
         when (seat.status) {
             "AVAILABLE" -> {

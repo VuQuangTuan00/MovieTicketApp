@@ -1,5 +1,6 @@
 package com.example.movieticketsapp.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -10,7 +11,10 @@ import com.example.movieticketsapp.adapter.ItemTimeAdapter
 import com.example.movieticketsapp.databinding.ChooseDateAndTimeLayoutBinding
 import com.example.movieticketsapp.model.Cinema
 import com.example.movieticketsapp.utils.navigateTo
+import com.google.android.gms.tasks.Task
+import com.google.android.gms.tasks.Tasks
 import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
@@ -28,7 +32,9 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private val db = Firebase.firestore
     private lateinit var movieId: String
     private var showtimeStartDate: LocalDate? = null
-    private var timelineListener: ListenerRegistration? = null
+    private var timelineListener = mutableListOf<ListenerRegistration>()
+    private var showtimeId = ""
+    private var timelineId = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ChooseDateAndTimeLayoutBinding.inflate(layoutInflater)
@@ -47,16 +53,20 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private fun setEvent() {
         binding.imgBack.setOnClickListener { finish() }
         binding.btnContinue.setOnClickListener {
-            if (selectedD == null || selectedT == null) {
-                Log.d("DDD", "$selectedT : $selectedD")
-                Toast.makeText(
-                    this@ChooseDateAndTimeActivity,
-                    "Vui lòng chọn ngày và giờ chiếu",
-                    Toast.LENGTH_SHORT
-                ).show()
+            if (selectedD == null) {
+                Toast.makeText(this@ChooseDateAndTimeActivity, "Vui lòng chọn ngày", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            navigateTo(SeatActivity::class.java, flag = false)
+            if (selectedT.isNullOrEmpty()) {
+                Toast.makeText(this@ChooseDateAndTimeActivity, "Vui lòng chọn thời gian", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            val intent = Intent(this@ChooseDateAndTimeActivity, SeatActivity::class.java)
+            intent.putExtra("selectedDate", selectedD)
+            intent.putExtra("selectedTime", selectedT)
+            intent.putExtra("showtimeId", showtimeId)
+            intent.putExtra("timelineId", timelineId)
+            startActivity(intent)
         }
     }
 
@@ -70,7 +80,6 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
             val selectedDate = LocalDate.parse(selectedD)
             if (showtimeStartDate != null && selectedDate.isBefore(showtimeStartDate)) {
                 binding.rcvTime.adapter = null
-                selectedT = null
                 Toast.makeText(
                     this,
                     "Không có suất chiếu trước ngày công chiếu",
@@ -121,60 +130,85 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     }
 
     private fun fetchTimelinesByMovieId(movieId: String, selectedDate: LocalDate) {
+        timelineListener.forEach { it.remove() }
+        timelineListener.clear()
+
         db.collection("showtimes")
             .whereEqualTo("movie_id", movieId)
-            .get()
-            .addOnSuccessListener { showtimeSnapshots ->
-                if (showtimeSnapshots == null || showtimeSnapshots.isEmpty) {
-                    Log.d("Timeline", "No showtime found for movieId: $movieId")
-                    return@addOnSuccessListener
+            .addSnapshotListener { showtimeSnapshots, e ->
+                if (e != null || showtimeSnapshots == null) {
+                    Log.e("Timeline", "Error fetching showtimes", e)
+                    binding.rcvTime.adapter = null
+                    selectedT = null
+                    return@addSnapshotListener
                 }
 
-                val allTimelineItems = mutableListOf<Pair<String, String>>()
                 val formatter = DateTimeFormatter.ofPattern("hh:mm a")
+                val allTimelineItems = mutableListOf<Pair<String, String>>()
+                var timelinesPending = 0
+                var timelinesCollected = 0
 
                 for (showtimeDoc in showtimeSnapshots) {
-                    val showtimeId = showtimeDoc.id
+                     showtimeId = showtimeDoc.id
                     val startTimeTimestamp = showtimeDoc.getTimestamp("start_time") ?: continue
 
                     val startDate = startTimeTimestamp.toDate().toInstant()
                         .atZone(TimeZone.getDefault().toZoneId())
                         .toLocalDate()
 
-                    if (selectedDate.isBefore(startDate)) {
-                        continue
-                    }
+                    if (selectedDate.isBefore(startDate)) continue
 
-                    db.collection("showtimes")
+                    timelinesPending++
+
+                    val listener = db.collection("showtimes")
                         .document(showtimeId)
                         .collection("timelines")
-                        .get()
-                        .addOnSuccessListener { timelineSnapshots ->
-                            for (timelineDoc in timelineSnapshots) {
-                                val timelineId = timelineDoc.id
-                                val timestamp = timelineDoc.getTimestamp("time") ?: continue
-
-                                val localTime = timestamp.toDate().toInstant()
-                                    .atZone(TimeZone.getDefault().toZoneId())
-                                    .toLocalTime()
-                                val timeFormatted = localTime.format(formatter)
-                                allTimelineItems.add(timelineId to timeFormatted)
+                        .addSnapshotListener { timelineSnapshots, error ->
+                            if (error != null || timelineSnapshots == null) {
+                                Log.e("Timeline", "Error listening to timelines", error)
+                            } else {
+                                for (doc in timelineSnapshots) {
+                                    timelineId = doc.id
+                                    val timestamp = doc.getTimestamp("time") ?: continue
+                                    val localTime = timestamp.toDate().toInstant()
+                                        .atZone(TimeZone.getDefault().toZoneId())
+                                        .toLocalTime()
+                                    val timeFormatted = localTime.format(formatter)
+                                    allTimelineItems.add(timelineId to timeFormatted)
+                                }
                             }
-                            binding.rcvTime.layoutManager = LinearLayoutManager(
-                                this, LinearLayoutManager.HORIZONTAL, false
-                            )
-                            binding.rcvTime.adapter = ItemTimeAdapter(
-                                allTimelineItems.map { it.second }
-                            ) { index ->
-                                selectedT = allTimelineItems[index].second
+
+                            timelinesCollected++
+                            if (timelinesCollected == timelinesPending) {
+                                allTimelineItems.sortBy { it.second } // sort time if needed
+
+                                if (allTimelineItems.isEmpty()) {
+                                    binding.rcvTime.adapter = null
+                                    selectedT = null
+                                    return@addSnapshotListener
+                                }
+
+                                binding.rcvTime.layoutManager = LinearLayoutManager(
+                                    this, LinearLayoutManager.HORIZONTAL, false
+                                )
+                                binding.rcvTime.adapter = ItemTimeAdapter(
+                                    allTimelineItems.map { it.second }
+                                ) { index ->
+                                    selectedT = allTimelineItems[index].second
+                                }
                             }
                         }
+
+                    timelineListener.add(listener)
+                }
+
+                if (timelinesPending == 0) {
+                    binding.rcvTime.adapter = null
+                    selectedT = null
                 }
             }
-            .addOnFailureListener {
-                Log.e("Showtime", "Error fetching showtimes", it)
-            }
     }
+
 
     private fun fetchLocation() {
         var locationCinema = Cinema("", "", "", "")
@@ -201,6 +235,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
-        timelineListener?.remove()
+        timelineListener.forEach { it.remove() }
+        timelineListener.clear()
     }
 }

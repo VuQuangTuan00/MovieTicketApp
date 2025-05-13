@@ -6,77 +6,116 @@ import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.movieticketsapp.R
-import com.example.movieticketsapp.adapter.ItemDateAdapter
 import com.example.movieticketsapp.adapter.ItemSeatAdapter
-import com.example.movieticketsapp.adapter.ItemTimeAdapter
 import com.example.movieticketsapp.databinding.SeatLayoutBinding
 import com.example.movieticketsapp.model.Seat
 import com.google.firebase.firestore.FirebaseFirestore
-import java.time.LocalDate
-import java.time.LocalTime
-import java.time.format.DateTimeFormatter
+import com.google.firebase.firestore.ListenerRegistration
 
 class SeatActivity : AppCompatActivity() {
     private lateinit var binding: SeatLayoutBinding
-    private  var price:Double = 0.0
-    private  var number:Int = 0
+    private var price: Double = 0.0
+    private var number: Int = 0
     private val db = FirebaseFirestore.getInstance()
+    private var selectedDate: String? = null
+    private var selectedTime: String? = null
+    private var showtimeId: String? = null
+    private var timelineId: String? = null
+    private var seatListener: ListenerRegistration? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = SeatLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         getIntentExtra()
-        setVariable()
-        initSeatList()
+        setEvent()
+        fetchSeatsRealtime(showtimeId!!, timelineId!!)
         window.setFlags(
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
     }
 
-    private fun initSeatList() {
-        val gridLayoutManager = GridLayoutManager(this, 7)
-        gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-            override fun getSpanSize(position: Int): Int {
-                return if (position % 7 == 3) 1 else 1
+    private fun fetchSeatsRealtime(showtimeId: String, timelineId: String) {
+        seatListener?.remove()
+        seatListener = db.collection("showtimes")
+            .document(showtimeId)
+            .collection("timelines")
+            .document(timelineId)
+            .collection("seats")
+            .addSnapshotListener { seatSnapshots, e ->
+                if (e != null) {
+                    Log.e("SEAT", "Lỗi realtime: ", e)
+                    return@addSnapshotListener
+                }
+
+                if (seatSnapshots == null || seatSnapshots.isEmpty) {
+                    binding.rcvSeat.adapter = null
+                    return@addSnapshotListener
+                }
+
+                val seatList = mutableListOf<Seat>()
+                for (doc in seatSnapshots) {
+                    val seat = Seat(
+                        code = doc.getString("code") ?: "",
+                        status = doc.getString("status") ?: "AVAILABLE",
+                        row = doc.getString("row") ?: "",
+                        column = doc.getLong("column")?.toInt() ?: 0
+                    )
+                    seatList.add(seat)
+                }
+
+                val sortedSeats = seatList.sortedWith(compareBy({ it.row }, { it.column }))
+
+                binding.rcvSeat.layoutManager = GridLayoutManager(this, 8)
+                binding.rcvSeat.adapter = ItemSeatAdapter(sortedSeats, object : ItemSeatAdapter.SelectedSeat {
+                    @SuppressLint("SetTextI18n")
+                    override fun onSelectedSeat(selectedNme: String, num: Int) {
+                        number = num
+                        price = DecimalFormat("#.##").format(num * 1.0).toDouble()
+                        binding.tvNumberSelected.text = "Đã chọn: $selectedNme ($num)"
+                        binding.tvPrice.text = "$$price"
+                    }
+                })
             }
-        }
-        binding.rcvSeat.layoutManager = gridLayoutManager
-        val seatList = mutableListOf<Seat>()
-        val numSeat = 60
-        for (i in 0 until numSeat) {
-            val seatcode = ""
-            val seatStatus = if(i == 2 || i == 20) "UNAVAILABLE" else "AVAILABLE"
-            seatList.add(Seat(seatcode,seatStatus))
-        }
-        val adapter = ItemSeatAdapter(seatList,object : ItemSeatAdapter.SelectedSeat{
-            @SuppressLint("SetTextI18n")
-            override fun onSelectedSeat(selectedNme: String, num: Int) {
-                binding.tvNumberSelected.text = "$num Seat Selected"
-                val df = DecimalFormat("#.##")
-                price = df.format(num*1.0).toDouble()
-                number = num
-                binding.tvPrice.text = "$$price"
-            }
-        })
-        binding.rcvSeat.adapter = adapter
-        binding.rcvSeat.isNestedScrollingEnabled = false
     }
-    private fun setVariable() {
+
+    private fun setEvent() {
         binding.imgBack.setOnClickListener {
             finish()
+        }
+        binding.btnContinue.setOnClickListener {
+//            val intent = intent(this, PaymentActivity::class.java)
         }
     }
 
     private fun getIntentExtra() {
+        selectedDate = intent?.getStringExtra("selectedDate") ?: run {
+            Toast.makeText(this, "Date is missing!", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+        selectedTime = intent?.getStringExtra("selectedTime") ?: run {
+            Toast.makeText(this, "Time is missing!", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+        showtimeId = intent?.getStringExtra("showtimeId") ?: run {
+            Toast.makeText(this, "Showtime ID is missing!", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+        timelineId = intent?.getStringExtra("timelineId") ?: run {
+            Toast.makeText(this, "Timeline ID is missing!", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        seatListener?.remove()
     }
 }

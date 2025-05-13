@@ -16,11 +16,6 @@ class ItemTimeAdapter(
     private var lastSelectedTime = -1
 
     inner class ViewHolder(val binding: ItemTimeLayoutBinding):RecyclerView.ViewHolder(binding.root){
-        init {
-            itemView.setOnClickListener {
-                onItemClick?.invoke(adapterPosition)
-            }
-        }
         fun bind(time:String){
             binding.tvTime.text = time
             if (selectedPosition == adapterPosition){
@@ -30,15 +25,15 @@ class ItemTimeAdapter(
                 binding.tvTime.setBackgroundResource(R.drawable.light_black_bg)
                 binding.tvTime.setTextColor(ContextCompat.getColor(itemView.context,R.color.white))
             }
-            binding.root.setOnClickListener{
+            binding.root.setOnClickListener {
                 val position = adapterPosition
-                if (position!= RecyclerView.NO_POSITION){
+                if (position != RecyclerView.NO_POSITION && selectedPosition != position) {
                     lastSelectedTime = selectedPosition
                     selectedPosition = position
                     notifyItemChanged(lastSelectedTime)
                     notifyItemChanged(selectedPosition)
+                    onItemClick?.invoke(position)
                 }
-                Log.d("SSSS","SSSS")
             }
         }
     }
