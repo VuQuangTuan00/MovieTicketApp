@@ -79,4 +79,6 @@
     <string name="line">-</string>
     <string name="dash_line_black">dash line black</string>
     <string name="time">time</string>
+    <string name="amc_empire_25">AMC Empire 25</string>
+    <string name="_12_00">($12.00)</string>
 </resources>

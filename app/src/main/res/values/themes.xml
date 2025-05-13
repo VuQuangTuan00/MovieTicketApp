@@ -57,6 +57,10 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">10dp</item>
     </style>
+    <style name="RoundedMap" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
     <style name="BoderAvatarCast" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">30dp</item>

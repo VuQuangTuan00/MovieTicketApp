@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -17,7 +19,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
-            android:name=".activity.SeatActivity"
+            android:name=".activity.ChooseDateAndTimeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SaverActivity"
             android:exported="false" />
         <activity
             android:name=".activity.DetailsMovieActivity"
@@ -38,7 +43,7 @@
             android:name=".activity.SignUpSuccessfulActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomaPageActivity"
+            android:name=".activity.SeatActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SignUpActivity"
@@ -59,7 +64,7 @@
             android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SaverActivity"
+            android:name=".activity.HomaPageActivity"
             android:exported="true">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />

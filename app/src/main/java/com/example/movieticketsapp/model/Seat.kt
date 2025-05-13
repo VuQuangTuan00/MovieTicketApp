@@ -1,10 +1,10 @@
 package com.example.movieticketsapp.model
 
-data class Seat(val id:String, val seatCode:String, val row:String, val col:String, var status:Status){
+data class Seat(val code:String, var status:String){
 
-    enum class Status{
-        AVAILABLE,
-        SELECTED,
-        UNAVAILABLE
-    }
+//    enum class Status{
+//        AVAILABLE,
+//        SELECTED,
+//        UNAVAILABLE
+//    }
 }

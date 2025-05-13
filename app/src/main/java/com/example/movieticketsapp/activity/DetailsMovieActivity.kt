@@ -1,5 +1,6 @@
 package com.example.movieticketsapp.activity
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -51,7 +52,10 @@ class DetailsMovieActivity : AppCompatActivity() {
     private fun setEvent() {
         binding.apply {
             btnBookNow.setOnClickListener {
-                navigateTo(SeatActivity::class.java, flag = false)
+                val intent = Intent(this@DetailsMovieActivity, ChooseDateAndTimeActivity::class.java)
+                intent.putExtra("movie_id", movieId)
+                startActivity(intent)
+                finish()
             }
         }
     }

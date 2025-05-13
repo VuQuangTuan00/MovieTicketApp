@@ -24,31 +24,31 @@ class ItemSeatAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val seat = seatList[position]
-        holder.binding.seat.text = seat.seatCode
+        holder.binding.seat.text = seat.code
         when (seat.status) {
-            Seat.Status.AVAILABLE -> {
+            "AVAILABLE" -> {
                 holder.binding.seat.setBackgroundResource(R.drawable.ic_seat_available)
                 holder.binding.seat.setTextColor(holder.itemView.context.getColor(R.color.white))
             }
-            Seat.Status.SELECTED -> {
+            "SELECTED" -> {
                 holder.binding.seat.setBackgroundResource(R.drawable.ic_seat_selected)
                 holder.binding.seat.setTextColor(holder.itemView.context.getColor(R.color.black))
             }
-            Seat.Status.UNAVAILABLE -> {
+            "UNAVAILABLE" -> {
                 holder.binding.seat.setBackgroundResource(R.drawable.ic_seat_unavailable)
                 holder.binding.seat.setTextColor(holder.itemView.context.getColor(R.color.primaryEnableGray))
             }
         }
         holder.binding.seat.setOnClickListener {
             when (seat.status) {
-                Seat.Status.AVAILABLE -> {
-                    seat.status = Seat.Status.SELECTED
-                    selectedSeatName.add(seat.seatCode)
+                "AVAILABLE" -> {
+                    seat.status = "SELECTED"
+                    selectedSeatName.add(seat.code)
                     notifyItemChanged(position)
                 }
-                Seat.Status.SELECTED -> {
-                    seat.status = Seat.Status.AVAILABLE
-                    selectedSeatName.remove(seat.seatCode)
+                "SELECTED" -> {
+                    seat.status = "AVAILABLE"
+                    selectedSeatName.remove(seat.code)
                     notifyItemChanged(position)
                 }
                else -> {}

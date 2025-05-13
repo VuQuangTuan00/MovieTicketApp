@@ -7,11 +7,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.ItemTimeLayoutBinding
 
-class ItemTimeAdapter(private val timeList: List<String>) : RecyclerView.Adapter<ItemTimeAdapter.ViewHolder>(){
+class ItemTimeAdapter(
+    private val timeList: List<String>,
+    private val onItemClick: ((Int) -> Unit)? = null
+    ) : RecyclerView.Adapter<ItemTimeAdapter.ViewHolder>(){
     private var selectedPosition = -1
     private var lastSelectedTime = -1
 
     inner class ViewHolder(val binding: ItemTimeLayoutBinding):RecyclerView.ViewHolder(binding.root){
+        init {
+            itemView.setOnClickListener {
+                onItemClick?.invoke(adapterPosition)
+            }
+        }
         fun bind(time:String){
             binding.tvTime.text = time
             if (selectedPosition == adapterPosition){
