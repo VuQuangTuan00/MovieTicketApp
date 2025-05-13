@@ -111,7 +111,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private fun fetchTimelinesByMovieId(movieId: String, selectedDate: LocalDate) {
         db.collection("showtimes")
             .whereEqualTo("movie_id", movieId)
-            .get() // Dùng get thay vì listener để tránh leak
+            .get()
             .addOnSuccessListener { showtimeSnapshots ->
                 if (showtimeSnapshots == null || showtimeSnapshots.isEmpty) {
                     Log.d("Timeline", "No showtime found for movieId: $movieId")
