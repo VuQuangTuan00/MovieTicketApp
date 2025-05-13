@@ -3,24 +3,18 @@ package com.example.movieticketsapp.activity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.movieticketsapp.R
 import com.example.movieticketsapp.adapter.ItemDateAdapter
 import com.example.movieticketsapp.adapter.ItemTimeAdapter
 import com.example.movieticketsapp.databinding.ChooseDateAndTimeLayoutBinding
-import com.example.movieticketsapp.databinding.DetailsMovieLayoutBinding
+import com.example.movieticketsapp.model.Cinema
 import com.example.movieticketsapp.utils.navigateTo
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.time.LocalDate
-import java.time.LocalTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.Date
@@ -29,6 +23,8 @@ import java.util.TimeZone
 
 class ChooseDateAndTimeActivity : AppCompatActivity() {
     private lateinit var binding: ChooseDateAndTimeLayoutBinding
+    private var selectedD: String? = null
+    private var selectedT: String? = null
     private val db = Firebase.firestore
     private lateinit var movieId: String
     private var showtimeStartDate: LocalDate? = null
@@ -43,7 +39,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
             finish()
             return
         }
-
+        fetchLocation()
         setEvent()
         fetchShowtimeStartDate(movieId)
     }
@@ -51,6 +47,15 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private fun setEvent() {
         binding.imgBack.setOnClickListener { finish() }
         binding.btnContinue.setOnClickListener {
+            if (selectedD == null || selectedT == null) {
+                Log.d("DDD", "$selectedT : $selectedD")
+                Toast.makeText(
+                    this@ChooseDateAndTimeActivity,
+                    "Vui lòng chọn ngày và giờ chiếu",
+                    Toast.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            }
             navigateTo(SeatActivity::class.java, flag = false)
         }
     }
@@ -58,11 +63,14 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private fun setupDateAdapter() {
         val dates = generateDates()
 
-        binding.rcvDate.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rcvDate.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.rcvDate.adapter = ItemDateAdapter(dates) { selectedInternalDate ->
-            val selectedDate = LocalDate.parse(selectedInternalDate)
+            selectedD = selectedInternalDate
+            val selectedDate = LocalDate.parse(selectedD)
             if (showtimeStartDate != null && selectedDate.isBefore(showtimeStartDate)) {
                 binding.rcvTime.adapter = null
+                selectedT = null
                 Toast.makeText(
                     this,
                     "Không có suất chiếu trước ngày công chiếu",
@@ -82,7 +90,11 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
 
         for (i in 0 until 7) {
             val date = today.plusDays(i.toLong())
-            val display = displayFormat.format(Date.from(date.atStartOfDay(ZoneId.systemDefault()).toInstant()))
+            val display = displayFormat.format(
+                Date.from(
+                    date.atStartOfDay(ZoneId.systemDefault()).toInstant()
+                )
+            )
             val internal = date.format(internalFormat)
             result.add(Pair(display, internal))
         }
@@ -101,7 +113,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
                         ?.atZone(ZoneId.systemDefault())
                         ?.toLocalDate()
                 }
-                setupDateAdapter() // Gọi sau khi lấy được start date
+                setupDateAdapter()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Không thể tải dữ liệu suất chiếu", Toast.LENGTH_SHORT).show()
@@ -148,17 +160,13 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
                                 val timeFormatted = localTime.format(formatter)
                                 allTimelineItems.add(timelineId to timeFormatted)
                             }
-
-                            // Cập nhật adapter chỉ 1 lần sau khi load tất cả
                             binding.rcvTime.layoutManager = LinearLayoutManager(
                                 this, LinearLayoutManager.HORIZONTAL, false
                             )
                             binding.rcvTime.adapter = ItemTimeAdapter(
                                 allTimelineItems.map { it.second }
                             ) { index ->
-                                val selectedTimelineId = allTimelineItems[index].first
-                                val selectedTime = allTimelineItems[index].second
-                                Log.d("Selected", "Timeline ID: $selectedTimelineId, Time: $selectedTime")
+                                selectedT = allTimelineItems[index].second
                             }
                         }
                 }
@@ -168,6 +176,28 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
             }
     }
 
+    private fun fetchLocation() {
+        var locationCinema = Cinema("", "", "", "")
+        db.collection("cinema")
+            .addSnapshotListener { snapshots, e ->
+                if (e != null) {
+                    Log.e("Firestore", "Error fetching location_cinema", e)
+                    return@addSnapshotListener
+                }
+                if (snapshots != null) {
+                    for (doc in snapshots) {
+                        val address = doc.getString("address") ?: "Không có địa chỉ"
+                        val cinemaName = doc.getString("cinema_name") ?: "Không có thông tin"
+                        val phone = doc.getString("phone") ?: "Không có số điện thoại"
+                        val locationMap = doc.getString("location_map") ?: "Không có bản đồ"
+                        locationCinema = Cinema(cinemaName, address, phone, locationMap)
+                    }
+                }
+                binding.tvCinemaName.text = locationCinema.cinemaName
+                binding.tvAddress.text = locationCinema.address
+                binding.tvPhone.text = locationCinema.phone
+            }
+    }
 
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()

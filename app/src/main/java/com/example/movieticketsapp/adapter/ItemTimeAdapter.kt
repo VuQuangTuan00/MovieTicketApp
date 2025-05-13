@@ -1,5 +1,6 @@
 package com.example.movieticketsapp.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -37,6 +38,7 @@ class ItemTimeAdapter(
                     notifyItemChanged(lastSelectedTime)
                     notifyItemChanged(selectedPosition)
                 }
+                Log.d("SSSS","SSSS")
             }
         }
     }

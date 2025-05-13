@@ -13,7 +13,6 @@ import com.example.movieticketsapp.adapter.ItemPhotosApdater
 import com.example.movieticketsapp.databinding.DetailsMovieLayoutBinding
 import com.example.movieticketsapp.model.Cast
 import com.example.movieticketsapp.model.GenerMovie
-import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
