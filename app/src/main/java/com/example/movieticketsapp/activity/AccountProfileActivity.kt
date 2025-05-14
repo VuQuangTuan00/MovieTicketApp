@@ -53,6 +53,7 @@ class AccountProfileActivity : AppCompatActivity() {
                     val name = document.getString("name") ?: "No Name"
                     val email = document.getString("email") ?: "No Email"
                     val avatarUrl = document.getString("avatar") ?: ""
+                    val role = document.getString("role") ?: "User" // Get role from Firestore
 
                     binding.tvNameUser.text = name
                     binding.tvEmailUser.text = email
@@ -63,6 +64,14 @@ class AccountProfileActivity : AppCompatActivity() {
                             .circleCrop()
                             .into(binding.imgAvatarUser)
                     }
+                    if (role == "Admin") {
+                        // Add the Admin menu item
+                        menuList.add(MenuItem("Admin Panel", R.drawable.ic_admin)) // Add your custom icon for Admin Panel
+                    }
+
+                    // Refresh the menu adapter
+                    menuAdapter.notifyDataSetChanged()
+
                 } else {
                     Toast.makeText(this, "User data not found", Toast.LENGTH_SHORT).show()
                 }

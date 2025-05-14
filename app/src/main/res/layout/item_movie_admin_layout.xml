@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
-    android:background="@drawable/custom_border_genre_movie">
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/button_border">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imgMovie"
@@ -35,7 +36,7 @@
             android:text="Movie Title"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginBottom="5dp" />
 
         <TextView
@@ -43,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Director: John Doe"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginBottom="5dp" />
 
         <TextView
@@ -51,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Genres: Action, Drama"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginBottom="5dp" />
 
         <TextView
@@ -59,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cast: Actor 1, Actor 2"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginBottom="5dp" />
 
         <LinearLayout
@@ -110,24 +111,22 @@
             android:gravity="center">
 
             <ImageView
-                android:id="@+id/btnEditGener"
+                android:id="@+id/btnEditMovie"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/ic_edit"
                 android:contentDescription="Edit"
-                app:tint="@color/white"
                 app:layout_constraintStart_toEndOf="@id/tvGenerMovie"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginStart="8dp" />
 
             <ImageView
-                android:id="@+id/btnDeleteGener"
+                android:id="@+id/btnDeleteMovie"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:src="@drawable/ic_delete"
                 android:contentDescription="Delete"
-                app:tint="@color/white"
                 app:layout_constraintStart_toEndOf="@id/btnEditGener"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -30,6 +30,7 @@ firebaseFunctions = "21.2.1"
 viewpager2 = "1.1.0"
 firebaseStorageKtx = "21.0.1"
 compressor = "3.0.1"
+cardview = "1.0.0"
 
 [libraries]
 android-flexbox = { module = "implementation 'com.google.android:flexbox", version.ref = "flexboxVersion" }
@@ -62,6 +63,7 @@ firebase-functions = { group = "com.google.firebase", name = "firebase-functions
 firebase-storage-ktx = { group = "com.google.firebase", name = "firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
 
 compressor = { group = "id.zelory", name = "compressor", version.ref = "compressor" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

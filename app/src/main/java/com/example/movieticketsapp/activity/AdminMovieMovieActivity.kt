@@ -1,18 +1,24 @@
 package com.example.movieticketsapp.activity
 
+import android.app.AlertDialog
+import android.content.ClipData.Item
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.movieticketsapp.R
 import com.example.movieticketsapp.adapter.ItemMovieAdminAdapter
 import com.example.movieticketsapp.databinding.AdminMovieMovieLayoutBinding
+import com.example.movieticketsapp.fragments.AddEditMovieFragment
 import com.example.movieticketsapp.model.MovieAdmin
+import com.google.android.gms.tasks.Tasks
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 
 class AdminMovieMovieActivity : AppCompatActivity() {
     private lateinit var binding: AdminMovieMovieLayoutBinding
     private lateinit var adapter: ItemMovieAdminAdapter
+    private val movieList = mutableListOf<MovieAdmin>()
     private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,34 +28,49 @@ class AdminMovieMovieActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appbar.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Danh sách phim"
+        supportActionBar?.title = "Movie List"
+
+        adapter = ItemMovieAdminAdapter(
+            movieList,
+            onEdit = { movie -> openAddEditMovieFragment(true, movie.id) },
+            onDelete = { movie -> confirmDelete(movie) }
+        )
 
         binding.listMovies.layoutManager = LinearLayoutManager(this)
+        binding.listMovies.adapter = adapter
+
+        binding.fabAddMovie.setOnClickListener {
+            openAddEditMovieFragment(false, null)
+        }
 
         loadMoviesFromFirestore()
     }
 
     private fun loadMoviesFromFirestore() {
-        db.collection("movie")
-            .get()
-            .addOnSuccessListener { result ->
-                val movieList = mutableListOf<MovieAdmin>()
-                val genreNamesMap = mutableMapOf<String, String>()
-                val castNamesMap = mutableMapOf<String, String>()
+        val genreNamesMap = mutableMapOf<String, String>()
+        val castNamesMap = mutableMapOf<String, String>()
 
-                db.collection("gener").get().addOnSuccessListener { genreResult ->
-                    for (genreDoc in genreResult) {
-                        val genreName = genreDoc.getString("name") ?: ""
-                        genreNamesMap[genreDoc.id] = genreName
-                    }
+        val genreTask = db.collection("gener").get()
+        val castTask = db.collection("cast").get()
 
-                    db.collection("cast").get().addOnSuccessListener { actorResult ->
-                        for (castDoc in actorResult) {
-                            val actorName = castDoc.getString("name") ?: ""
-                            castNamesMap[castDoc.id] = actorName
-                        }
+        Tasks.whenAllSuccess<Any>(genreTask, castTask)
+            .addOnSuccessListener { results ->
+                val genreResult = results[0] as QuerySnapshot
+                val castResult = results[1] as QuerySnapshot
 
-                        for (document in result) {
+                genreResult.forEach { genreDoc ->
+                    val genreName = genreDoc.getString("name") ?: ""
+                    genreNamesMap[genreDoc.id] = genreName
+                }
+
+                castResult.forEach { castDoc ->
+                    val actorName = castDoc.getString("name") ?: ""
+                    castNamesMap[castDoc.id] = actorName
+                }
+
+                db.collection("movie").get()
+                    .addOnSuccessListener { movieResult ->
+                        for (document in movieResult) {
                             val movie = document.toObject(MovieAdmin::class.java)
 
                             val genreNames = movie.gener_movie.mapNotNull { genreNamesMap[it] }
@@ -63,16 +84,48 @@ class AdminMovieMovieActivity : AppCompatActivity() {
                             movieList.add(updatedMovie)
                         }
 
-                        adapter = ItemMovieAdminAdapter(movieList) { movie ->
-                            Toast.makeText(this, "Clicked on: ${movie.title}", Toast.LENGTH_SHORT).show()
-                        }
-                        binding.listMovies.adapter = adapter
+                        adapter.notifyDataSetChanged()
                     }
-                }
+                    .addOnFailureListener { exception ->
+                        Toast.makeText(this, "Error loading movies: ${exception.message}", Toast.LENGTH_SHORT).show()
+                    }
             }
             .addOnFailureListener { exception ->
-                Toast.makeText(this, "Error loading movies: ${exception.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error loading genres or casts: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun openAddEditMovieFragment(isEditMode: Boolean, movieId: String?) {
+        val fragment = AddEditMovieFragment()
+        val bundle = Bundle()
+        bundle.putBoolean("isEditMode", isEditMode)
+        movieId?.let { bundle.putString("movieId", it) }
+        fragment.arguments = bundle
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
+    }
+
+    private fun confirmDelete(movie: MovieAdmin) {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Delete Movie")
+            .setMessage("Are you sure you want to delete ${movie.title}?")
+            .setPositiveButton("Yes") { _, _ ->
+                db.collection("movie").document(movie.id)
+                    .delete()
+                    .addOnSuccessListener {
+                        Toast.makeText(this, "Movie deleted successfully!", Toast.LENGTH_SHORT).show()
+                        loadMoviesFromFirestore() // Reload the movie list after deletion
+                    }
+                    .addOnFailureListener { exception ->
+                        Toast.makeText(this, "Error deleting movie: ${exception.message}", Toast.LENGTH_SHORT).show()
+                    }
+            }
+            .setNegativeButton("No") { dialog, _ -> dialog.dismiss() } // Do nothing on cancel
+            .create()
+            .show()
     }
 
     override fun onSupportNavigateUp(): Boolean {

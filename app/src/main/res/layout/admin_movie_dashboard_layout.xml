@@ -17,7 +17,7 @@
         android:layout_marginTop="26dp">
 
         <LinearLayout
-            android:id="@+id/lnMovieManager"
+            android:id="@+id/lnMovieList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -31,7 +31,7 @@
             android:elevation="2dp">
 
             <ImageView
-                android:id="@+id/imgMovieManager"
+                android:id="@+id/imgMovieList"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_not_image"
@@ -39,17 +39,17 @@
                 android:layout_gravity="start"/>
 
             <TextView
-                android:id="@+id/tvMoviManager"
+                android:id="@+id/tvMovieList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Movie Manager"
+                android:text="Movie List"
                 android:textColor="@color/primaryText"
                 android:textSize="23sp"
                 android:layout_marginStart="12dp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lnTheaterManagement"
+            android:id="@+id/lnGenreList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -63,7 +63,7 @@
             android:elevation="2dp">
 
             <ImageView
-                android:id="@+id/imgTheaterManagement"
+                android:id="@+id/imgGenreList"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_not_image"
@@ -71,17 +71,17 @@
                 android:layout_gravity="start"/>
 
             <TextView
-                android:id="@+id/tvTheaterManagement"
+                android:id="@+id/tvGenreList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Theater Management"
+                android:text="Genre List"
                 android:textColor="@color/primaryText"
                 android:textSize="23sp"
                 android:layout_marginStart="12dp"/>
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lnSaleStatistic"
+            android:id="@+id/lnCastList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -95,7 +95,7 @@
             android:elevation="2dp">
 
             <ImageView
-                android:id="@+id/imgSaleStatistic"
+                android:id="@+id/imgCastList"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_not_image"
@@ -103,25 +103,14 @@
                 android:layout_gravity="start"/>
 
             <TextView
-                android:id="@+id/tvSaleStatistic"
+                android:id="@+id/tvCastList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sales Statistics"
+                android:text="Cast List"
                 android:textColor="@color/primaryText"
                 android:textSize="23sp"
                 android:layout_marginStart="12dp"/>
         </LinearLayout>
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textSize="23sp"
-        android:layout_marginTop="16dp"
-        android:textColor="@android:color/white"
-        android:background="@color/colorAccent" />
-
 </LinearLayout>
