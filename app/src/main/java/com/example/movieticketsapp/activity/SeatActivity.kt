@@ -1,6 +1,7 @@
 package com.example.movieticketsapp.activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +24,8 @@ class SeatActivity : AppCompatActivity() {
     private var selectedTime: String? = null
     private var showtimeId: String? = null
     private var timelineId: String? = null
+    private var movieId: String? = null
+    private var seat: String? = null
     private var seatListener: ListenerRegistration? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,12 +35,11 @@ class SeatActivity : AppCompatActivity() {
         getIntentExtra()
         setEvent()
         fetchSeatsRealtime(showtimeId!!, timelineId!!)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-        )
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+//            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+//        )
     }
-
     private fun fetchSeatsRealtime(showtimeId: String, timelineId: String) {
         seatListener?.remove()
         seatListener = db.collection("showtimes")
@@ -76,6 +78,7 @@ class SeatActivity : AppCompatActivity() {
                         number = num
                         price = DecimalFormat("#.##").format(num * 1.0).toDouble()
                         binding.tvNumberSelected.text = "Đã chọn: $selectedNme ($num)"
+                        seat = binding.tvNumberSelected.text.toString()
                         binding.tvPrice.text = "$$price"
                     }
                 })
@@ -87,7 +90,15 @@ class SeatActivity : AppCompatActivity() {
             finish()
         }
         binding.btnContinue.setOnClickListener {
-//            val intent = intent(this, PaymentActivity::class.java)
+            val intent = Intent(this, PaymentActivity::class.java)
+            intent.putExtra("selectedDate", selectedDate)
+            intent.putExtra("selectedTime", selectedTime)
+            intent.putExtra("showtimeId", showtimeId)
+            intent.putExtra("timelineId", timelineId)
+            intent.putExtra("movie_id", movieId)
+            intent.putExtra("seat", seat)
+            intent.putExtra("price", price)
+            startActivity(intent)
         }
     }
 
@@ -109,6 +120,11 @@ class SeatActivity : AppCompatActivity() {
         }
         timelineId = intent?.getStringExtra("timelineId") ?: run {
             Toast.makeText(this, "Timeline ID is missing!", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+        movieId = intent?.getStringExtra("movie_id") ?: run {
+            Toast.makeText(this, "Movie ID is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
         }

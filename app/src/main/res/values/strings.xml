@@ -81,4 +81,16 @@
     <string name="time">time</string>
     <string name="amc_empire_25">AMC Empire 25</string>
     <string name="_12_00">($12.00)</string>
+    <string name="review_summary">Review Summary</string>
+    <string name="cinema">Cinema</string>
+    <string name="seat_s">Seat(s)</string>
+    <string name="date">Date</string>
+    <string name="hours">Hours</string>
+    <string name="price_details">Price Details</string>
+    <string name="standard">Standard</string>
+    <string name="conversion_free">Conversion Free</string>
+    <string name="actual_pay">Actual Pay</string>
+    <string name="continue_payment">Continue to Payment</string>
+    <string name="pay">Pay</string>
+    <string name="payment">Payment</string>
 </resources>

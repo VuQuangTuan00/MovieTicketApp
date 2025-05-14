@@ -10,11 +10,7 @@ import com.example.movieticketsapp.adapter.ItemDateAdapter
 import com.example.movieticketsapp.adapter.ItemTimeAdapter
 import com.example.movieticketsapp.databinding.ChooseDateAndTimeLayoutBinding
 import com.example.movieticketsapp.model.Cinema
-import com.example.movieticketsapp.utils.navigateTo
-import com.google.android.gms.tasks.Task
-import com.google.android.gms.tasks.Tasks
 import com.google.firebase.firestore.ListenerRegistration
-import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
@@ -66,6 +62,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
             intent.putExtra("selectedTime", selectedT)
             intent.putExtra("showtimeId", showtimeId)
             intent.putExtra("timelineId", timelineId)
+            intent.putExtra("movie_id", movieId)
             startActivity(intent)
         }
     }

@@ -19,6 +19,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
+            android:name=".activity.QRDialogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ChooseDateAndTimeActivity"
             android:exported="false" />
         <activity
