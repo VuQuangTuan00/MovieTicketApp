@@ -190,10 +190,9 @@ class PaymentActivity : AppCompatActivity() {
 
                     tvAmount.text = "Số tiền: %,dđ".format(amount)
                     Glide.with(this)
-                        .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact.jpg?amount=$amount&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account%20Vac%20Xin%20Covid")
+                        .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact2.jpg?amount=$amount&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account")
                         .into(imgQRCode)
-//                    https://img.vietqr.io/image/vietinbank-113366668888-compact2.jpg?amount=790000&addInfo=dong%20gop%20quy%20vac%20xin&accountName=Quy%20Vac%20Xin%20Covid
-                }
+                   }
             }
 
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
