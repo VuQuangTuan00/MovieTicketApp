@@ -86,6 +86,7 @@ class ViewAllMovie : AppCompatActivity() {
             searchJob = CoroutineScope(Dispatchers.Main).launch {
                 delay(300)
                 searchQuery = editable.toString().trim()
+                searchKeyword = searchQuery
                 filterAndSearchMovies()
             }
         }
