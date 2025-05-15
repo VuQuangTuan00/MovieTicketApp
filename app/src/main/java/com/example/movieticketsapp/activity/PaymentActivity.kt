@@ -209,6 +209,7 @@ class PaymentActivity : AppCompatActivity() {
         val seatIds = seat?.split(",")?.map { it.trim() } ?: emptyList()
 
         val ticketMovie = TicketMovie(
+            id = ticket_movie_id,
             userId = userId,
             movieId = movieId,
             seatIds = seat,

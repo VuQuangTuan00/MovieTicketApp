@@ -8,6 +8,7 @@
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
-            android:name=".activity.QRDialogActivity"
+            android:name=".activity.TicketDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ListTicketActivity"
             android:exported="false" />
         <activity
             android:name=".activity.PaymentActivity"
@@ -61,7 +65,7 @@
             android:name=".activity.OTPCodeActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SignInActivity"
+            android:name=".activity.HomaPageActivity"
             android:exported="false" />
         <activity
             android:name=".activity.GetStartedActivity"
@@ -70,7 +74,7 @@
             android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomaPageActivity"
+            android:name=".activity.SignInActivity"
             android:exported="true">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />

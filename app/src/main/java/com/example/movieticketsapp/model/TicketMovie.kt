@@ -1,6 +1,7 @@
 package com.example.movieticketsapp.model
 
 class TicketMovie (
+    val id: String,
     val userId: String,
     val movieId: String,
     val seatIds: String,

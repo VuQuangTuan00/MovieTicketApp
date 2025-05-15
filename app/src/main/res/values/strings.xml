@@ -93,4 +93,5 @@
     <string name="continue_payment">Continue to Payment</string>
     <string name="pay">Pay</string>
     <string name="payment">Payment</string>
+    <string name="cancel">Cancel</string>
 </resources>

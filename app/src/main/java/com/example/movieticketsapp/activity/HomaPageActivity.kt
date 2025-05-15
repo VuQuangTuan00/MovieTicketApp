@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.movieticketsapp.R
 import com.example.movieticketsapp.adapter.ItemMovieAdapter
 import com.example.movieticketsapp.databinding.HomaPageLayoutBinding
 import com.example.movieticketsapp.model.Movie
@@ -58,6 +59,15 @@ class HomaPageActivity : AppCompatActivity() {
             tvViewAllNowPlaying.setOnClickListener {
                 navigateTo(ViewAllMovie::class.java, flag = false)
             }
+            binding.bottomnvg.setOnItemSelectedListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.ticket -> {
+                      navigateTo(ListTicketActivity::class.java, flag = false)
+                        true  // đã xử lý, trả về true
+                    }
+                    else -> false
+                }
+            }
         }
     }
 
@@ -98,6 +108,7 @@ class HomaPageActivity : AppCompatActivity() {
                 }
             }
     }
+
 
     private fun listenToImgMovieCollectionRealtime() {
         db.collection("img_slide")
