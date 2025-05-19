@@ -1,17 +1,12 @@
 package com.example.movieticketsapp.activity
 
+import TicketMovie
 import android.annotation.SuppressLint
-import android.app.Activity
-import android.app.AlertDialog
 import android.app.Dialog
-import android.content.Context
-import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.util.Base64
 import android.util.Log
-import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -22,59 +17,48 @@ import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.PaymentLayoutBinding
 import com.example.movieticketsapp.model.Cinema
 import com.example.movieticketsapp.model.GenerMovie
-import com.example.movieticketsapp.model.TicketMovie
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import java.lang.Double.parseDouble
+
 
 class PaymentActivity : AppCompatActivity() {
     private lateinit var binding: PaymentLayoutBinding
     private lateinit var db: FirebaseFirestore
     private lateinit var listGenerMovie: ArrayList<GenerMovie>
-    private var movieListener: ListenerRegistration? = null
+    private var ticketListener: ListenerRegistration? = null
+    private lateinit var tickets:TicketMovie
+    private lateinit var dialog: Dialog
+    private  var flag: Boolean = false
+    private lateinit var seatIds: ArrayList<String>
+    private lateinit var showTimeId: String
+    private lateinit var titleMovie: String
+    private lateinit var timelineId: String
     private lateinit var selectedDate: String
     private lateinit var selectedTime: String
-    private lateinit var showtimeId: String
-    private lateinit var timelineId: String
+    private  var standard: Double = 0.0
+    private  var conversionFee: Double = 0.0
+    private  var totalAmounts: Double = 0.0
     private lateinit var movieId: String
-    private lateinit var standard: String
-    private lateinit var totalAmounts: String
-    private lateinit var conversionFee: String
-    private lateinit var seat: String
-    private lateinit var ticket_movie_id: String
-    private lateinit var cinemaId: String
-    private lateinit var dialog: Dialog
-
-    private  var flag: Boolean = false
-    private var price: Double = 0.0
-
+    private lateinit var userId: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = PaymentLayoutBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        initialize()
         getIntentExtra()
+        initialize()
+        setContentView(binding.root)
         fetchLocation()
         setEvent()
     }
 
     private fun initialize() {
-        standard = ""
-        totalAmounts = ""
-        conversionFee = ""
-        cinemaId = ""
-        selectedDate = ""
-        selectedTime= ""
-        showtimeId= ""
-        timelineId= ""
-        movieId= ""
-        seat= ""
+        userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
         listGenerMovie = ArrayList()
         dialog = Dialog(this)
         db = Firebase.firestore
+        tickets = TicketMovie(userId,movieId, titleMovie,seatIds,totalAmounts,selectedDate,selectedTime,"",showTimeId,timelineId,standard,conversionFee,"")
     }
 
     @SuppressLint("SetTextI18n")
@@ -90,16 +74,13 @@ class PaymentActivity : AppCompatActivity() {
                     flag = false
                 }
             }
-            tvDate.text = selectedDate
-            tvHours.text = selectedTime
-            tvSeat.text = seat
-            tvConversionFree.text = "$0"
-            tvStandard.text = "$${price}"
-            tvActualPay.text = "$${price}"
-
-            standard = tvStandard.text.toString()
-            conversionFee = tvConversionFree.text.toString()
-            totalAmounts = tvActualPay.text.toString()
+            tickets.totalAmounts = tickets.standard + tickets.conversionFee
+            tvDate.text = tickets.date
+            tvHours.text = tickets.hour
+            tvSeat.text = tickets.seatIds.joinToString ( ", " )
+            tvConversionFree.text = "$${tickets.conversionFee}"
+            tvStandard.text = "$${tickets.standard}"
+            tvActualPay.text = "$${tickets.totalAmounts}"
         }
     }
 
@@ -119,23 +100,30 @@ class PaymentActivity : AppCompatActivity() {
             }
             fetchMovieDetail(generMap)
         }
+        uploadTicketForUser(tickets,
+            onSuccess = {
+                Toast.makeText(this, "Đặt vé thành công!", Toast.LENGTH_SHORT).show()
+            },
+            onFailure = { e ->
+                Toast.makeText(this, "Lỗi: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        )
     }
 
     private fun fetchMovieDetail(generMap: Map<String, String>) {
-        movieListener = db.collection("movie").document(movieId)
+        ticketListener = db.collection("movie").document(tickets.movieId)
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     Log.w("MovieRealtime", "Listen failed.", e)
                     return@addSnapshotListener
                 }
-
                 if (snapshot != null && snapshot.exists()) {
                     val data = snapshot.data
                     val imgMovie = data?.get("img_movie") as? String
                     val genreIds = data?.get("gener_movie") as? List<String> ?: emptyList()
                     val duration = data?.get("druation") as? Number ?: "Unknown duration"
-
-                    binding.tvTitleMovie.text = data?.get("title") as? String ?: "No title"
+                    titleMovie = data?.get("title") as? String ?: "No title"
+                    binding.tvTitleMovie.text = titleMovie
                     binding.tvDuration.text = "$duration minutes"
                     binding.tvDirector.text = data?.get("director") as? String ?: "Unknown director"
                     val genreNames = genreIds.mapNotNull { generMap[it] }
@@ -149,6 +137,48 @@ class PaymentActivity : AppCompatActivity() {
                 }
             }
     }
+   private fun uploadTicketForUser(ticket: TicketMovie, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
+        val db = FirebaseFirestore.getInstance()
+        val userTicketsRef = db.collection("users")
+            .document(ticket.userId)
+            .collection("tickets")
+
+        userTicketsRef
+            .add(ticket)
+            .addOnSuccessListener {
+                onSuccess()
+            }
+            .addOnFailureListener { e ->
+                onFailure(e)
+            }
+    }
+
+//   private fun listenToUserTickets(
+//        userId: String,
+//        onTicketsUpdate: (List<TicketMovie>) -> Unit,
+//        onError: (Exception) -> Unit
+//    ): ListenerRegistration {
+//        val db = FirebaseFirestore.getInstance()
+//        return db.collection("users")
+//            .document(userId)
+//            .collection("tickets")
+//            .addSnapshotListener { snapshots, e ->
+//                if (e != null) {
+//                    onError(e)
+//                    return@addSnapshotListener
+//                }
+//
+//                val ticketList = snapshots?.documents?.mapNotNull { doc ->
+//                    try {
+//                        doc.toObject(TicketMovie::class.java)
+//                    } catch (ex: Exception) {
+//                        null
+//                    }
+//                } ?: emptyList()
+//
+//                onTicketsUpdate(ticketList)
+//            }
+//    }
     private fun fetchLocation() {
         var locationCinema = Cinema("", "", "", "")
         db.collection("cinema")
@@ -159,7 +189,7 @@ class PaymentActivity : AppCompatActivity() {
                 }
                 if (snapshots != null) {
                     for (doc in snapshots) {
-                        cinemaId = doc.id
+                        tickets.cinemaId = doc.id
                         val cinemaName = doc.getString("cinema_name") ?: "Không có thông tin"
                         locationCinema = Cinema(cinemaName, "", "phone", "")
                     }
@@ -173,11 +203,6 @@ class PaymentActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.qr_dialog_layout)
         val imgQRCode = dialog.findViewById<ImageView>(R.id.imgQRCode)
         val tvAmount = dialog.findViewById<TextView>(R.id.tvAmount)
-        val btnClose = dialog.findViewById<Button>(R.id.btnClose)
-
-        btnClose.setOnClickListener {
-                uploadTicketToFirestore()
-        }
 
         db.collection("bank").document(paymentId)
             .get()
@@ -194,49 +219,15 @@ class PaymentActivity : AppCompatActivity() {
                         .into(imgQRCode)
                    }
             }
-
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
     }
-    private fun uploadTicketToFirestore(
-    ) {
-        val userId = FirebaseAuth.getInstance().currentUser?.uid
-        if (userId == null) {
-            Toast.makeText(this, "Người dùng chưa đăng nhập", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        val seatIds = seat?.split(",")?.map { it.trim() } ?: emptyList()
-
-        val ticketMovie = TicketMovie(
-            id = ticket_movie_id,
-            userId = userId,
-            movieId = movieId,
-            seatIds = seat,
-            totalAmounts = totalAmounts,
-            date = selectedDate,
-            hour = selectedTime,
-            cinemaId = cinemaId,
-            standard = standard,
-            conversionFee = conversionFee
-        )
-
-        FirebaseFirestore.getInstance().collection("tickets_movie")
-            .add(ticketMovie)
-            .addOnSuccessListener {
-                binding.btnPay.text = "Cancle"
-                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener { e ->
-                Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
-            }
-    }
 
     private fun cancelPayment() {
-       ticket_movie_id =  db.collection("tickets_movie").id
+       tickets.movieId =  db.collection("tickets_movie").id
         db
             .collection("tickets_movie")
-            .document(ticket_movie_id)
+            .document(tickets.movieId)
             .delete()
             .addOnSuccessListener {
                 binding.btnPay.text = "Pay"
@@ -247,7 +238,7 @@ class PaymentActivity : AppCompatActivity() {
             }
     }
     private fun getIntentExtra() {
-        selectedDate = intent?.getStringExtra("selectedDate") ?: run {
+       selectedDate = intent?.getStringExtra("selectedDate") ?: run {
             Toast.makeText(this, "Date is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
@@ -257,12 +248,12 @@ class PaymentActivity : AppCompatActivity() {
             finish()
             return
         }
-        showtimeId = intent?.getStringExtra("showtimeId") ?: run {
+       showTimeId = intent?.getStringExtra("showtimeId") ?: run {
             Toast.makeText(this, "Showtime ID is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
-        timelineId = intent?.getStringExtra("timelineId") ?: run {
+       timelineId = intent?.getStringExtra("timelineId") ?: run {
             Toast.makeText(this, "Timeline ID is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
@@ -272,20 +263,24 @@ class PaymentActivity : AppCompatActivity() {
             finish()
             return
         }
-        seat = intent?.getStringExtra("seat") ?: run {
+        seatIds = intent?.getStringArrayListExtra("seat") ?: run {
             Toast.makeText(this, "Seat is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
-        price = intent?.getDoubleExtra("price", 0.0) ?: run {
+        standard = intent?.getDoubleExtra("price", 0.0) ?: run {
             Toast.makeText(this, "Price is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
+        totalAmounts = standard + conversionFee
+    }
+    override fun onStop() {
+        super.onStop()
+        ticketListener?.remove()
     }
     override fun onDestroy() {
         super.onDestroy()
         dialog.dismiss()
-        movieListener?.remove()
     }
 }

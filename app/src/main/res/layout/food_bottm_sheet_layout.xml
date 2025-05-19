@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/border_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgFood"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dia_dao1" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="Jumbo Popcorn"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:text="Indulge in the ultimate movie experience..."
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Quantity selector -->
+    <LinearLayout
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:text="$95.00"
+          android:gravity="center_vertical"
+          android:textStyle="bold"
+          android:textSize="20sp"
+          />
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMinus"
+            android:text="@string/reduce"
+            android:background="@drawable/border_btn_book_now"
+            android:layout_width="28dp"
+            android:layout_gravity="center"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:text="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_width="48dp"
+            android:layout_height="48dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlus"
+            android:text="@string/increase"
+            android:layout_gravity="center"
+            android:background="@drawable/border_btn_book_now"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_light_line_top"
+      >
+
+        <Button
+            android:id="@+id/btnAddToBasket"
+            style="@style/orange_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="25dp"
+            android:text="Add to Basket - $9.00"
+           />
+    </LinearLayout>
+</LinearLayout>
