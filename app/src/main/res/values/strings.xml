@@ -93,4 +93,8 @@
     <string name="continue_payment">Continue to Payment</string>
     <string name="pay">Pay</string>
     <string name="payment">Payment</string>
+    <string name="dola">$0</string>
+    <string name="food_delivery_date">Food delivery date</string>
+    <string name="reduce">-</string>
+    <string name="increase">+</string>
 </resources>

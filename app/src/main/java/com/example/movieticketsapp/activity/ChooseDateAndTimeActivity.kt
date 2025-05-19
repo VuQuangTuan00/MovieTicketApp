@@ -31,6 +31,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
     private var timelineListener = mutableListOf<ListenerRegistration>()
     private var showtimeId = ""
     private var timelineId = ""
+    private var price: Double = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ChooseDateAndTimeLayoutBinding.inflate(layoutInflater)
@@ -63,6 +64,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
             intent.putExtra("showtimeId", showtimeId)
             intent.putExtra("timelineId", timelineId)
             intent.putExtra("movie_id", movieId)
+            intent.putExtra("price", price)
             startActivity(intent)
         }
     }
@@ -148,7 +150,8 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
                 for (showtimeDoc in showtimeSnapshots) {
                      showtimeId = showtimeDoc.id
                     val startTimeTimestamp = showtimeDoc.getTimestamp("start_time") ?: continue
-
+                    price = showtimeDoc.getDouble("price") ?: continue
+                    binding.tvStandard.text = "$$price"
                     val startDate = startTimeTimestamp.toDate().toInstant()
                         .atZone(TimeZone.getDefault().toZoneId())
                         .toLocalDate()
@@ -177,7 +180,7 @@ class ChooseDateAndTimeActivity : AppCompatActivity() {
 
                             timelinesCollected++
                             if (timelinesCollected == timelinesPending) {
-                                allTimelineItems.sortBy { it.second } // sort time if needed
+                                allTimelineItems.sortBy { it.second }
 
                                 if (allTimelineItems.isEmpty()) {
                                     binding.rcvTime.adapter = null

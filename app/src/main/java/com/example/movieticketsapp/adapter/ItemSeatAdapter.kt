@@ -8,24 +8,31 @@ import com.example.movieticketsapp.databinding.ItemSeatLayoutBinding
 import com.example.movieticketsapp.model.Seat
 
 class ItemSeatAdapter(
-    private val seatList: List<Seat>,
-    private val selected:SelectedSeat
-    ) : RecyclerView.Adapter<ItemSeatAdapter.ViewHolder>(){
+    seatList: List<Seat>,
+    private val selected: SelectedSeat
+) : RecyclerView.Adapter<ItemSeatAdapter.ViewHolder>() {
+
     private val seatData = seatList.toMutableList()
-        private var selectedSeatName = mutableListOf<String>()
+    private val selectedSeatNames = arrayListOf<String>()
 
-
-    inner class ViewHolder(val binding: ItemSeatLayoutBinding):RecyclerView.ViewHolder(binding.root)
+    inner class ViewHolder(val binding: ItemSeatLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemSeatLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return ViewHolder(
+            ItemSeatLayoutBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
-    override fun getItemCount(): Int {return seatData.size}
+    override fun getItemCount(): Int = seatData.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val seat = seatData[position]
         holder.binding.seat.text = seat.code
+
         when (seat.status) {
             "AVAILABLE" -> {
                 holder.binding.seat.setBackgroundResource(R.drawable.ic_seat_available)
@@ -40,25 +47,26 @@ class ItemSeatAdapter(
                 holder.binding.seat.setTextColor(holder.itemView.context.getColor(R.color.primaryEnableGray))
             }
         }
+
         holder.binding.seat.setOnClickListener {
             when (seat.status) {
                 "AVAILABLE" -> {
                     seat.status = "SELECTED"
-                    selectedSeatName.add(seat.code)
+                    selectedSeatNames.add(seat.code)
                     notifyItemChanged(position)
                 }
                 "SELECTED" -> {
                     seat.status = "AVAILABLE"
-                    selectedSeatName.remove(seat.code)
+                    selectedSeatNames.remove(seat.code)
                     notifyItemChanged(position)
                 }
-               else -> {}
+                else -> {}
             }
-            val selectedName = selectedSeatName.joinToString(", ")
-            selected.onSelectedSeat(selectedName,selectedSeatName.size)
+            selected.onSelectedSeat(ArrayList(selectedSeatNames), selectedSeatNames.size)
         }
     }
-    interface SelectedSeat{
-        fun onSelectedSeat(selectedNme:String,num: Int)
+
+    interface SelectedSeat {
+        fun onSelectedSeat(selectedNames: ArrayList<String>, num: Int)
     }
 }

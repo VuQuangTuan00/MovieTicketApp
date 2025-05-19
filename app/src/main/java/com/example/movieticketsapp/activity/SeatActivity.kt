@@ -19,13 +19,15 @@ class SeatActivity : AppCompatActivity() {
     private lateinit var binding: SeatLayoutBinding
     private var price: Double = 0.0
     private var number: Int = 0
+    private var totalPrice: Double = 0.0
     private val db = FirebaseFirestore.getInstance()
     private var selectedDate: String? = null
     private var selectedTime: String? = null
     private var showtimeId: String? = null
     private var timelineId: String? = null
     private var movieId: String? = null
-    private var seat: String? = null
+    private lateinit var seat: Seat
+    private var selectedSeats = arrayListOf<String>()
     private var seatListener: ListenerRegistration? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,10 +37,6 @@ class SeatActivity : AppCompatActivity() {
         getIntentExtra()
         setEvent()
         fetchSeatsRealtime(showtimeId!!, timelineId!!)
-//        window.setFlags(
-//            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-//            WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-//        )
     }
     private fun fetchSeatsRealtime(showtimeId: String, timelineId: String) {
         seatListener?.remove()
@@ -74,18 +72,19 @@ class SeatActivity : AppCompatActivity() {
                 binding.rcvSeat.layoutManager = GridLayoutManager(this, 8)
                 binding.rcvSeat.adapter = ItemSeatAdapter(sortedSeats, object : ItemSeatAdapter.SelectedSeat {
                     @SuppressLint("SetTextI18n")
-                    override fun onSelectedSeat(selectedNme: String, num: Int) {
+                    override fun onSelectedSeat(selectedNames: ArrayList<String>, num: Int) {
                         number = num
-                        price = DecimalFormat("#.##").format(num * 1.0).toDouble()
-                        binding.tvNumberSelected.text = "Đã chọn: $selectedNme ($num)"
-                        seat = binding.tvNumberSelected.text.toString()
-                        binding.tvPrice.text = "$$price"
+                        selectedSeats = selectedNames
+                        totalPrice = (num * price * 100).toInt() / 100.0
+                        binding.tvNumberSelected.text = "Đã chọn: ${selectedSeats.joinToString()} ($num)"
+                        binding.tvPrice.text = "$" + String.format("%.2f", totalPrice)
                     }
                 })
             }
     }
 
     private fun setEvent() {
+        seat = Seat("", "", 0, "")
         binding.imgBack.setOnClickListener {
             finish()
         }
@@ -96,8 +95,8 @@ class SeatActivity : AppCompatActivity() {
             intent.putExtra("showtimeId", showtimeId)
             intent.putExtra("timelineId", timelineId)
             intent.putExtra("movie_id", movieId)
-            intent.putExtra("seat", seat)
-            intent.putExtra("price", price)
+            intent.putStringArrayListExtra("seat", selectedSeats)
+            intent.putExtra("price", totalPrice)
             startActivity(intent)
         }
     }
@@ -125,6 +124,11 @@ class SeatActivity : AppCompatActivity() {
         }
         movieId = intent?.getStringExtra("movie_id") ?: run {
             Toast.makeText(this, "Movie ID is missing!", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+        price = intent?.getDoubleExtra("price", 0.0) ?: run  {
+            Toast.makeText(this, "Price is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
         }

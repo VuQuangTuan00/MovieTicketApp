@@ -19,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
-            android:name=".activity.QRDialogActivity"
+            android:name=".activity.FoodActivity"
             android:exported="false" />
         <activity
             android:name=".activity.PaymentActivity"
@@ -67,10 +67,10 @@
             android:name=".activity.GetStartedActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activity.HomaPageActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.HomaPageActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />
