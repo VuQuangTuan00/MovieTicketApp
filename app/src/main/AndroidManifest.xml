@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
+            android:name=".activity.BillDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.TicketDetailActivity"
             android:exported="false" />
         <activity
