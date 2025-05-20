@@ -1,4 +1,9 @@
 package com.example.movieticketsapp.model
 
-class Cast(val id:String,val avatar:String, val name:String) {
+data class Cast (
+    var id: String = "",
+    var avatar: String = "",
+    var name: String = ""
+) {
+    constructor() : this("", "", "")
 }
