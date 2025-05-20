@@ -17,7 +17,7 @@ import okhttp3.internal.notifyAll
 
 class FoodBottomSheetFragment(
     private val food: Food,
-
+    private val onAddToBasket: ((quantity: Int) -> Unit)? = null
 ) : BottomSheetDialogFragment() {
 
     private lateinit var tvQuantity: TextView
@@ -75,6 +75,7 @@ class FoodBottomSheetFragment(
 
         btnAdd.setOnClickListener {
             Toast.makeText(requireContext(), "Added $quantity items", Toast.LENGTH_SHORT).show()
+            onAddToBasket?.invoke(quantity)
             dismiss()
         }
     }

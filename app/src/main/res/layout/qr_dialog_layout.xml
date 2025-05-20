@@ -39,7 +39,7 @@
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/btnClose"
+            android:id="@+id/btnPaid"
             android:text="@string/pay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

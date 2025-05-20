@@ -34,7 +34,7 @@ class PaymentActivity : AppCompatActivity() {
     private  var flag: Boolean = false
     private lateinit var seatIds: ArrayList<String>
     private lateinit var showTimeId: String
-    private lateinit var titleMovie: String
+    private var titleMovie:String = ""
     private lateinit var timelineId: String
     private lateinit var selectedDate: String
     private lateinit var selectedTime: String
@@ -100,14 +100,6 @@ class PaymentActivity : AppCompatActivity() {
             }
             fetchMovieDetail(generMap)
         }
-        uploadTicketForUser(tickets,
-            onSuccess = {
-                Toast.makeText(this, "Đặt vé thành công!", Toast.LENGTH_SHORT).show()
-            },
-            onFailure = { e ->
-                Toast.makeText(this, "Lỗi: ${e.message}", Toast.LENGTH_SHORT).show()
-            }
-        )
     }
 
     private fun fetchMovieDetail(generMap: Map<String, String>) {
@@ -203,21 +195,34 @@ class PaymentActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.qr_dialog_layout)
         val imgQRCode = dialog.findViewById<ImageView>(R.id.imgQRCode)
         val tvAmount = dialog.findViewById<TextView>(R.id.tvAmount)
-
+        val btnPay = dialog.findViewById<Button>(R.id.btnPaid)
+        btnPay.setOnClickListener {
+            uploadTicketForUser(tickets,
+                onSuccess = {
+                    updateSeatStatus(seatIds)
+                },
+                onFailure = { e ->
+                    Toast.makeText(this, "Lỗi: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            )
+        }
         db.collection("bank").document(paymentId)
-            .get()
-            .addOnSuccessListener { doc ->
-                if (doc != null && doc.exists()) {
-                    val bank_number = doc.getString("bank_number") ?: return@addOnSuccessListener
-                    val bank_name = doc.getString("bank_name") ?: return@addOnSuccessListener
-                    val bank_account = doc.getString("bank_account") ?: return@addOnSuccessListener
-                    val amount = doc.getLong("amount")?.toInt() ?: 0
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    Log.e("Firestore", "Error fetching QR code", e)
+                    return@addSnapshotListener
+                }
+                if (snapshot != null && snapshot.exists()) {
+                        val bank_number = snapshot.getString("bank_number") ?: ""
+                        val bank_name = snapshot.getString("bank_name") ?: ""
+                        val bank_account = snapshot.getString("bank_account") ?: ""
+                        val amount = snapshot.getLong("amount")?.toInt() ?: 0
 
-                    tvAmount.text = "Số tiền: %,dđ".format(amount)
-                    Glide.with(this)
-                        .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact2.jpg?amount=$amount&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account")
-                        .into(imgQRCode)
-                   }
+                        tvAmount.text = "Số tiền: %,dđ".format(amount)
+                        Glide.with(this)
+                            .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact2.jpg?amount=$amount&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account")
+                            .into(imgQRCode)
+                }
             }
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
@@ -237,6 +242,26 @@ class PaymentActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
+    private fun updateSeatStatus(seatIds: List<String>) {
+        val db = FirebaseFirestore.getInstance()
+        val batch = db.batch()
+        val seatRef = db.collection("showtimes").document(showTimeId).collection("timelines").document(timelineId).collection("seats")
+
+        seatIds.forEach { seatId ->
+            val docRef = seatRef.document(seatId)
+            batch.update(docRef, "status", "UNAVAILABLE")
+        }
+
+        batch.commit()
+            .addOnSuccessListener {
+                Log.d("SeatUpdate", "Ghế đã được cập nhật realtime")
+                Toast.makeText(this, "Ticket booking successful!", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Log.e("SeatUpdate", "Lỗi cập nhật trạng thái ghế", it)
+            }
+    }
+
     private fun getIntentExtra() {
        selectedDate = intent?.getStringExtra("selectedDate") ?: run {
             Toast.makeText(this, "Date is missing!", Toast.LENGTH_SHORT).show()

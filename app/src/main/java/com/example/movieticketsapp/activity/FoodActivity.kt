@@ -2,6 +2,7 @@ package com.example.movieticketsapp.activity
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,6 +23,7 @@ class FoodActivity : AppCompatActivity() {
     private lateinit var listFood: ArrayList<Food>
     private lateinit var imgList: ArrayList<SlideModel>
     private lateinit var db: FirebaseFirestore
+    private val cartItems = mutableListOf<Pair<Food, Int>>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initialize()
@@ -42,7 +44,13 @@ class FoodActivity : AppCompatActivity() {
         val layoutManager = GridLayoutManager(this, 2)
         binding.rcvFood.layoutManager = layoutManager
         adapter = ItemFoodAdapter(list) { selectedFood ->
-            val bottomSheet = FoodBottomSheetFragment(selectedFood)
+            val bottomSheet = FoodBottomSheetFragment(
+                selectedFood,
+                onAddToBasket = {quantity->
+                    updateCart(selectedFood, quantity)
+                    Log.d("AddToBasket", "Item added to basket: ${binding.lnCartSummaryBar.visibility}")
+                }
+            )
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)
         }
         binding.rcvFood.adapter = adapter
@@ -56,13 +64,13 @@ class FoodActivity : AppCompatActivity() {
                     return@addSnapshotListener
                 }
                 listFood.clear()
-                for (doc in snapshot!!) {
+                snapshot?.forEach { doc ->
                     val food = doc.toObject(Food::class.java)
+                    food.food_id = doc.id
                     listFood.add(food)
                 }
 
                 setAdapter(listFood)
-                adapter.notifyDataSetChanged()
             }
     }
     private fun fetchListImgFood() {
@@ -72,11 +80,9 @@ class FoodActivity : AppCompatActivity() {
                     Log.e("Firestore", "Error fetching image list", e)
                     return@addSnapshotListener
                 }
-
                 imgList.clear()
-                for (doc in snapshot!!) {
-                    val img = doc.getString("img")
-                    if (!img.isNullOrEmpty()) {
+                snapshot?.forEach { doc ->
+                    doc.getString("img")?.let { img ->
                         imgList.add(SlideModel(img, ScaleTypes.FIT))
                     }
                 }
@@ -92,12 +98,28 @@ class FoodActivity : AppCompatActivity() {
                     Log.e("Firestore", "Error fetching image list", e)
                     return@addSnapshotListener
                 }
-
-                imgList.clear()
                 for (doc in snapshot!!) {
                     address = doc.getString("address").orEmpty()
                 }
                 binding.edtReceived.setText(address)
             }
+    }
+    private fun updateCart(food: Food, quantity: Int) {
+
+        val existingIndex = cartItems.indexOfFirst { it.first.food_id == food.food_id }
+        if (existingIndex != -1) {
+            val existingItem = cartItems[existingIndex]
+            cartItems[existingIndex] = existingItem.copy(second = existingItem.second + quantity)
+        } else {
+            cartItems.add(Pair(food, quantity))
+        }
+
+
+        val totalQuantity = cartItems.sumOf { it.second }
+        val totalPrice = cartItems.sumOf { it.first.price * it.second }
+
+        binding.lnCartSummaryBar.visibility = View.VISIBLE
+        binding.tvCartItems.text = "$totalQuantity item"
+        binding.tvCartTotalPrice.text = "$${String.format("%.2f", totalPrice)}"
     }
 }

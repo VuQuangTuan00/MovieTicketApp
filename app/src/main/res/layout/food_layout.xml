@@ -110,8 +110,53 @@
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="15dp"
                 android:layout_marginTop="20dp"
-                />
+                >
 
+            </androidx.recyclerview.widget.RecyclerView>
+           <LinearLayout
+               android:id="@+id/lnCartSummaryBar"
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:layout_margin="16dp"
+               android:background="@drawable/bg_cart_bar"
+               android:gravity="center_vertical"
+               android:orientation="horizontal"
+               android:paddingHorizontal="16dp"
+               android:visibility="gone"
+               android:isScrollContainer="false"
+               >
+                   <ImageView
+                       android:layout_width="24dp"
+                       android:layout_height="24dp"
+                       android:src="@drawable/cart_ic"
+                       android:contentDescription="Cart Icon" />
+
+                   <TextView
+                       android:id="@+id/tvCartItems"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="10dp"
+                       android:layout_weight="1"
+                       android:text="@string/ba_cham"
+                       android:textColor="@android:color/white"
+                       android:textSize="16sp" />
+
+                   <TextView
+                       android:id="@+id/tvCartTotalPrice"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/_0"
+                       android:textColor="@android:color/white"
+                       android:textSize="16sp"
+                       android:textStyle="bold" />
+
+                   <ImageView
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:layout_marginStart="8dp"
+                       android:src="@drawable/baseline_arrow_forward_ios_16"
+                       android:contentDescription="@string/arrow" />
+               </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

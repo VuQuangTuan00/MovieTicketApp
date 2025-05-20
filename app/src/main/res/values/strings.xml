@@ -102,4 +102,6 @@
     <string name="food_order">Food Order</string>
     <string name="_1">1</string>
     <string name="oops_something_went_wrong">Oops something went wrong!!!</string>
+    <string name="ba_cham">...</string>
+    <string name="arrow">Arrow</string>
 </resources>
