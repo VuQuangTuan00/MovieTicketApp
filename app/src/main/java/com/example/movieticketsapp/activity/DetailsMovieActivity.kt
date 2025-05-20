@@ -9,13 +9,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.movieticketsapp.adapter.ItemCastsAdapter
 import com.example.movieticketsapp.adapter.ItemPhotosApdater
+import com.example.movieticketsapp.adapter.ReviewAdapter
 import com.example.movieticketsapp.databinding.DetailsMovieLayoutBinding
 import com.example.movieticketsapp.model.Cast
 import com.example.movieticketsapp.model.GenerMovie
+import com.example.movieticketsapp.model.Review
 import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.ktx.Firebase
 
 class DetailsMovieActivity : AppCompatActivity() {
@@ -28,12 +31,21 @@ class DetailsMovieActivity : AppCompatActivity() {
     private var movieListener: ListenerRegistration? = null
     private lateinit var movieId: String
 
+    private lateinit var reviewAdapter: ReviewAdapter
+    private val reviewList = mutableListOf<Review>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DetailsMovieLayoutBinding.inflate(layoutInflater)
         initialize()
         setEvent()
         setContentView(binding.root)
+
+        setAdapterMovie(emptyList())
+
+        binding.rcvReviews.layoutManager = LinearLayoutManager(this)
+        reviewAdapter = ReviewAdapter(reviewList)
+        binding.rcvReviews.adapter = reviewAdapter
     }
 
     private fun initialize() {
@@ -50,6 +62,10 @@ class DetailsMovieActivity : AppCompatActivity() {
 
     private fun setEvent() {
         binding.apply {
+            imgBack.setOnClickListener {
+                onBackPressed()
+            }
+
             btnBookNow.setOnClickListener {
                 navigateTo(SeatActivity::class.java, flag = false)
             }
@@ -112,7 +128,7 @@ class DetailsMovieActivity : AppCompatActivity() {
                             val listPhotos = data?.get("list_photos") as? List<String> ?: emptyList()
                             val castIds = data?.get("list_casts") as? List<String> ?: emptyList()
                             val genreIds = data?.get("gener_movie") as? List<String> ?: emptyList()
-                            val duration = data?.get("druation") as? Number ?: "Unknown duration"
+                            val duration = data?.get("duration") as? Number ?: "Unknown duration"
 
                             binding.tvTitleMovie.text = data?.get("title") as? String ?: "No title"
                             binding.tvDuration.text = "$duration minutes"
@@ -142,6 +158,34 @@ class DetailsMovieActivity : AppCompatActivity() {
                     }
             }
         }
+
+        loadReviews()
+    }
+
+    fun loadReviews() {
+        db.collection("movie")
+            .document(movieId)
+            .collection("ratings")
+            .orderBy("createdAt", Query.Direction.DESCENDING)
+            .limit(3)
+            .get()
+            .addOnSuccessListener { snaps ->
+                val items = snaps.documents.mapNotNull { doc ->
+                    val email   = doc.getString("userEmail") ?: return@mapNotNull null
+                    val score   = doc.getDouble("score")   ?: return@mapNotNull null
+                    val comment = doc.getString("comment") ?: ""
+                    val ts      = doc.getTimestamp("createdAt")?.toDate()
+                    Review(email, score, comment, ts)
+                }
+                reviewList.apply {
+                    clear()
+                    addAll(items)
+                }
+                reviewAdapter.notifyDataSetChanged()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Không tải được reviews.", Toast.LENGTH_SHORT).show()
+            }
     }
 
     override fun onStop() {

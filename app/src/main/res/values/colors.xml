@@ -2,6 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorAccent">#03DAC5</color>
     <color name="primaryBlack">#181A20</color>
     <color name="primaryOrange">#FE3323</color>">
     <color name="primaryLightGray">#D0CFD0</color>
@@ -10,4 +13,5 @@
     <color name="primaryWhite">#D8D8D9</color>
     <color name="primaryEnableGray">#49454F</color>
     <color name="primaryBoderBGGray">#212121</color>
+    <color name="primaryText">#333333</color>
 </resources>
