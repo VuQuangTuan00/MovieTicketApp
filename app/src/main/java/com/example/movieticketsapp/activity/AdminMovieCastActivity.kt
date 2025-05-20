@@ -53,6 +53,7 @@ class AdminMovieCastActivity : AppCompatActivity() {
 
     private fun loadCastMovies() {
         db.collection("cast")
+            .orderBy("name")
             .get()
             .addOnSuccessListener { result ->
                 castList.clear()

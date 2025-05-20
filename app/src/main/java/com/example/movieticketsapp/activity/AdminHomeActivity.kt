@@ -27,24 +27,32 @@ class AdminHomeActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.lnTheaterManagement.setOnClickListener {
-            val intent = Intent(this, AdminTheaterDashbroadActivity::class.java)
+        binding.lnFoodManager.setOnClickListener {
+            val intent = Intent(this, AdminFoodManagerActivity::class.java)
             startActivity(intent)
         }
 
-        /*
         binding.lnSaleStatistic.setOnClickListener {
-            val intent = Intent(this, SalesStatisticsActivity::class.java)
+            val intent = Intent(this, AdminStatisticsActivity::class.java)
             startActivity(intent)
         }
-         */
 
         binding.btnLogout.setOnClickListener {
+            // Đăng xuất khỏi Firebase
             FirebaseAuth.getInstance().signOut()
-            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+
+            // Xóa thông tin ghi nhớ đăng nhập
+            val sharedPref = getSharedPreferences("login_prefs", MODE_PRIVATE)
+            sharedPref.edit().clear().apply()
+
+            // Hiển thị thông báo
+            Toast.makeText(this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show()
+
+            // Điều hướng về màn hình đăng nhập và kết thúc Activity hiện tại
             val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
-            true
+            finish()
         }
     }
 }

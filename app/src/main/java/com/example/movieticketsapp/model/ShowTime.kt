@@ -1,12 +1,11 @@
 package com.example.movieticketsapp.model
 
-import java.time.LocalDateTime
+import java.util.Date
 
 data class ShowTime(
-    val movieId: String,
-    val cinemaId: String,
-    val roomId: String,
-    val startTime: LocalDateTime,
-    val price: Int,
-    val availableSeats: List<String>
+    val id: String = "",
+    val cinema_id: String = "",
+    val movie_id: String = "",
+    val price: Int = 0,
+    val start_time: Date = Date()
 )

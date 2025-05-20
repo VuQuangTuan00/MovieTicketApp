@@ -83,4 +83,12 @@
     <string name="content_update_profile">Update your personal information</string>
     <string name="update">Update</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Best_Movie">Best Movie</string>
+
+    <string-array name="statistic_filter_options">
+        <item>Thống kê theo ngày</item>
+        <item>Thống kê theo tháng</item>
+        <item>Thống kê theo phim</item>
+        <item>Người mua nhiều nhất</item>
+    </string-array>
 </resources>

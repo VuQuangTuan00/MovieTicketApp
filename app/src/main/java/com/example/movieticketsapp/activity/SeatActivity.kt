@@ -52,7 +52,7 @@ class SeatActivity : AppCompatActivity() {
         for (i in 0 until numSeat) {
             val seatcode = ""
             val seatStatus = if(i == 2 || i == 20) Seat.Status.UNAVAILABLE else Seat.Status.AVAILABLE
-            seatList.add(Seat("",seatcode,"","",seatStatus))
+            seatList.add(Seat("",seatcode,"",0, seatStatus))
         }
         val adapter = ItemSeatAdapter(seatList,object : ItemSeatAdapter.SelectedSeat{
             @SuppressLint("SetTextI18n")

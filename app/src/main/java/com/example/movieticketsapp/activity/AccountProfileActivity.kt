@@ -87,22 +87,29 @@ class AccountProfileActivity : AppCompatActivity() {
     private fun loadMenuItems() {
         // Mô phỏng dữ liệu menu
         menuList.apply {
-            add(MenuItem("Watchlist", R.drawable.ic_watchlist))
-            add(MenuItem("Payment Methods", R.drawable.ic_payment))
-            add(MenuItem("Personal Info", R.drawable.ic_info))
-            add(MenuItem("Change Password", R.drawable.ic_security))
-            add(MenuItem("Notification", R.drawable.ic_notification))
+            add(MenuItem("Change Info", R.drawable.ic_info))
+            add(MenuItem("Create NewPassword", R.drawable.ic_security))
         }
         menuAdapter.notifyDataSetChanged()
     }
 
     private fun setupLogoutButton() {
         binding.btnLogout.setOnClickListener {
+            // Đăng xuất khỏi Firebase
             FirebaseAuth.getInstance().signOut()
-            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+
+            // Xóa thông tin ghi nhớ đăng nhập
+            val sharedPref = getSharedPreferences("login_prefs", MODE_PRIVATE)
+            sharedPref.edit().clear().apply()
+
+            // Hiển thị thông báo
+            Toast.makeText(this, "Đăng xuất thành công", Toast.LENGTH_SHORT).show()
+
+            // Điều hướng về màn hình đăng nhập và kết thúc Activity hiện tại
             val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
-            true
+            finish()
         }
     }
 }

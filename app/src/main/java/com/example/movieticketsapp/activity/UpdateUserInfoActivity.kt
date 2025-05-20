@@ -3,6 +3,7 @@ package com.example.movieticketsapp.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -19,12 +20,16 @@ class UpdateUserInfoActivity : AppCompatActivity() {
     private val storage = FirebaseStorage.getInstance()
     private var avatarUri: Uri? = null
 
+    companion object {
+        private const val PICK_IMAGE_REQUEST = 1
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = UpdateUserInfoLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //loadUserInfo()
+        loadUserInfo()
 
         binding.imgBack.setOnClickListener {
             onBackPressed()
@@ -39,34 +44,32 @@ class UpdateUserInfoActivity : AppCompatActivity() {
         }
     }
 
-//    private fun loadUserInfo() {
-//        val user = FirebaseAuth.getInstance().currentUser
-//        user?.let {
-//            firestore.collection("users").document(userId).get()
-//                .addOnSuccessListener { document ->
-//                    if (document.exists()) {
-//                        val avatar = document.getString("avatar")
-//                        val name = document.getString("name")
-//                        val phone = document.getString("phone")
-//                        val dob = document.getString("dob")
-//
-//                        avatar?.let { url ->
-//                            Glide.with(this)
-//                                .load(url)
-//                                .circleCrop()
-//                                .into(binding.imgAvatar)
-//                        }
-//
-//                        binding.edtFullname.setText(name)
-//                        binding.edtPhoneNumber.setText(phone)
-//                        binding.edtDateOfBirth.setText(dob)
-//                    }
-//                }
-//                .addOnFailureListener { e ->
-//                    Toast.makeText(this, "Error loading user info", Toast.LENGTH_SHORT).show()
-//                }
-//        }
-//    }
+    private fun loadUserInfo() {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        firestore.collection("users").document(userId).get()
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    val avatar = document.getString("avatar")
+                    val name = document.getString("name")
+                    val phone = document.getString("phone")
+                    val dob = document.getString("dob")
+
+                    avatar?.let { url ->
+                        Glide.with(this)
+                            .load(url)
+                            .circleCrop()
+                            .into(binding.imgAvatar)
+                    }
+
+                    binding.edtFullname.setText(name)
+                    binding.edtPhoneNumber.setText(phone)
+                    binding.edtDateOfBirth.setText(dob)
+                }
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Error loading user info", Toast.LENGTH_SHORT).show()
+            }
+    }
 
     private fun openImageChooser() {
         val intent = Intent(Intent.ACTION_GET_CONTENT).apply {
@@ -94,6 +97,7 @@ class UpdateUserInfoActivity : AppCompatActivity() {
         }
 
         val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        showLoading(true)
 
         firestore.collection("users").document(userId)
             .update("name", fullname, "phone", phoneNumber, "dob", dateOfBirth)
@@ -101,40 +105,46 @@ class UpdateUserInfoActivity : AppCompatActivity() {
                 if (avatarUri != null) {
                     uploadAvatarToStorage(userId)
                 } else {
+                    showLoading(false)
                     Toast.makeText(this, "User info updated successfully!", Toast.LENGTH_SHORT).show()
                     onBackPressed()
                 }
             }
             .addOnFailureListener {
+                showLoading(false)
                 Toast.makeText(this, "Error updating user info", Toast.LENGTH_SHORT).show()
             }
     }
 
-    // Hàm tải avatar lên Firebase Storage
     private fun uploadAvatarToStorage(userId: String) {
         val avatarRef: StorageReference = storage.reference.child("avatars/$userId.jpg")
 
-        avatarRef.putFile(avatarUri!!)
-            .addOnSuccessListener {
-                avatarRef.downloadUrl.addOnSuccessListener { uri ->
-                    // Cập nhật URL của ảnh avatar vào Firestore
-                    firestore.collection("users").document(userId)
-                        .update("avatar", uri.toString())
-                        .addOnSuccessListener {
-                            Toast.makeText(this, "User info updated successfully!", Toast.LENGTH_SHORT).show()
-                            onBackPressed()
-                        }
-                        .addOnFailureListener {
-                            Toast.makeText(this, "Error updating avatar", Toast.LENGTH_SHORT).show()
-                        }
+        avatarUri?.let { uri ->
+            avatarRef.putFile(uri)
+                .addOnSuccessListener {
+                    avatarRef.downloadUrl.addOnSuccessListener { downloadUri ->
+                        firestore.collection("users").document(userId)
+                            .update("avatar", downloadUri.toString())
+                            .addOnSuccessListener {
+                                showLoading(false)
+                                Toast.makeText(this, "User info updated successfully!", Toast.LENGTH_SHORT).show()
+                                onBackPressed()
+                            }
+                            .addOnFailureListener {
+                                showLoading(false)
+                                Toast.makeText(this, "Error updating avatar URL", Toast.LENGTH_SHORT).show()
+                            }
+                    }
                 }
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, "Error uploading avatar", Toast.LENGTH_SHORT).show()
-            }
+                .addOnFailureListener {
+                    showLoading(false)
+                    Toast.makeText(this, "Error uploading avatar", Toast.LENGTH_SHORT).show()
+                }
+        }
     }
 
-    companion object {
-        private const val PICK_IMAGE_REQUEST = 1
+    private fun showLoading(show: Boolean) {
+        binding.progressBar.visibility = if (show) View.VISIBLE else View.GONE
+        binding.btnUpdate.isEnabled = !show
     }
 }

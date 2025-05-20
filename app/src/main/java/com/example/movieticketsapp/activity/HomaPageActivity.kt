@@ -30,6 +30,9 @@ class HomaPageActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private var movieListener: ListenerRegistration? = null
 
+    private lateinit var adapterBestMovie: ItemMovieAdapter
+    private lateinit var listBestMovie: ArrayList<Movie>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = HomaPageLayoutBinding.inflate(layoutInflater)
@@ -38,7 +41,9 @@ class HomaPageActivity : AppCompatActivity() {
         initialize()
         setEvent()
         setAdapterMovie()
+        setAdapterBestMovie()
         listenToMovieCollectionRealtime()
+        listenToBestRatedMovies()
         listenToImgMovieCollectionRealtime()
         getUserInfo()
 
@@ -48,6 +53,7 @@ class HomaPageActivity : AppCompatActivity() {
     private fun initialize() {
         listMovie = ArrayList()
         imgList = ArrayList()
+        listBestMovie = ArrayList()
         db = FirebaseFirestore.getInstance()
         auth = FirebaseAuth.getInstance()
     }
@@ -69,6 +75,16 @@ class HomaPageActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.rcvMovie.adapter = adapterMovie
+    }
+    private fun setAdapterBestMovie() {
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.rcv.layoutManager = layoutManager
+        adapterBestMovie = ItemMovieAdapter(listBestMovie) { event ->
+            val intent = Intent(this, DetailsMovieActivity::class.java)
+            intent.putExtra("movie_id", event.id)
+            startActivity(intent)
+        }
+        binding.rcv.adapter = adapterBestMovie
     }
 
     private fun listenToMovieCollectionRealtime() {
@@ -105,6 +121,44 @@ class HomaPageActivity : AppCompatActivity() {
                     }
                     adapterMovie.notifyDataSetChanged()
                 }
+            }
+    }
+    private fun listenToBestRatedMovies() {
+        db.collection("movie")
+            .get()
+            .addOnSuccessListener { movieDocs ->
+                listBestMovie.clear()
+
+                for (movieDoc in movieDocs) {
+                    val movieId = movieDoc.id
+                    val data = movieDoc.data
+                    val imgMovie = data["img_movie"] as? String
+                    val title = data["title"] as? String
+
+                    if (imgMovie.isNullOrEmpty() || title.isNullOrEmpty()) continue
+
+                    db.collection("movie")
+                        .document(movieId)
+                        .collection("ratings")
+                        .get()
+                        .addOnSuccessListener { ratingDocs ->
+                            val scores = ratingDocs.mapNotNull { it.getDouble("score") }
+                            val avg = if (scores.isNotEmpty()) scores.average() else 0.0
+
+                            if (avg > 8.0) {
+                                listBestMovie.add(
+                                    Movie(
+                                        movieId, title, "", 0, listOf(),
+                                        imgMovie, listOf(), "", avg, ""
+                                    )
+                                )
+                                adapterBestMovie.notifyDataSetChanged()
+                            }
+                        }
+                }
+            }
+            .addOnFailureListener {
+                Log.e("BestMovie", "Error loading best-rated movies", it)
             }
     }
 
@@ -167,12 +221,13 @@ class HomaPageActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-                /*
-                R.id.nav_food_order -> {
-                    val intent = Intent(this, FoodOrderActivity::class.java)
-                    startActivity(intent)
+
+                R.id.food_order -> {
+                    // Mở màn hình thực đơn
+                    startActivity(Intent(this, FoodMenuActivity::class.java))
                     true
                 }
+                /*
                 R.id.nav_ticket -> {
                     val intent = Intent(this, TicketActivity::class.java)
                     startActivity(intent)

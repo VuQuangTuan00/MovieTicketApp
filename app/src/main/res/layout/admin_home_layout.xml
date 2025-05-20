@@ -34,7 +34,7 @@
                 android:id="@+id/imgMovieManager"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_not_image"
+                android:src="@drawable/icon_movie_admin"
                 android:contentDescription="Button Icon"
                 android:layout_gravity="start"/>
 
@@ -49,7 +49,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lnTheaterManagement"
+            android:id="@+id/lnFoodManager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -63,18 +63,18 @@
             android:elevation="2dp">
 
             <ImageView
-                android:id="@+id/imgTheaterManagement"
+                android:id="@+id/imgFoodManager"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_not_image"
+                android:src="@drawable/ic_food_manager"
                 android:contentDescription="Button Icon"
                 android:layout_gravity="start"/>
 
             <TextView
-                android:id="@+id/tvTheaterManagement"
+                android:id="@+id/tvFoodManager"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Theater Management"
+                android:text="Food Manager"
                 android:textColor="@color/primaryText"
                 android:textSize="23sp"
                 android:layout_marginStart="12dp"/>
@@ -98,7 +98,7 @@
                 android:id="@+id/imgSaleStatistic"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_not_image"
+                android:src="@drawable/icon_statistic_admin"
                 android:contentDescription="Button Icon"
                 android:layout_gravity="start"/>
 

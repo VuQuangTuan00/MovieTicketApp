@@ -67,9 +67,12 @@ dependencies {
     implementation (libs.glide)
     implementation(libs.firebase.storage.ktx)
     implementation(libs.androidx.cardview)
+    implementation(libs.androidx.material3.android)
     annotationProcessor (libs.compiler)
 
     implementation(libs.compressor)
+
+    implementation(libs.mpandroidchart)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

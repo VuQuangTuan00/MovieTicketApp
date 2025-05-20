@@ -75,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Rating: 4.5/5"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_marginBottom="5dp" />
 
             <TextView
@@ -83,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Synopsis: This is a brief description of the movie."
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:layout_marginBottom="5dp" />
 
             <androidx.recyclerview.widget.RecyclerView

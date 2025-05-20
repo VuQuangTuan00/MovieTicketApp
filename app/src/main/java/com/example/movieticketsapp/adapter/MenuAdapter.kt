@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieticketsapp.activity.AdminHomeActivity
+import com.example.movieticketsapp.activity.CreateNewPassActivity
+import com.example.movieticketsapp.activity.UpdateUserInfoActivity
 import com.example.movieticketsapp.databinding.ItemMenuBinding
 import com.example.movieticketsapp.model.MenuItem
 
@@ -26,6 +28,16 @@ class MenuAdapter(private val menuItems: List<MenuItem>) : RecyclerView.Adapter<
             if (menuItem.name == "Admin Panel") {
                 val context = holder.itemView.context
                 val intent = Intent(context, AdminHomeActivity::class.java)
+                context.startActivity(intent)
+            }
+            else if (menuItem.name == "Create NewPassword") {
+                val context = holder.itemView.context
+                val intent = Intent(context, CreateNewPassActivity::class.java)
+                context.startActivity(intent)
+            }
+            else if (menuItem.name == "Change Info") {
+                val context = holder.itemView.context
+                val intent = Intent(context, UpdateUserInfoActivity::class.java)
                 context.startActivity(intent)
             } else {
                 // Handle clicks for other menu items

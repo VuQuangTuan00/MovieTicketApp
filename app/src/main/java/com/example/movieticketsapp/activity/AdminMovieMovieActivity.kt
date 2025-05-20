@@ -2,6 +2,7 @@ package com.example.movieticketsapp.activity
 
 import android.app.AlertDialog
 import android.content.ClipData.Item
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -41,6 +42,12 @@ class AdminMovieMovieActivity : AppCompatActivity() {
 
         adapter = ItemMovieAdminAdapter(
             movieList,
+            onItemClick = { movie ->
+                // Chuyển sang Activity quản lý showtime của movie
+                val intent = Intent(this, AdminShowtimesActivity::class.java)
+                intent.putExtra("movieId", movie.id)
+                startActivity(intent)
+            },
             onEdit = { movie -> openAddEditMovieFragment(true, movie.id) },
             onDelete = { movie -> confirmDelete(movie) }
         )

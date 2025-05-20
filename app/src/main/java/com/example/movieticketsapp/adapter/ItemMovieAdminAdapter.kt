@@ -11,6 +11,7 @@ import com.example.movieticketsapp.model.MovieAdmin
 
 class ItemMovieAdminAdapter(
     private var listMovie: List<MovieAdmin>,
+    private val onItemClick: (MovieAdmin) -> Unit,
     private val onEdit: (MovieAdmin) -> Unit,
     private val onDelete: (MovieAdmin) -> Unit
 ) : RecyclerView.Adapter<ItemMovieAdminAdapter.MyViewHolder>() {
@@ -69,6 +70,10 @@ class ItemMovieAdminAdapter(
         val imageAdapter = ItemPhotosApdater(movie.list_photos)
         holder.binding.recyclerViewPhotos.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         holder.binding.recyclerViewPhotos.adapter = imageAdapter
+
+        holder.binding.root.setOnClickListener {
+            onItemClick(movie)
+        }
 
         holder.binding.btnEditMovie.setOnClickListener { onEdit(movie) }
         holder.binding.btnDeleteMovie.setOnClickListener { onDelete(movie) }
