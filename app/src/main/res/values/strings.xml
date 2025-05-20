@@ -98,4 +98,8 @@
     <string name="food_delivery_date">Food delivery date</string>
     <string name="reduce">-</string>
     <string name="increase">+</string>
+    <string name="received_at">Received at</string>
+    <string name="food_order">Food Order</string>
+    <string name="_1">1</string>
+    <string name="oops_something_went_wrong">Oops something went wrong!!!</string>
 </resources>

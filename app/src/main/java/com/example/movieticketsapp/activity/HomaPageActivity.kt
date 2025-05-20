@@ -63,7 +63,11 @@ class HomaPageActivity : AppCompatActivity() {
                 when (menuItem.itemId) {
                     R.id.ticket -> {
                       navigateTo(ListTicketActivity::class.java, flag = false)
-                        true  // đã xử lý, trả về true
+                        true
+                    }
+                    R.id.food_order ->{
+                        navigateTo(FoodActivity::class.java, flag = false)
+                        true
                     }
                     else -> false
                 }

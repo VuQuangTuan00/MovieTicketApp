@@ -1,5 +1,6 @@
 package com.example.movieticketsapp.adapter
 
+import TicketMovie
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +9,6 @@ import com.example.movieticketsapp.databinding.ItemCastLayoutBinding
 import com.example.movieticketsapp.databinding.ItemTicketLayoutBinding
 import com.example.movieticketsapp.model.Cast
 import com.example.movieticketsapp.model.Movie
-import com.example.movieticketsapp.model.TicketMovie
 
 class ItemTicketAdapter(private val listCasts: List<TicketMovie>,
                         private var id:String,

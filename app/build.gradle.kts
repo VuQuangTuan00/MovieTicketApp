@@ -46,7 +46,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
+    implementation (libs.androidx.recyclerview)
     // okhttp
     implementation (libs.okhttp)
     implementation (libs.logging.interceptor)

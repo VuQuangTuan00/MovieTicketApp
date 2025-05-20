@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieticketsapp.databinding.ItemFoodLayoutBinding
 import com.example.movieticketsapp.model.Food
-import java.util.zip.Inflater
 
 class ItemFoodAdapter(
     private val foodList: List<Food>,
@@ -15,8 +14,11 @@ class ItemFoodAdapter(
     inner class ViewHolder(val binding: ItemFoodLayoutBinding) : RecyclerView.ViewHolder(binding.root){
         init {
             binding.root.setOnClickListener {
-                val food = foodList[adapterPosition]
-                onItemClick.invoke(food)
+                val position = bindingAdapterPosition
+                if (position != RecyclerView.NO_POSITION && position < foodList.size) {
+                    val food = foodList[position]
+                    onItemClick.invoke(food)
+                }
             }
         }
     }
@@ -30,8 +32,8 @@ class ItemFoodAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val food = foodList[position]
         holder.binding.tvTitle.text = food.food_name
-        holder.binding.tvDescription.text = food.describe
-        holder.binding.tvPrice.text = food.price.toString()
+        holder.binding.tvDescription.text = food.description
+        holder.binding.tvPrice.text = "$${food.price}"
         Glide.with(holder.itemView.context)
             .load(food.img_food)
             .into( holder.binding.imgFood)

@@ -11,7 +11,7 @@
             </handle>
           </Target>
         </DropdownSelection>
-        <DialogSelection />qa
+        <DialogSelection />
       </SelectionState>
     </selectionStates>
   </component>

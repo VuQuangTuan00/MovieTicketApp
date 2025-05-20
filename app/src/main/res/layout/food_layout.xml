@@ -23,8 +23,10 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="48dp">
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                >
 
                 <ImageView
                     android:id="@+id/imgBack"
@@ -40,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
-                    android:text="@string/choose_seat_s"
+                    android:text="@string/food_order"
                     android:textColor="@color/white"
                     android:textSize="19sp"
                     android:textStyle="bold"
@@ -50,36 +52,65 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgMap"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_marginHorizontal="20dp"
-                android:contentDescription="@string/movie"
-                android:src="@drawable/dia_dao1"
-                app:shapeAppearanceOverlay="@style/RoundedMap" />
-
-            <com.example.movieticketsapp.custom_view.CustomCalendarEditText
-                android:id="@+id/edtDateOfBirth"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/style_edittext"
-                android:drawableRight="@drawable/baseline_calendar_month_24"
-                android:drawablePadding="20dp"
-                android:ems="10"
-                android:layout_marginHorizontal="20dp"
-                android:hint="@string/food_delivery_date"
-                android:inputType="datetime"
-                android:padding="15dp"
-                android:textColorHint="#9E9F9F"
-               />
+                android:layout_marginHorizontal="15dp"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="10dp"
+                android:background="@drawable/bg_boder"
+                android:orientation="vertical"
+                >
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/imgSlider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    app:iss_auto_cycle="true"
+                    app:iss_corner_radius="20"
+                    app:iss_delay="3000"
+                    app:iss_period="3000"
+                    app:iss_text_align="CENTER"
+                     />
+                <EditText
+                    android:id="@+id/edtReceived"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/style_text_food"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:padding="15dp"
+                    android:textColorHint="#9E9F9F"
+                    android:inputType="text"
+                    android:hint="@string/received_at"
+                    />
+
+                <com.example.movieticketsapp.custom_view.CustomCalendarEditText
+                    android:id="@+id/edtFoodDeliveryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/style_text_food"
+
+                    android:drawableRight="@drawable/calender_ic"
+                    android:drawablePadding="20dp"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:hint="@string/food_delivery_date"
+                    android:inputType="datetime"
+                    android:padding="15dp"
+                    android:textColorHint="#9E9F9F" />
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcvFood"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp" />
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                />
 
         </LinearLayout>
     </ScrollView>
