@@ -42,6 +42,7 @@
                 android:gravity="center"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBookNow"
                 android:layout_width="100dp"
                 android:background="@drawable/border_btn_book_now"
                 android:layout_height="40dp"

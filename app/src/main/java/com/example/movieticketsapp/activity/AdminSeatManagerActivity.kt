@@ -86,13 +86,13 @@ class AdminSeatManagerActivity : AppCompatActivity() {
                     val row = doc.getString("row") ?: ""
                     val col = doc.getLong("column")?.toInt() ?: 0
                     val statusStr = doc.getString("status") ?: "AVAILABLE"
-                    val status = try {
-                        Seat.Status.valueOf(statusStr)
-                    } catch (e: Exception) {
-                        Seat.Status.AVAILABLE
-                    }
+//                    val status = try {
+//                        Seat.Status.valueOf(statusStr)
+//                    } catch (e: Exception) {
+//                        Seat.Status.AVAILABLE
+//                    }
 
-                    val seat = Seat(id, seatCode, row, col, status)
+                    val seat = Seat(id, seatCode, row, col, statusStr)
                     seatList.add(seat)
                 }
 
@@ -104,9 +104,10 @@ class AdminSeatManagerActivity : AppCompatActivity() {
 
     private fun toggleSeatStatus(seat: Seat) {
         val newStatus = when (seat.status) {
-            Seat.Status.AVAILABLE -> Seat.Status.UNAVAILABLE
-            Seat.Status.UNAVAILABLE -> Seat.Status.SELECTED
-            Seat.Status.SELECTED -> Seat.Status.AVAILABLE
+           "AVAILABLE"-> Seat.Status.UNAVAILABLE
+           "UNAVAILABLE" -> Seat.Status.SELECTED
+           "SELECTED" -> Seat.Status.AVAILABLE
+            else -> {Log.d("AdminSeatManager", "Unknown status: ${seat.status}")}
         }
 
         val seatRef = db.collection("showtimes")
@@ -116,7 +117,7 @@ class AdminSeatManagerActivity : AppCompatActivity() {
             .collection("seats")
             .document(seat.id)
 
-        seatRef.update("status", newStatus.name)
+        seatRef.update("status", newStatus)
             .addOnSuccessListener {
                 Toast.makeText(this, "Ghế ${seat.seatCode} được cập nhật thành $newStatus", Toast.LENGTH_SHORT).show()
             }

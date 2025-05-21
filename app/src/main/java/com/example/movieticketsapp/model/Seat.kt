@@ -5,7 +5,7 @@ data class Seat(
     val seatCode: String = "",
     val row: String = "",
     val col: Int = 0,
-    var status: Status = Status.AVAILABLE
+    var status: String = ""
 ) {
     enum class Status {
         AVAILABLE,

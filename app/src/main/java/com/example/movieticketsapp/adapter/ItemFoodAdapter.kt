@@ -31,8 +31,7 @@ class ItemFoodAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val food = foodList[position]
-        holder.binding.tvTitle.text = food.food_name
-        holder.binding.tvDescription.text = food.description
+        holder.binding.tvFoodName.text = food.food_name
         holder.binding.tvPrice.text = "$${food.price}"
         Glide.with(holder.itemView.context)
             .load(food.img_food)

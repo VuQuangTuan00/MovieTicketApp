@@ -33,11 +33,11 @@ class FoodAdapter(
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val food = listFood[position]
-        holder.tvName.text   = food.foodName
+        holder.tvName.text   = food.food_name
         holder.tvPrice.text  = "${food.price} đ"
         holder.tvStatus.text = food.status
         Glide.with(holder.itemView)
-            .load(food.imgFood)
+            .load(food.img_food)
             .into(holder.imgFood)
 
         holder.itemView.setOnClickListener { onItemClick(food) }

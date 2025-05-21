@@ -116,6 +116,10 @@
             android:name=".activity.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.FoodMenuActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".activity.SaverActivity"
             android:exported="true">
             <intent-filter android:autoVerify="true">

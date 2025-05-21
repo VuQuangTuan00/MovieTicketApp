@@ -223,17 +223,15 @@ class HomaPageActivity : AppCompatActivity() {
                 }
 
                 R.id.food_order -> {
-                    // Mở màn hình thực đơn
-                    startActivity(Intent(this, FoodMenuActivity::class.java))
+                    startActivity(Intent(this, FoodActivity::class.java))
                     true
                 }
-                /*
-                R.id.nav_ticket -> {
-                    val intent = Intent(this, TicketActivity::class.java)
+
+                R.id.ticket -> {
+                    val intent = Intent(this, ListTicketActivity::class.java)
                     startActivity(intent)
                     true
                 }
-                 */
                 R.id.account -> {
                     val intent = Intent(this, AccountProfileActivity::class.java)
                     startActivity(intent)

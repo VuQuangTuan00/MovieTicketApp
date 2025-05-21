@@ -31,7 +31,7 @@ class ItemSeatAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val seat = seatData[position]
-        holder.binding.seat.text = seat.code
+        holder.binding.seat.text = seat.seatCode
 
         when (seat.status) {
             "AVAILABLE" -> {
@@ -52,12 +52,12 @@ class ItemSeatAdapter(
             when (seat.status) {
                 "AVAILABLE" -> {
                     seat.status = "SELECTED"
-                    selectedSeatNames.add(seat.code)
+                    selectedSeatNames.add(seat.seatCode)
                     notifyItemChanged(position)
                 }
                 "SELECTED" -> {
                     seat.status = "AVAILABLE"
-                    selectedSeatNames.remove(seat.code)
+                    selectedSeatNames.remove(seat.seatCode)
                     notifyItemChanged(position)
                 }
                 else -> {}

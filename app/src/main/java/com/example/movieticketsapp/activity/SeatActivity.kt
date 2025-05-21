@@ -59,15 +59,16 @@ class SeatActivity : AppCompatActivity() {
                 val seatList = mutableListOf<Seat>()
                 for (doc in seatSnapshots) {
                     val seat = Seat(
-                        code = doc.getString("code") ?: "",
-                        status = doc.getString("status") ?: "AVAILABLE",
+                        id = doc.id,
+                        seatCode = doc.getString("code") ?: "",
                         row = doc.getString("row") ?: "",
-                        column = doc.getLong("column")?.toInt() ?: 0
+                        col = doc.getLong("column")?.toInt() ?: 0,
+                        status = doc.getString("status") ?: "AVAILABLE",
                     )
                     seatList.add(seat)
                 }
 
-                val sortedSeats = seatList.sortedWith(compareBy({ it.row }, { it.column }))
+                val sortedSeats = seatList.sortedWith(compareBy({ it.row }, { it.col }))
 
                 binding.rcvSeat.layoutManager = GridLayoutManager(this, 8)
                 binding.rcvSeat.adapter = ItemSeatAdapter(sortedSeats, object : ItemSeatAdapter.SelectedSeat {
@@ -84,7 +85,7 @@ class SeatActivity : AppCompatActivity() {
     }
 
     private fun setEvent() {
-        seat = Seat("", "", 0, "")
+        seat = Seat("", "", "", 0,"")
         binding.imgBack.setOnClickListener {
             finish()
         }

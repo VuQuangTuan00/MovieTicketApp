@@ -50,7 +50,7 @@ class FoodMenuActivity : AppCompatActivity() {
         binding.rcvFood.layoutManager = GridLayoutManager(this, 2)
         adapter = FoodAdapter(listFood) { food ->
             // Xử lý khi click vào 1 món, ví dụ show Toast
-            Toast.makeText(this, "Bạn chọn: ${food.foodName}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Bạn chọn: ${food.food_name}", Toast.LENGTH_SHORT).show()
         }
         binding.rcvFood.adapter = adapter
         binding.rcvFood.isNestedScrollingEnabled = false
@@ -90,11 +90,11 @@ class FoodMenuActivity : AppCompatActivity() {
                         if (name.isNotEmpty()) {
                             listFood.add(
                                 Food(
-                                    id          = doc.id,
-                                    foodName    = name,
-                                    description = doc.getString("description").orEmpty(),
-                                    imgFood     = imgFood,
+                                    food_id          = doc.id,
+                                    img_food     = imgFood,
+                                    food_name    = name,
                                     price       = doc.getDouble("price") ?: 0.0,
+                                    description = doc.getString("description").orEmpty(),
                                     status      = doc.getString("status").orEmpty()
                                 )
                             )

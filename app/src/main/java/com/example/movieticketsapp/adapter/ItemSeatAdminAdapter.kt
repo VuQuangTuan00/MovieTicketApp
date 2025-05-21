@@ -1,5 +1,6 @@
 package com.example.movieticketsapp.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,9 +37,10 @@ class ItemSeatAdminAdapter(
             tvSeatCode.text = seat.seatCode
 
             val backgroundRes = when (seat.status) {
-                Seat.Status.AVAILABLE -> R.drawable.ic_seat_available
-                Seat.Status.SELECTED -> R.drawable.ic_seat_selected
-                Seat.Status.UNAVAILABLE -> R.drawable.ic_seat_unavailable
+                "AVAILABLE" -> R.drawable.ic_seat_available
+                 "SELECTED" -> R.drawable.ic_seat_selected
+                 "UNAVAILABLE" -> R.drawable.ic_seat_unavailable
+                else->{Log.d("ItemSeatAdminAdapter", "Unknown seat status: ${seat.status}")}
             }
             tvSeatCode.setBackgroundResource(backgroundRes)
         }
