@@ -1,50 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/white"
-    app:cardCornerRadius="10dp"
-    android:layout_marginBottom="20dp"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:orientation="vertical">
+        android:padding="8dp"
+        android:background="@color/primaryBox">
+
         <ImageView
             android:id="@+id/imgFood"
-            android:layout_width="145dp"
-            android:layout_height="145dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/dia_dao1"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"/>
+
         <TextView
-            android:id="@+id/tvTitle"
+            android:id="@+id/tvFoodName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Jumbo Popcorn"
-            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
             android:textStyle="bold"
-            />
-        <TextView
-            android:id="@+id/tvDescription"
-            android:textColor="@color/primaryBlack"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Jumbo Popcorn"
-            android:textSize="12sp"
-            />
+            android:textColor="@color/white"/>
+
         <TextView
             android:id="@+id/tvPrice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="$99"
-            android:textSize="17sp"
-            android:layout_marginVertical="10dp"
-            android:textStyle="bold"
-            />
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            android:textColor="@color/primaryOrange"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dp"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

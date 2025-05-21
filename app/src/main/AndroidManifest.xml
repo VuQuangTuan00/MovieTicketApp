@@ -20,6 +20,42 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieTicketsApp">
         <activity
+            android:name=".activity.UpdateUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminHomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AdminMovieDashboardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AdminMovieMovieActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AdminMovieGenreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AdminMovieCastActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.AdminShowtimesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminTimelineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminSeatManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminFoodManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AdminStatisticsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AccountProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.BillDetailsActivity"
             android:exported="false" />
         <activity
@@ -39,9 +75,6 @@
             android:exported="false" />
         <activity
             android:name=".activity.ChooseDateAndTimeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.SaverActivity"
             android:exported="false" />
         <activity
             android:name=".activity.DetailsMovieActivity"
@@ -74,10 +107,16 @@
             android:name=".activity.OTPCodeActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.GetStartedActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.SignInActivity"
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SaverActivity"
             android:exported="true">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />

@@ -49,10 +49,10 @@
     <string name="resetpass">Reset Password</string>
     <string name="reset_password_success">Reset password success</string>
     <string name="successful">Successful!</string>
-    <string name="please_wait">Please wait..</string>
+    <string name="please_wait">Please wait...</string>
     <string name="you_will_be_directed_to_the_homepage">You will be directed to the homepage.</string>
     <string name="sign_in_successful">Sign in successful!</string>
-    <string name="name_user">Vu Quang Tuan</string>
+    <string name="name_user">Loading...</string>
     <string name="img_back_ground">Img Back Ground</string>
     <string name="now_playing">Now Playing</string>
     <string name="view_all">view all</string>
@@ -111,4 +111,15 @@
     <string name="poster">Poster</string>
     <string name="scan_vietqr_code_to_pay">Scan VietQR code to pay</string>
     <string name="movie_detail">Movie Detail</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="content_update_profile">Update your personal information</string>
+    <string name="update">Update</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Best_Movie">Best Movie</string>
+    <string-array name="statistic_filter_options">
+        <item>Thống kê theo ngày</item>
+        <item>Thống kê theo tháng</item>
+        <item>Thống kê theo phim</item>
+        <item>Người mua nhiều nhất</item>
+    </string-array>
 </resources>

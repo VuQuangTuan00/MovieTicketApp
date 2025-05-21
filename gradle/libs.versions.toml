@@ -1,5 +1,5 @@
 [versions]
-agp = "8.8.0"
+agp = "8.6.0"
 autoimageslider = "1.4.0"
 compiler = "4.15.1"
 dotsindicator = "4.3"
@@ -9,7 +9,6 @@ flexbox = "3.0.0"
 flexboxVersion = "2.0.1"
 glide = "4.15.1"
 imageslideshow = "0.1.2"
-kotlin = "1.9.24"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -30,6 +29,9 @@ firebaseFunctions = "21.2.1"
 recyclerview = "1.4.0"
 viewpager2 = "1.1.0"
 firebaseStorageKtx = "21.0.1"
+compressor = "3.0.1"
+cardview = "1.0.0"
+material3Android = "1.3.2"
 
 [libraries]
 android-flexbox = { module = "implementation 'com.google.android:flexbox", version.ref = "flexboxVersion" }
@@ -61,6 +63,12 @@ play-services-base = { module = "com.google.android.gms:play-services-base", ver
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 firebase-functions = { group = "com.google.firebase", name = "firebase-functions", version.ref = "firebaseFunctions" }
 firebase-storage-ktx = { group = "com.google.firebase", name = "firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
+
+mpandroidchart = { group = "com.github.PhilJay", name = "MPAndroidChart", version = "3.1.0" }
+
+compressor = { group = "id.zelory", name = "compressor", version.ref = "compressor" }
+androidx-cardview = { group = "androidx.cardview", name = "cardview", version.ref = "cardview" }
+androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

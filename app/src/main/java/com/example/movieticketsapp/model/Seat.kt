@@ -1,8 +1,13 @@
 package com.example.movieticketsapp.model
 
-data class Seat(var code:String, val row:String, val column:Int, var status:String){
-
-    enum class Status{
+data class Seat(
+    val id: String = "",
+    val seatCode: String = "",
+    val row: String = "",
+    val col: Int = 0,
+    var status: Status = Status.AVAILABLE
+) {
+    enum class Status {
         AVAILABLE,
         SELECTED,
         UNAVAILABLE
