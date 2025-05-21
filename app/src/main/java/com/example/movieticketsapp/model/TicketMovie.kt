@@ -1,7 +1,8 @@
 data class TicketMovie(
-    val userId: String = "",
+    var id: String = "",
     var movieId: String = "",
     var titleMovie: String = "",
+    var imgMovie: String = "",
     var seatIds: ArrayList<String> = ArrayList(),
     var totalAmounts: Double = 0.0,
     var date: String = "",

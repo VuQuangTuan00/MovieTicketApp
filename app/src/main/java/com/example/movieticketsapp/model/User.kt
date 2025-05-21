@@ -1,16 +1,13 @@
 package com.example.movieticketsapp.model
 
-import TicketMovie
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 
 data class User(
-    val name: String,
-    val phone:String,
+    var name: String,
+    var phone:String,
     val dob:String,
     val avatar:String,
-    val email: String,
+    var email: String,
     val role: String,
 )
-{
-}

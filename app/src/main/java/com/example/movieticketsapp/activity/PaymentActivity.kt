@@ -31,10 +31,8 @@ class PaymentActivity : AppCompatActivity() {
     private var ticketListener: ListenerRegistration? = null
     private lateinit var tickets:TicketMovie
     private lateinit var dialog: Dialog
-    private  var flag: Boolean = false
     private lateinit var seatIds: ArrayList<String>
     private lateinit var showTimeId: String
-    private var titleMovie:String = ""
     private lateinit var timelineId: String
     private lateinit var selectedDate: String
     private lateinit var selectedTime: String
@@ -58,7 +56,7 @@ class PaymentActivity : AppCompatActivity() {
         listGenerMovie = ArrayList()
         dialog = Dialog(this)
         db = Firebase.firestore
-        tickets = TicketMovie(userId,movieId, titleMovie,seatIds,totalAmounts,selectedDate,selectedTime,"",showTimeId,timelineId,standard,conversionFee,"")
+        tickets = TicketMovie()
     }
 
     @SuppressLint("SetTextI18n")
@@ -66,13 +64,7 @@ class PaymentActivity : AppCompatActivity() {
         binding.apply {
             imgBack.setOnClickListener { finish() }
             btnPay.setOnClickListener {
-                if (!flag){
-                    showVietQRDialog("WfezerpFvKNYs1m2Bi7W")
-                    flag = true
-                }else{
-                    cancelPayment()
-                    flag = false
-                }
+                    showVietQRDialog()
             }
             tickets.totalAmounts = tickets.standard + tickets.conversionFee
             tvDate.text = tickets.date
@@ -103,7 +95,7 @@ class PaymentActivity : AppCompatActivity() {
     }
 
     private fun fetchMovieDetail(generMap: Map<String, String>) {
-        ticketListener = db.collection("movie").document(tickets.movieId)
+        ticketListener = db.collection("movie").document(movieId)
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     Log.w("MovieRealtime", "Listen failed.", e)
@@ -114,8 +106,7 @@ class PaymentActivity : AppCompatActivity() {
                     val imgMovie = data?.get("img_movie") as? String
                     val genreIds = data?.get("gener_movie") as? List<String> ?: emptyList()
                     val duration = data?.get("druation") as? Number ?: "Unknown duration"
-                    titleMovie = data?.get("title") as? String ?: "No title"
-                    binding.tvTitleMovie.text = titleMovie
+                    val titleMovie = data?.get("title") as? String ?: "No title"
                     binding.tvDuration.text = "$duration minutes"
                     binding.tvDirector.text = data?.get("director") as? String ?: "Unknown director"
                     val genreNames = genreIds.mapNotNull { generMap[it] }
@@ -126,13 +117,23 @@ class PaymentActivity : AppCompatActivity() {
                             .load(imgMovie)
                             .into(binding.imgMovie)
                     }
+                    tickets = TicketMovie("",movieId, titleMovie,imgMovie!!,seatIds,totalAmounts,selectedDate,selectedTime,"",showTimeId,timelineId,standard,conversionFee,"")
+                    binding.apply {
+                        tvDate.text = tickets.date
+                        tvHours.text = tickets.hour
+                        tvSeat.text = tickets.seatIds.joinToString(", ")
+                        tvConversionFree.text = "$${tickets.conversionFee}"
+                        tvStandard.text = "$${tickets.standard}"
+                        tvActualPay.text = "$${tickets.totalAmounts}"
+                    }
                 }
             }
     }
    private fun uploadTicketForUser(ticket: TicketMovie, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
         val db = FirebaseFirestore.getInstance()
+       val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
         val userTicketsRef = db.collection("users")
-            .document(ticket.userId)
+            .document(userId)
             .collection("tickets")
 
         userTicketsRef
@@ -145,32 +146,7 @@ class PaymentActivity : AppCompatActivity() {
             }
     }
 
-//   private fun listenToUserTickets(
-//        userId: String,
-//        onTicketsUpdate: (List<TicketMovie>) -> Unit,
-//        onError: (Exception) -> Unit
-//    ): ListenerRegistration {
-//        val db = FirebaseFirestore.getInstance()
-//        return db.collection("users")
-//            .document(userId)
-//            .collection("tickets")
-//            .addSnapshotListener { snapshots, e ->
-//                if (e != null) {
-//                    onError(e)
-//                    return@addSnapshotListener
-//                }
-//
-//                val ticketList = snapshots?.documents?.mapNotNull { doc ->
-//                    try {
-//                        doc.toObject(TicketMovie::class.java)
-//                    } catch (ex: Exception) {
-//                        null
-//                    }
-//                } ?: emptyList()
-//
-//                onTicketsUpdate(ticketList)
-//            }
-//    }
+
     private fun fetchLocation() {
         var locationCinema = Cinema("", "", "", "")
         db.collection("cinema")
@@ -190,11 +166,10 @@ class PaymentActivity : AppCompatActivity() {
             }
     }
 
-    private fun showVietQRDialog(paymentId: String) {
+    private fun showVietQRDialog() {
         if (isFinishing || isDestroyed) return
         dialog.setContentView(R.layout.qr_dialog_layout)
         val imgQRCode = dialog.findViewById<ImageView>(R.id.imgQRCode)
-        val tvAmount = dialog.findViewById<TextView>(R.id.tvAmount)
         val btnPay = dialog.findViewById<Button>(R.id.btnPaid)
         btnPay.setOnClickListener {
             uploadTicketForUser(tickets,
@@ -206,42 +181,28 @@ class PaymentActivity : AppCompatActivity() {
                 }
             )
         }
-        db.collection("bank").document(paymentId)
+        db.collection("bank").limit(1)
             .addSnapshotListener { snapshot, e ->
                 if (e != null) {
                     Log.e("Firestore", "Error fetching QR code", e)
                     return@addSnapshotListener
                 }
-                if (snapshot != null && snapshot.exists()) {
-                        val bank_number = snapshot.getString("bank_number") ?: ""
-                        val bank_name = snapshot.getString("bank_name") ?: ""
-                        val bank_account = snapshot.getString("bank_account") ?: ""
-                        val amount = snapshot.getLong("amount")?.toInt() ?: 0
-
-                        tvAmount.text = "Số tiền: %,dđ".format(amount)
+                if (snapshot != null) {
+                    for (doc in snapshot) {
+                        val bank_number = doc.getString("bank_number") ?: ""
+                        val bank_name = doc.getString("bank_name") ?: ""
+                        val bank_account = doc.getString("bank_account") ?: ""
+                        val amount = doc.getLong("amount")?.toInt() ?: 0
                         Glide.with(this)
                             .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact2.jpg?amount=$amount&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account")
                             .into(imgQRCode)
+                    }
                 }
             }
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
     }
 
-    private fun cancelPayment() {
-       tickets.movieId =  db.collection("tickets_movie").id
-        db
-            .collection("tickets_movie")
-            .document(tickets.movieId)
-            .delete()
-            .addOnSuccessListener {
-                binding.btnPay.text = "Pay"
-                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
-            }
-            .addOnFailureListener { e ->
-                Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
-            }
-    }
     private fun updateSeatStatus(seatIds: List<String>) {
         val db = FirebaseFirestore.getInstance()
         val batch = db.batch()

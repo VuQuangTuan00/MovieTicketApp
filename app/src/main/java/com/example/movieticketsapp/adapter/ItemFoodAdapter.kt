@@ -36,7 +36,6 @@ class ItemFoodAdapter(
         holder.binding.tvPrice.text = "$${food.price}"
         Glide.with(holder.itemView.context)
             .load(food.img_food)
-            .into( holder.binding.imgFood)
-
+            .into(holder.binding.imgFood)
     }
 }

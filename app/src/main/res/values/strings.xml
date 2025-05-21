@@ -104,4 +104,11 @@
     <string name="oops_something_went_wrong">Oops something went wrong!!!</string>
     <string name="ba_cham">...</string>
     <string name="arrow">Arrow</string>
+    <string name="note">Note:</string>
+    <string name="recipient_information">Recipient Information</string>
+    <string name="order_details">Order Details</string>
+    <string name="provisional_total">Provisional Total</string>
+    <string name="poster">Poster</string>
+    <string name="scan_vietqr_code_to_pay">Scan VietQR code to pay</string>
+    <string name="movie_detail">Movie Detail</string>
 </resources>

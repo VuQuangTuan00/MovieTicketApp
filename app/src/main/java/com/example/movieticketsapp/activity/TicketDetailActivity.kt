@@ -10,7 +10,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.TicketDetailLayoutBinding
+import com.example.movieticketsapp.model.Cinema
 import com.example.movieticketsapp.model.GenerMovie
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 
@@ -18,33 +20,46 @@ class TicketDetailActivity : AppCompatActivity() {
     private lateinit var binding: TicketDetailLayoutBinding
     private val db = FirebaseFirestore.getInstance()
     private var movieListener: ListenerRegistration? = null
-    private lateinit var movieId:String
-    private lateinit var ticketId:String
-    private lateinit var standard: String
-    private lateinit var totalAmounts: String
-    private lateinit var conversionFee: String
+    private val movieId: String by lazy { intent.getStringExtra("MOVIE_ID").orEmpty() }
+    private val ticketId: String by lazy { intent.getStringExtra("TICKET_ID").orEmpty() }
+    private val userId  = FirebaseAuth.getInstance().currentUser?.uid ?: ""
     private lateinit var listGenerMovie: ArrayList<GenerMovie>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         listGenerMovie = ArrayList()
         binding = TicketDetailLayoutBinding.inflate(layoutInflater)
         setContentView(binding.root)
-         ticketId = intent.getStringExtra("TICKET_ID").toString()
-         movieId = intent.getStringExtra("MOVIE_ID").toString()
-        fetchTicketDetail()
         binding.btnPay.setOnClickListener{
             cancelPayment()
         }
+        binding.imgBack.setOnClickListener {
+            finish()
+        }
+        listenToTicketDetailRealtime()
     }
-
+    private fun fetchLocation() {
+        var locationCinema = Cinema("", "", "", "")
+        db.collection("cinema")
+            .addSnapshotListener { snapshots, e ->
+                if (e != null) {
+                    Log.e("Firestore", "Error fetching location_cinema", e)
+                    return@addSnapshotListener
+                }
+                if (snapshots != null) {
+                    for (doc in snapshots) {
+                        val cinemaName = doc.getString("cinema_name") ?: "Không có thông tin"
+                        locationCinema = Cinema(cinemaName, "", "phone", "")
+                    }
+                }
+                binding.tvCinema.text = locationCinema.cinemaName
+            }
+    }
     private fun cancelPayment() {
-        db
-            .collection("tickets_movie")
-            .document(ticketId)
+        db.collection("users").document(userId).collection("tickets").document(ticketId)
             .delete()
             .addOnSuccessListener {
-                finish()
                 Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
+                finish()
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
@@ -95,39 +110,38 @@ class TicketDetailActivity : AppCompatActivity() {
                 }
             }
     }
-    private fun fetchTicketDetail() {
-        db.collection("tickets_movie")
+    private fun listenToTicketDetailRealtime() {
+        movieListener = db.collection("users")
+            .document(userId)
+            .collection("tickets")
             .document(ticketId)
-            .get()
-            .addOnSuccessListener { doc ->
-                if (!doc.exists()) {
-                    Toast.makeText(this, "Không tìm thấy vé", Toast.LENGTH_SHORT).show()
-                    finish()
-                    return@addOnSuccessListener
-                }
-                // Lấy các giá trị
-                val date          = doc.getString("date").orEmpty()
-                val hour          = doc.getString("hour").orEmpty()
-                val seatIds       = doc.getString("seatIds").orEmpty()
-                standard          = doc.getString("standard").orEmpty()
-                conversionFee     = doc.getString("conversionFee").orEmpty()
-                totalAmounts      = doc.getString("totalAmounts").orEmpty()
 
-                // Bơm lên UI
-                binding.tvDate.text       = date
-                binding.tvHours.text       = hour
-                binding.tvSeat.text          = seatIds
-                binding.tvStandard.text         = standard
-                binding.tvConversionFree.text   = conversionFee
-                binding.tvActualPay.text        = totalAmounts
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) {
+                    Toast.makeText(this, "Lỗi khi cập nhật vé", Toast.LENGTH_SHORT).show()
+                    return@addSnapshotListener
+                }
+
+                if (snapshot != null) {
+                    val date = snapshot.getString("date").orEmpty()
+                    val hour = snapshot.getString("hour").orEmpty()
+                    val seatIds = snapshot.get("seatIds") as? List<String> ?: emptyList()
+                    val standard = snapshot.getDouble("standard")
+                    val conversionFee = snapshot.getDouble("conversionFee")
+                    val totalAmounts = snapshot.getDouble("totalAmounts")
+
+                    binding.tvDate.text = date
+                    binding.tvHours.text = hour
+                    binding.tvSeat.text = seatIds.joinToString ( ", " )
+                    binding.tvStandard.text = standard.toString()
+                    binding.tvConversionFree.text = conversionFee.toString()
+                    binding.tvActualPay.text = totalAmounts.toString()
+                }
             }
-            .addOnFailureListener { e ->
-                Log.e("TicketDetail", "Lỗi lấy chi tiết vé", e)
-                Toast.makeText(
-                    this,
-                    "Error loading ticket details: ${e.message}",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        movieListener?.remove()
     }
 }

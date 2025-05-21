@@ -30,29 +30,33 @@
              android:padding="20dp"
              android:orientation="vertical"
              >
-             <LinearLayout
+             <androidx.constraintlayout.widget.ConstraintLayout
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:orientation="horizontal">
-
+                 >
                  <ImageView
-                     android:layout_width="0dp"
-                     android:layout_height="match_parent"
-                     android:layout_weight="1"
-                     android:src="@drawable/baseline_arrow_forward_ios_16" />
+                     android:id="@+id/imgBack"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:contentDescription="@string/back"
+                     android:src="@drawable/baseline_arrow_back_24"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />
 
-                 <ImageView
-                     android:layout_width="0dp"
-                     android:layout_height="match_parent"
-                     android:layout_weight="1"
-                     android:src="@drawable/baseline_arrow_back_24" />
-
-                 <ImageView
-                     android:layout_width="0dp"
-                     android:layout_height="match_parent"
-                     android:layout_weight="1"
-                     android:src="@drawable/baseline_arrow_back_24" />
-             </LinearLayout>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="5dp"
+                     android:text="@string/movie_detail"
+                     android:textColor="@color/white"
+                     android:textSize="19sp"
+                     android:textStyle="bold"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     app:layout_constraintStart_toStartOf="@+id/imgBack"
+                     app:layout_constraintTop_toTopOf="parent" />
+             </androidx.constraintlayout.widget.ConstraintLayout>
 
              <LinearLayout
                  android:layout_width="match_parent"
@@ -67,7 +71,6 @@
                      android:layout_marginEnd="10dp"
                      android:contentDescription="@string/movie"
                      android:scaleType="fitXY"
-                     android:src="@drawable/comic"
                      app:shapeAppearanceOverlay="@style/RoundedImageView" />
 
                  <LinearLayout
