@@ -36,6 +36,12 @@ class FoodActivity : AppCompatActivity() {
         setEvent()
     }
 
+    override fun onResume() {
+        super.onResume()
+        cartItems.clear()
+        binding.lnCartSummaryBar.visibility = View.GONE
+        Log.d("FFFF","${cartItems.size}")
+    }
     private fun setEvent() {
         binding.lnCartSummaryBar.setOnClickListener {
             foodDeliveryDate = binding.edtFoodDeliveryDate.text.toString()
@@ -65,7 +71,6 @@ class FoodActivity : AppCompatActivity() {
                 selectedFood,
                 onAddToBasket = { quantity ->
                     updateCart(selectedFood, quantity)
-                    Log.d("AddToBasket", "Item added to basket: ${binding.lnCartSummaryBar.visibility}")
                 }
             )
             bottomSheet.show(supportFragmentManager, bottomSheet.tag)

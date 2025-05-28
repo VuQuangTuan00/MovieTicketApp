@@ -105,13 +105,13 @@ class PaymentActivity : AppCompatActivity() {
                     val data = snapshot.data
                     val imgMovie = data?.get("img_movie") as? String
                     val genreIds = data?.get("gener_movie") as? List<String> ?: emptyList()
-                    val duration = data?.get("druation") as? Number ?: "Unknown duration"
+                    val duration = data?.get("duration") as? Number ?: "Unknown duration"
                     val titleMovie = data?.get("title") as? String ?: "No title"
                     binding.tvDuration.text = "$duration minutes"
                     binding.tvDirector.text = data?.get("director") as? String ?: "Unknown director"
                     val genreNames = genreIds.mapNotNull { generMap[it] }
                     binding.tvGener.text = genreNames.joinToString(", ")
-
+                    binding.tvTitleMovie.text = titleMovie
                     if (!imgMovie.isNullOrEmpty()) {
                         Glide.with(this@PaymentActivity)
                             .load(imgMovie)
@@ -194,7 +194,7 @@ class PaymentActivity : AppCompatActivity() {
                         val bank_account = doc.getString("bank_account") ?: ""
                         val amount = doc.getLong("amount")?.toInt() ?: 0
                         Glide.with(this)
-                            .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact2.jpg?amount=$amount&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account")
+                            .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact2.jpg?amount=${tickets.totalAmounts}&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account")
                             .into(imgQRCode)
                     }
                 }

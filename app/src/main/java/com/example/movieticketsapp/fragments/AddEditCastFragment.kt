@@ -96,7 +96,8 @@ class AddEditCastFragment : Fragment() {
     private fun uploadAvatarAndSaveToFirestore(castMovie: Cast?, isNew: Boolean, newName: String = "") {
         val castRef = if (isNew) db.collection("cast").document() else db.collection("cast").document(castMovie!!.id)
         val name = if (isNew) newName else castMovie!!.name
-        val initialAvatar = if (isNew) "" else castMovie!!.avatar
+        //val initialAvatar = if (isNew) "" else castMovie!!.avatar
+        val initialAvatar = if (isNew) "" else existingAvatarUrl ?: ""
 
         val cast = Cast(castRef.id, initialAvatar, name)
 
