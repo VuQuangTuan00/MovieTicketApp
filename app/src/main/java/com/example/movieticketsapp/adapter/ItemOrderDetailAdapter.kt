@@ -44,13 +44,14 @@ class ItemOrderDetailAdapter(
                     item.quantity--
                     binding.tvQuantity.text = item.quantity.toString()
                     onTotal()
-                    onTotal()
                 } else {
                     listOrderDetail.removeAt(position)
                     notifyItemRemoved(position)
                     notifyItemRangeChanged(position, listOrderDetail.size)
                     onTotal()
-                    dissmiss()
+                    if (listOrderDetail.size == 0){
+                        dissmiss()
+                    }
                 }
             }
         }

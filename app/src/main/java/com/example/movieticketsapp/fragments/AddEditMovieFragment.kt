@@ -235,7 +235,7 @@ class AddEditMovieFragment : BottomSheetDialogFragment() {
         selectedSet: MutableSet<String>,
         onSelectedChanged: () -> Unit
     ) {
-        val names = map.keys.toTypedArray()
+        val names = map.keys.sorted().toTypedArray()
         val checked = names.map { map[it] in selectedSet }.toBooleanArray()
 
         androidx.appcompat.app.AlertDialog.Builder(requireContext())

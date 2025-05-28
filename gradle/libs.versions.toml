@@ -1,5 +1,5 @@
 [versions]
-agp = "8.8.0"
+agp = "8.6.0"
 autoimageslider = "1.4.0"
 commonsCodec = "1.14"
 compiler = "4.15.1"

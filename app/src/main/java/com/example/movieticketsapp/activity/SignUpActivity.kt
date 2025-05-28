@@ -24,40 +24,47 @@ class SignUpActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-       setEvent()
+        setEvent()
     }
-    private fun setEvent(){
+
+    private fun setEvent() {
         binding.apply {
             btnSignUp.setOnClickListener {
                 val email = edtEmail.text.toString().trim()
                 val password = edtPassword.text.toString().trim()
 
-                when{
+                when {
                     email.isEmpty() -> {
                         edtEmail.error = "Vui lòng nhập email"
                     }
+
                     password.isEmpty() -> {
                         edtPassword.error = "Vui lòng nhập mật khẩu"
                     }
+
                     password.length < 6 -> {
                         edtPassword.error = "Mật khẩu phải có ít nhất 6 ký tự"
                     }
+
                     !ckbAgree.isChecked -> {
                         Toast.makeText(
                             this@SignUpActivity,
                             "Vui lòng đồng ý với điều khoản sử dụng.",
-                            Toast.LENGTH_SHORT).show()
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
+
                     else -> {
                         signUpWithEmailPassword(email, password)
                     }
                 }
             }
-            tvSignIn.setOnClickListener{
-                navigateTo (SignInActivity::class.java,flag = false)
+            tvSignIn.setOnClickListener {
+                navigateTo(SignInActivity::class.java, flag = false)
             }
         }
     }
+
     private fun signUpWithEmailPassword(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
@@ -117,7 +124,11 @@ class SignUpActivity : AppCompatActivity() {
                         Log.d("checkSC", "checkIfEmailVerified:success")
                         progressBar.visibility = View.GONE
                         dialog.dismiss()
-                        Toast.makeText(this@SignUpActivity, "Xác thực thành công!", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this@SignUpActivity,
+                            "Xác thực thành công!",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         startActivity(Intent(this@SignUpActivity, ProfileActivity::class.java))
                         finish()
                     } else {

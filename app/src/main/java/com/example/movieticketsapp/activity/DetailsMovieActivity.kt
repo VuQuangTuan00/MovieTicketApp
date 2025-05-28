@@ -135,6 +135,7 @@ class DetailsMovieActivity : AppCompatActivity() {
                             val duration = data?.get("duration") as? Number ?: "Unknown duration"
 
                             binding.tvTitleMovie.text = data?.get("title") as? String ?: "No title"
+
                             binding.tvDuration.text = "$duration minutes"
                             binding.tvDirector.text = data?.get("director") as? String ?: "Unknown director"
                             binding.tvSynopsis.text = data?.get("synopsis") as? String ?: "No synopsis"
