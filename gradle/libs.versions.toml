@@ -1,6 +1,7 @@
 [versions]
 agp = "8.8.0"
 autoimageslider = "1.4.0"
+commonsCodec = "1.14"
 compiler = "4.15.1"
 compressor = "3.0.1"
 dotsindicator = "4.3"
@@ -40,6 +41,7 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 autoimageslider = { module = "com.github.smarteist:autoimageslider", version.ref = "autoimageslider" }
+commons-codec = { module = "commons-codec:commons-codec", version.ref = "commonsCodec" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
 compressor = { module = "id.zelory:compressor", version.ref = "compressor" }
 dotsindicator = { module = "com.tbuonomo:dotsindicator", version.ref = "dotsindicator" }

@@ -2,17 +2,21 @@ package com.example.movieticketsapp.activity
 
 import TicketMovie
 import android.annotation.SuppressLint
+import android.app.ComponentCaller
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.os.StrictMode
 import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.example.movieticketsapp.Api.CreateOrder
 import com.example.movieticketsapp.R
 import com.example.movieticketsapp.databinding.PaymentLayoutBinding
 import com.example.movieticketsapp.model.Cinema
@@ -22,7 +26,10 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-
+import vn.zalopay.sdk.Environment
+import vn.zalopay.sdk.ZaloPayError
+import vn.zalopay.sdk.ZaloPaySDK
+import vn.zalopay.sdk.listeners.PayOrderListener
 
 class PaymentActivity : AppCompatActivity() {
     private lateinit var binding: PaymentLayoutBinding
@@ -39,8 +46,11 @@ class PaymentActivity : AppCompatActivity() {
     private  var standard: Double = 0.0
     private  var conversionFee: Double = 0.0
     private  var totalAmounts: Double = 0.0
+
     private lateinit var movieId: String
     private lateinit var userId: String
+    private var policy: StrictMode.ThreadPolicy? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = PaymentLayoutBinding.inflate(layoutInflater)
@@ -49,6 +59,10 @@ class PaymentActivity : AppCompatActivity() {
         setContentView(binding.root)
         fetchLocation()
         setEvent()
+        policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
+        ZaloPaySDK.init(2553, Environment.SANDBOX)
+
     }
 
     private fun initialize() {
@@ -59,12 +73,77 @@ class PaymentActivity : AppCompatActivity() {
         tickets = TicketMovie()
     }
 
+    private fun ZaloPay
+                () {
+        val orderApi = CreateOrder()
+//        val priceText = tickets.totalAmounts.toString()
+//
+//        if (priceText.isEmpty()) {
+//            Toast.makeText(this, "Số tiền không hợp lệ", Toast.LENGTH_SHORT).show()
+//            return
+//        }
+
+        try {
+            val data = orderApi.createOrder("5000")
+            val code = data.getInt("return_code")
+            val message = data.optString("return_message")
+            val subMessage = data.optString("sub_return_message")
+
+            Log.d("ZaloPay", "Code: $code, Message: $message, Detail: $subMessage")
+            if (data.has("return_code") && data.getString("return_code") == "1") {
+                val token = data.getString("zp_trans_token")
+                ZaloPaySDK.getInstance().payOrder(this, token, "demozpdk://app",
+                    object : PayOrderListener {
+                        override fun onPaymentSucceeded(transactionId: String?, transToken: String?, appTransID: String?) {
+                            AlertDialog.Builder(this@PaymentActivity)
+                                .setTitle("Payment Success")
+                                .setMessage("TransactionId: $transactionId\nTransToken: $transToken")
+                                .setPositiveButton("OK") { _, _ ->
+                                    // Gọi lưu vé
+                                    uploadTicketForUser(tickets,
+                                        onSuccess = {
+                                            updateSeatStatus(seatIds)
+                                        },
+                                        onFailure = { e ->
+                                            Toast.makeText(this@PaymentActivity, "Lỗi: ${e.message}", Toast.LENGTH_SHORT).show()
+                                        }
+                                    )
+                                }
+                                .show()
+                        }
+
+                        override fun onPaymentCanceled(zpTransToken: String?, appTransID: String?) {
+                            AlertDialog.Builder(this@PaymentActivity)
+                                .setTitle("Đã hủy thanh toán")
+                                .setMessage("zpTransToken: $zpTransToken")
+                                .setPositiveButton("OK", null)
+                                .show()
+                        }
+
+                        override fun onPaymentError(zaloPayError: ZaloPayError?, zpTransToken: String?, appTransID: String?) {
+                            AlertDialog.Builder(this@PaymentActivity)
+                                .setTitle("Thanh toán thất bại")
+                                .setMessage("ZaloPayError: $zaloPayError\nTransToken: $zpTransToken")
+                                .setPositiveButton("OK", null)
+                                .show()
+                        }
+                    })
+            } else {
+                Toast.makeText(this, "Không thể tạo đơn hàng", Toast.LENGTH_SHORT).show()
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "Lỗi: ${e.message}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     @SuppressLint("SetTextI18n")
     private fun setEvent() {
         binding.apply {
             imgBack.setOnClickListener { finish() }
             btnPay.setOnClickListener {
-                    showVietQRDialog()
+//                    showVietQRDialog()
+                ZaloPay()
             }
             tickets.totalAmounts = tickets.standard + tickets.conversionFee
             tvDate.text = tickets.date
@@ -75,6 +154,7 @@ class PaymentActivity : AppCompatActivity() {
             tvActualPay.text = "$${tickets.totalAmounts}"
         }
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -234,6 +314,7 @@ class PaymentActivity : AppCompatActivity() {
             finish()
             return
         }
+
        showTimeId = intent?.getStringExtra("showtimeId") ?: run {
             Toast.makeText(this, "Showtime ID is missing!", Toast.LENGTH_SHORT).show()
             finish()
@@ -268,5 +349,9 @@ class PaymentActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         dialog.dismiss()
+    }
+    override fun onNewIntent(intent: Intent, caller: ComponentCaller) {
+        super.onNewIntent(intent, caller)
+        ZaloPaySDK.getInstance().onResult(intent)
     }
 }

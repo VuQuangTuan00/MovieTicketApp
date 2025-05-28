@@ -1,19 +1,25 @@
 package com.example.movieticketsapp.activity
 
 import android.annotation.SuppressLint
+import android.app.ComponentCaller
 import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
+import android.os.StrictMode
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.movieticketsapp.Api.CreateOrder
 import com.example.movieticketsapp.adapter.ItemSeatAdapter
 import com.example.movieticketsapp.databinding.SeatLayoutBinding
 import com.example.movieticketsapp.model.Seat
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
+import vn.zalopay.sdk.Environment
+import vn.zalopay.sdk.ZaloPaySDK
 
 class SeatActivity : AppCompatActivity() {
     private lateinit var binding: SeatLayoutBinding
@@ -26,10 +32,10 @@ class SeatActivity : AppCompatActivity() {
     private var showtimeId: String? = null
     private var timelineId: String? = null
     private var movieId: String? = null
+
     private lateinit var seat: Seat
     private var selectedSeats = arrayListOf<String>()
     private var seatListener: ListenerRegistration? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = SeatLayoutBinding.inflate(layoutInflater)
@@ -37,6 +43,7 @@ class SeatActivity : AppCompatActivity() {
         getIntentExtra()
         setEvent()
         fetchSeatsRealtime(showtimeId!!, timelineId!!)
+
     }
     private fun fetchSeatsRealtime(showtimeId: String, timelineId: String) {
         seatListener?.remove()

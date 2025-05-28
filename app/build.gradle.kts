@@ -68,7 +68,16 @@ dependencies {
     implementation (libs.glide)
     implementation(libs.firebase.storage.ktx)
     implementation(libs.places)
+    implementation(fileTree(mapOf(
+        "dir" to "C:\\Users\\quang\\OneDrive\\Máy tính\\ZaloPayLib",
+        "include" to listOf("*.aar", "*.jar"),
+        "exclude" to listOf("")
+    )))
     annotationProcessor (libs.compiler)
+
+    // OKHTTP
+    implementation(libs.okhttp)
+    implementation(libs.commons.codec)
 
     implementation (libs.compressor)
     implementation(libs.mpandroidchart)

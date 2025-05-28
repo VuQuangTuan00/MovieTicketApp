@@ -9,7 +9,7 @@
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -69,7 +69,20 @@
             android:exported="false" />
         <activity
             android:name=".activity.PaymentActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:label="Merchant Demo"
+            android:launchMode="singleTask"
+            >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="demozpdk"
+                    android:host="app" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".activity.HomaPageActivity"
             android:exported="false" />
@@ -121,7 +134,9 @@
 
         <activity
             android:name=".activity.SaverActivity"
-            android:exported="true">
+            android:exported="true"
+
+            >
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.MAIN" />
 
