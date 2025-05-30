@@ -4,9 +4,9 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movieticketsapp.activity.AdminHomeActivity
-import com.example.movieticketsapp.activity.CreateNewPassActivity
-import com.example.movieticketsapp.activity.UpdateUserInfoActivity
+import com.example.movieticketsapp.activity.Admin.AdminHomeActivity
+import com.example.movieticketsapp.activity.Login.CreateNewPassActivity
+import com.example.movieticketsapp.activity.User.UpdateUserInfoActivity
 import com.example.movieticketsapp.databinding.ItemMenuBinding
 import com.example.movieticketsapp.model.MenuItem
 

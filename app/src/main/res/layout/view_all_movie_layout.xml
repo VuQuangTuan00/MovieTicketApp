@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="15dp"
     android:background="@color/primaryGray"
-    tools:context=".activity.ViewAllMovie">
+    tools:context=".activity.User.ViewAllMovie">
 
 
     <ImageView

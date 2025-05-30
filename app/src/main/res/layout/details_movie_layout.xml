@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryGray"
-    tools:context=".activity.DetailsMovieActivity">
+    tools:context=".activity.User.DetailsMovieActivity">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView3"
@@ -300,7 +300,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <com.example.movieticketsapp.activity.RatingSectionView
+            <com.example.movieticketsapp.activity.User.RatingSectionView
                 android:id="@+id/ratingSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

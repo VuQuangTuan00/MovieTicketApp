@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".activity.WalkthroughActivity">
+    tools:context=".activity.User.WalkthroughActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
