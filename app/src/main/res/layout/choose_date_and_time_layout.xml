@@ -50,14 +50,14 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgMap"
-                android:layout_width="wrap_content"
+            <fragment
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:id="@+id/map_fragment"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="20dp"
-                android:contentDescription="@string/movie"
-                android:src="@drawable/dia_dao1"
-                app:shapeAppearanceOverlay="@style/RoundedMap" />
+
+                />
 
             <TextView
                 android:id="@+id/tvCinemaName"

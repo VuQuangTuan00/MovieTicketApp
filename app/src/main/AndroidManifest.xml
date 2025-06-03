@@ -57,7 +57,20 @@
             android:exported="false" />
         <activity
             android:name=".activity.User.BillDetailsActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:label="Merchant Demo"
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="app"
+                    android:scheme="demozpdk"
+                    />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.User.TicketDetailActivity"
             android:exported="false" />
@@ -154,7 +167,11 @@
                     android:pathPrefix="/__/auth/links"
                     android:scheme="https" />
             </intent-filter>
+
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/GOOGLE_MAPS_API_KEY" />
         <activity
             android:name=".activity.User.WalkthroughActivity"
             android:exported="false" />

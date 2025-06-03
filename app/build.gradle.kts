@@ -79,6 +79,11 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.commons.codec)
 
+    // GOOGLE
+
+    implementation (libs.play.services.maps)
+
+    implementation (libs.libraries.bom)
     implementation (libs.compressor)
     implementation(libs.mpandroidchart)
     testImplementation(libs.junit)

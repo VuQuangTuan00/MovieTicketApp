@@ -175,7 +175,7 @@ class PaymentActivity : AppCompatActivity() {
 
 
     private fun fetchLocation() {
-        var locationCinema = Cinema("", "", "", "")
+        var locationCinema = Cinema("", "", "", 0.0,0.0)
         db.collection("cinema")
             .addSnapshotListener { snapshots, e ->
                 if (e != null) {
@@ -186,7 +186,7 @@ class PaymentActivity : AppCompatActivity() {
                     for (doc in snapshots) {
                         tickets.cinemaId = doc.id
                         val cinemaName = doc.getString("cinema_name") ?: "Không có thông tin"
-                        locationCinema = Cinema(cinemaName, "", "phone", "")
+                        locationCinema = Cinema(cinemaName, "", "phone", 0.0,0.0)
                     }
                 }
                 binding.tvCinema.text = locationCinema.cinemaName

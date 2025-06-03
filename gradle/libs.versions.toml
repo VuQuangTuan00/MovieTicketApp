@@ -17,6 +17,7 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+librariesBom = "26.45.0"
 loggingInterceptor = "4.12.0"
 material = "1.12.0"
 activity = "1.10.1"
@@ -30,6 +31,8 @@ firebaseFunctionsKtx = "21.2.1"
 playServicesBase = "18.7.0"
 firebaseFirestore = "25.1.4"
 firebaseFunctions = "21.2.1"
+playServicesMaps = "19.2.0"
+playServicesMapsVersion = "18.2.0"
 recyclerview = "1.4.0"
 viewpager2 = "1.1.0"
 firebaseStorageKtx = "21.0.1"
@@ -41,6 +44,7 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 autoimageslider = { module = "com.github.smarteist:autoimageslider", version.ref = "autoimageslider" }
+cloud-google-cloud-bigquery = { module = "com.google.cloud:google-cloud-bigquery" }
 commons-codec = { module = "commons-codec:commons-codec", version.ref = "commonsCodec" }
 compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
 compressor = { module = "id.zelory:compressor", version.ref = "compressor" }
@@ -50,11 +54,15 @@ firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "fir
 firebase-bom-v33130 = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBomVersion" }
 flexbox = { module = "com.google.android:flexbox", version.ref = "flexbox" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+google-cloud-bigquery = { module = "com.google.cloud:google-cloud-bigquery" }
+google-cloud-firestore = { module = "com.google.cloud:google-cloud-firestore" }
+google-cloud-storage = { module = "com.google.cloud:google-cloud-storage" }
 imageslideshow = { module = "com.github.denzcoskun:ImageSlideshow", version.ref = "imageslideshow" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+libraries-bom = { module = "com.google.cloud:libraries-bom", version.ref = "librariesBom" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
@@ -69,6 +77,8 @@ firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore
 firebase-functions = { group = "com.google.firebase", name = "firebase-functions", version.ref = "firebaseFunctions" }
 firebase-storage-ktx = { group = "com.google.firebase", name = "firebase-storage-ktx", version.ref = "firebaseStorageKtx" }
 places = { group = "com.google.android.libraries.places", name = "places", version.ref = "places" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMaps" }
+play-services-maps-v1820 = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMapsVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
