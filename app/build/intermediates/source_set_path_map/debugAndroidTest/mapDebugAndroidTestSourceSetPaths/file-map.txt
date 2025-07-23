@@ -1,0 +1,6 @@
+com.example.movieticketsapp.test.app-core-1.6.1-0 C:\Users\quang\.gradle\caches\8.10.2\transforms\088c6f12f06261a360a3aa4c2ab5b1f3\transformed\core-1.6.1\res
+com.example.movieticketsapp.test.app-tracing-1.2.0-1 C:\Users\quang\.gradle\caches\8.10.2\transforms\1f293c1821935ea5179466ce67d009ed\transformed\tracing-1.2.0\res
+com.example.movieticketsapp.test.app-androidTest-2 T:\MovieTicketsApp\app\build\generated\res\resValues\androidTest\debug
+com.example.movieticketsapp.test.app-mergeDebugAndroidTestResources-3 T:\MovieTicketsApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.movieticketsapp.test.app-mergeDebugAndroidTestResources-4 T:\MovieTicketsApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.movieticketsapp.test.app-debugAndroidTest-5 T:\MovieTicketsApp\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

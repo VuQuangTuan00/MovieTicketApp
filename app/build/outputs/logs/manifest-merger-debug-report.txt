@@ -1,0 +1,1167 @@
+-- Merging decision tree log ---
+manifest
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:2:1-170:12
+INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:2:1-170:12
+INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:2:1-170:12
+INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:2:1-170:12
+MERGED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:2:1-15:12
+MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\eaba6cd3b10486d019e0ea4d87c0bafa\transformed\viewbinding-8.8.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.denzcoskun:ImageSlideshow:0.1.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\4919f9cabc94456e53f4bcd244561810\transformed\ImageSlideshow-0.1.2\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\42e2ec83a1e69a70b28cef70d5548daa\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ab08195527894e5a9e774a79c76b35c4\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a34ca43a96500fa5acde951ea368e6da\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\cc99c19148a901c1e5c4cd7c67074209\transformed\appcompat-1.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:17:1-75:12
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\1e0b4885de399702d41e18f35436090f\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:17:1-40:12
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\202fd44922958ac9d55d71f4d2b3e8ea\transformed\glide-4.15.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:16:1-35:12
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\54fb5ab0688f73d3e09347d28f673e11\transformed\recyclerview-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\quang\.gradle\caches\8.10.2\transforms\63520329a6652748ab69eb79ab2e0eba\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\4bdd698718cf940585a00ce419048c29\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\quang\.gradle\caches\8.10.2\transforms\368be7c0dde0608d856e69ce0a595389\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a9df6fd5d861136b7aa1fb226158419c\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\a39ac1fb301acce63934d57d0517057c\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\804ff42c5d22d6e40b8641c20897517d\transformed\play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\892ef645dae1e7dcdfbc930386929056\transformed\play-services-fido-20.1.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\62a27a5054e8022876321e4e72c44894\transformed\firebase-iid-interop-17.1.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:2:1-24:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a31416e2b1b0321c948bc4f588933b39\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:15:1-41:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1604d5e5cbd55288e5c13f0ea3f4c7de\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\899fb3492bac62e3eec6d96e5e6dc7a0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\b79994637bd71c993c27b6d89cbf4425\transformed\play-services-stats-17.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\41c4e4655d28d6a51b8e08e72f4ad0ba\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a5a050e159ac1590ee948b741fb98ade\transformed\loader-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\09576093cfa867134d355f2a47fb9159\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\98ad1edbe21a3212d7f88104bd2ee825\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1a30df18deb8fd874feac201a395de81\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\c7851294c60d9c386f8666268745c780\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2c0b98e33811b66ba9eba0533ec7866f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\ef9f5646e432fc8b907b87622023e357\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\61501e722c1441046ad9ecd5e6a536ee\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\30feda3e333bed2d7c201124723d0974\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\cdfc8986056878d8baa7a40c5e6decdd\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\9ac85486e5ff9586fd9a445227aee289\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\27782ad81c21e7c961bb2a5d01985933\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\ba7bd381cd24cca74cf0e6dfd621fc97\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\1195555d296b3409c2d06e61e2dd8851\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\7cf00a07e00f28f884c7dd640b9d103c\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\6b16184515dbb51b601fb0a6eaf4274f\transformed\lifecycle-viewmodel-ktx-2.8.7\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:2:1-11:12
+MERGED from [id.zelory:compressor:3.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ed4058b152a7a13c75fbf8d72a89098\transformed\compressor-3.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e60adf05a84ce62062c716c79dab5697\transformed\integrity-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ea39972b32519d5ce495754fadf3f832\transformed\firebase-installations-interop-17.1.1\AndroidManifest.xml:15:1-19:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\399f9c7c5c1d230ec377dd6789a08320\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.fragment:fragment:1.5.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\bbc3e54853d19eba2ceefd782a67ff45\transformed\fragment-1.5.7\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.10.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ac6897cc9b6c5862341481a3b21b3493\transformed\activity-1.10.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\950324129ddc04900861f97c3f2ae416\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\755e760810ca1594257f6b441e4a46c9\transformed\core-ktx-1.15.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ed272c68bf8b8b485ad532738964c76\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2dc905437ce09ed8b1b74fbfe190cc7c\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\09a3be79fc676ef74b4bfdf2f7312ccb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\89feec73780cfe7510bbf6df5823aa8e\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\8c5d6a2e43c79e8295fc226b5ab7c8a9\transformed\firebase-components-18.0.0\AndroidManifest.xml:15:1-20:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\4dd6a8752202710a20f023fc055b21fd\transformed\gifdecoder-4.15.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\a34f654b319e6432aa4764b929dcf2bf\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:15:1-35:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4b38098172e6f7bfb749ddcf575de472\transformed\transport-api-3.1.0\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9940e67739ba535f2fea4a3c59c06967\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\951f0948c890de7636c3994a43a7e4f6\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\721a470d3c5036be60fe73cebaf7b003\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\c6ee238c1c7550f0426b082c5ba2c160\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\74f2585b672b293253126d9e9e69fc3f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\38c9c3faf9680d0b96d219c9a5037e0f\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2b8ae97b9cc26c2afd623b6db51a20ad\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\8b99634e0be9767d358c29fe6c9525e3\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\569a4f8adde57e8433c83bb516c1567c\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\10db39b409b76d53344bf73eddb9d5a2\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\58972421321390adbbb8be6c04adc182\transformed\googleid-1.1.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\a08dc7c6db7c50fb48fa15028d2d62b3\transformed\grpc-android-1.62.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ad255572dbd663b0e5377d8dbee06dcc\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\d4e9fba02f1ca1b9e23c2801529913ee\transformed\volley-1.2.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e06394a288ae56ae23db26a2c79b1609\transformed\exifinterface-27.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:2:1-21:12
+	package
+		INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:5:5-7:38
+	android:maxSdkVersion
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:7:9-35
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:6:9-64
+uses-permission#android.permission.INTERNET
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:21:5-66
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:11:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:20:5-78
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:20:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:20:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\a08dc7c6db7c50fb48fa15028d2d62b3\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\a08dc7c6db7c50fb48fa15028d2d62b3\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:12:22-76
+application
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:14:5-168:19
+INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:14:5-168:19
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\42e2ec83a1e69a70b28cef70d5548daa\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\42e2ec83a1e69a70b28cef70d5548daa\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:16:5-24:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ab08195527894e5a9e774a79c76b35c4\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ab08195527894e5a9e774a79c76b35c4\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:28:5-73:19
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:23:5-42:19
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:23:5-42:19
+MERGED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\202fd44922958ac9d55d71f4d2b3e8ea\transformed\glide-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\202fd44922958ac9d55d71f4d2b3e8ea\transformed\glide-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:31:5-34:19
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:31:5-34:19
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a9df6fd5d861136b7aa1fb226158419c\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a9df6fd5d861136b7aa1fb226158419c\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\804ff42c5d22d6e40b8641c20897517d\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\804ff42c5d22d6e40b8641c20897517d\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\892ef645dae1e7dcdfbc930386929056\transformed\play-services-fido-20.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\892ef645dae1e7dcdfbc930386929056\transformed\play-services-fido-20.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\62a27a5054e8022876321e4e72c44894\transformed\firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\62a27a5054e8022876321e4e72c44894\transformed\firebase-iid-interop-17.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:11:5-22:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a31416e2b1b0321c948bc4f588933b39\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a31416e2b1b0321c948bc4f588933b39\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\b79994637bd71c993c27b6d89cbf4425\transformed\play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\b79994637bd71c993c27b6d89cbf4425\transformed\play-services-stats-17.0.0\AndroidManifest.xml:7:5-20
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e60adf05a84ce62062c716c79dab5697\transformed\integrity-1.3.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e60adf05a84ce62062c716c79dab5697\transformed\integrity-1.3.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\399f9c7c5c1d230ec377dd6789a08320\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\399f9c7c5c1d230ec377dd6789a08320\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\4dd6a8752202710a20f023fc055b21fd\transformed\gifdecoder-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\4dd6a8752202710a20f023fc055b21fd\transformed\gifdecoder-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:25:5-33:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:25:5-33:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:23:5-37:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:23:5-37:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9940e67739ba535f2fea4a3c59c06967\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9940e67739ba535f2fea4a3c59c06967\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\c6ee238c1c7550f0426b082c5ba2c160\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\c6ee238c1c7550f0426b082c5ba2c160\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:11:5-19:19
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:11:5-19:19
+	android:extractNativeLibs
+		INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:21:9-35
+	android:label
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:19:9-41
+	android:fullBackupContent
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:17:9-54
+	android:roundIcon
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:20:9-54
+	android:icon
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:18:9-43
+	android:allowBackup
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:15:9-35
+	android:theme
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:22:9-53
+	android:dataExtractionRules
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:16:9-65
+activity#com.example.movieticketsapp.activity.Login.SaverActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:23:9-25:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:24:13-57
+activity#com.example.movieticketsapp.activity.Admin.AdminManageActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:26:9-28:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:27:13-63
+activity#com.example.movieticketsapp.activity.User.UpdateUserInfoActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:29:9-31:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:30:13-65
+activity#com.example.movieticketsapp.activity.Admin.AdminHomeActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:32:9-34:39
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:34:13-36
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:33:13-61
+activity#com.example.movieticketsapp.activity.Admin.AdminMovieDashboardActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:35:9-37:39
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:37:13-36
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:36:13-71
+activity#com.example.movieticketsapp.activity.Admin.AdminMovieMovieActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:38:9-40:39
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:40:13-36
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:39:13-67
+activity#com.example.movieticketsapp.activity.Admin.AdminMovieGenreActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:41:9-43:39
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:43:13-36
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:42:13-67
+activity#com.example.movieticketsapp.activity.Admin.AdminMovieCastActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:44:9-46:39
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:46:13-36
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:45:13-66
+activity#com.example.movieticketsapp.activity.Admin.AdminShowtimesActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:47:9-49:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:49:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:48:13-66
+activity#com.example.movieticketsapp.activity.Admin.AdminTimelineActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:50:9-52:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:52:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:51:13-65
+activity#com.example.movieticketsapp.activity.Admin.AdminSeatManagerActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:53:9-55:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:55:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:54:13-68
+activity#com.example.movieticketsapp.activity.Admin.AdminFoodManagerActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:56:9-58:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:58:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:57:13-68
+activity#com.example.movieticketsapp.activity.Admin.AdminStatisticsActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:59:9-61:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:60:13-67
+activity#com.example.movieticketsapp.activity.User.AccountProfileActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:62:9-64:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:64:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:63:13-65
+activity#com.example.movieticketsapp.activity.User.BillDetailsActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:65:9-67:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:67:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:66:13-62
+activity#com.example.movieticketsapp.activity.User.TicketDetailActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:68:9-70:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:70:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:69:13-63
+activity#com.example.movieticketsapp.activity.User.FoodActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:71:9-73:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:73:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:72:13-55
+activity#com.example.movieticketsapp.activity.User.ListTicketActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:74:9-76:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:76:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:75:13-61
+activity#com.example.movieticketsapp.activity.User.PaymentActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:77:9-92:20
+	android:label
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:80:13-42
+	android:launchMode
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:81:13-44
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:79:13-36
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:78:13-58
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:app+data:scheme:demozpdk
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:82:13-91:29
+action#android.intent.action.VIEW
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:17-69
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:25-66
+category#android.intent.category.DEFAULT
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:17-76
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:27-73
+category#android.intent.category.BROWSABLE
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:17-78
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:27-75
+data
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:88:17-90:49
+	android:host
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:89:21-39
+	android:scheme
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:90:21-46
+	android:pathPrefix
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:156:21-56
+activity#com.example.movieticketsapp.activity.User.HomaPageActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:93:9-95:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:95:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:94:13-59
+activity#com.example.movieticketsapp.activity.User.ChooseDateAndTimeActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:96:9-98:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:98:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:97:13-68
+activity#com.example.movieticketsapp.activity.User.DetailsMovieActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:99:9-101:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:101:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:100:13-63
+activity#com.example.movieticketsapp.activity.User.ViewAllMovie
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:102:9-104:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:104:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:103:13-55
+activity#com.example.movieticketsapp.activity.Login.ProfileActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:105:9-107:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:107:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:106:13-59
+activity#com.example.movieticketsapp.activity.Login.PopupSignInSuccess
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:108:9-110:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:110:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:109:13-62
+activity#com.example.movieticketsapp.activity.Login.ResetPassWordActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:111:9-113:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:113:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:112:13-65
+activity#com.example.movieticketsapp.activity.Login.SignUpSuccessfulActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:114:9-116:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:116:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:115:13-68
+activity#com.example.movieticketsapp.activity.User.SeatActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:117:9-119:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:119:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:118:13-55
+activity#com.example.movieticketsapp.activity.Login.SignUpActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:120:9-122:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:122:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:121:13-58
+activity#com.example.movieticketsapp.activity.Login.CreateNewPassActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:123:9-125:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:125:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:124:13-65
+activity#com.example.movieticketsapp.activity.User.OTPCodeActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:126:9-128:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:128:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:127:13-58
+activity#com.example.movieticketsapp.activity.Login.SignInActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:129:9-131:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:131:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:130:13-58
+activity#com.example.movieticketsapp.activity.Login.GetStartedActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:132:9-134:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:134:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:133:13-62
+activity#com.example.movieticketsapp.activity.User.DemoAPIctivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:135:9-137:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:137:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:136:13-57
+activity#com.example.movieticketsapp.activity.User.FoodMenuActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:138:9-140:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:140:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:139:13-59
+activity#com.example.movieticketsapp.activity.Login.LoginActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:141:9-159:20
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:143:13-36
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:142:13-57
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.LAUNCHER+data:host:movieticketsapp-9a88f.firebaseapp.com+data:pathPrefix:/__/auth/links+data:scheme:https
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:144:13-158:29
+	android:autoVerify
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:144:28-53
+action#android.intent.action.MAIN
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:145:17-69
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:145:25-66
+category#android.intent.category.LAUNCHER
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:147:17-77
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:147:27-74
+meta-data#com.google.android.geo.API_KEY
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:161:9-163:59
+	android:value
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:163:13-56
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:162:13-58
+activity#com.example.movieticketsapp.activity.User.WalkthroughActivity
+ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:165:9-167:40
+	android:exported
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:167:13-37
+	android:name
+		ADDED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:166:13-62
+uses-sdk
+INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+MERGED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:5:5-7:41
+MERGED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\eaba6cd3b10486d019e0ea4d87c0bafa\transformed\viewbinding-8.8.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.8.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\eaba6cd3b10486d019e0ea4d87c0bafa\transformed\viewbinding-8.8.0\AndroidManifest.xml:5:5-44
+MERGED from [com.github.denzcoskun:ImageSlideshow:0.1.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\4919f9cabc94456e53f4bcd244561810\transformed\ImageSlideshow-0.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.denzcoskun:ImageSlideshow:0.1.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\4919f9cabc94456e53f4bcd244561810\transformed\ImageSlideshow-0.1.2\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\42e2ec83a1e69a70b28cef70d5548daa\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\42e2ec83a1e69a70b28cef70d5548daa\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ab08195527894e5a9e774a79c76b35c4\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ab08195527894e5a9e774a79c76b35c4\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a34ca43a96500fa5acde951ea368e6da\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a34ca43a96500fa5acde951ea368e6da\transformed\appcompat-resources-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\cc99c19148a901c1e5c4cd7c67074209\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\cc99c19148a901c1e5c4cd7c67074209\transformed\appcompat-1.7.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:21:5-23:151
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\1e0b4885de399702d41e18f35436090f\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\1e0b4885de399702d41e18f35436090f\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\202fd44922958ac9d55d71f4d2b3e8ea\transformed\glide-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\202fd44922958ac9d55d71f4d2b3e8ea\transformed\glide-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:26:5-43
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:26:5-43
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\54fb5ab0688f73d3e09347d28f673e11\transformed\recyclerview-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\54fb5ab0688f73d3e09347d28f673e11\transformed\recyclerview-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\quang\.gradle\caches\8.10.2\transforms\63520329a6652748ab69eb79ab2e0eba\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\quang\.gradle\caches\8.10.2\transforms\63520329a6652748ab69eb79ab2e0eba\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\4bdd698718cf940585a00ce419048c29\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\4bdd698718cf940585a00ce419048c29\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\quang\.gradle\caches\8.10.2\transforms\368be7c0dde0608d856e69ce0a595389\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\quang\.gradle\caches\8.10.2\transforms\368be7c0dde0608d856e69ce0a595389\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a9df6fd5d861136b7aa1fb226158419c\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a9df6fd5d861136b7aa1fb226158419c\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\a39ac1fb301acce63934d57d0517057c\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\a39ac1fb301acce63934d57d0517057c\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\804ff42c5d22d6e40b8641c20897517d\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\804ff42c5d22d6e40b8641c20897517d\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\892ef645dae1e7dcdfbc930386929056\transformed\play-services-fido-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\892ef645dae1e7dcdfbc930386929056\transformed\play-services-fido-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\62a27a5054e8022876321e4e72c44894\transformed\firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\62a27a5054e8022876321e4e72c44894\transformed\firebase-iid-interop-17.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a31416e2b1b0321c948bc4f588933b39\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a31416e2b1b0321c948bc4f588933b39\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1604d5e5cbd55288e5c13f0ea3f4c7de\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1604d5e5cbd55288e5c13f0ea3f4c7de\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\899fb3492bac62e3eec6d96e5e6dc7a0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\899fb3492bac62e3eec6d96e5e6dc7a0\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\b79994637bd71c993c27b6d89cbf4425\transformed\play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\b79994637bd71c993c27b6d89cbf4425\transformed\play-services-stats-17.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\41c4e4655d28d6a51b8e08e72f4ad0ba\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\41c4e4655d28d6a51b8e08e72f4ad0ba\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a5a050e159ac1590ee948b741fb98ade\transformed\loader-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\a5a050e159ac1590ee948b741fb98ade\transformed\loader-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\09576093cfa867134d355f2a47fb9159\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\09576093cfa867134d355f2a47fb9159\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\98ad1edbe21a3212d7f88104bd2ee825\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\98ad1edbe21a3212d7f88104bd2ee825\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1a30df18deb8fd874feac201a395de81\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1a30df18deb8fd874feac201a395de81\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\c7851294c60d9c386f8666268745c780\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\c7851294c60d9c386f8666268745c780\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2c0b98e33811b66ba9eba0533ec7866f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2c0b98e33811b66ba9eba0533ec7866f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\ef9f5646e432fc8b907b87622023e357\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\ef9f5646e432fc8b907b87622023e357\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\61501e722c1441046ad9ecd5e6a536ee\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\61501e722c1441046ad9ecd5e6a536ee\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\30feda3e333bed2d7c201124723d0974\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\30feda3e333bed2d7c201124723d0974\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\cdfc8986056878d8baa7a40c5e6decdd\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\cdfc8986056878d8baa7a40c5e6decdd\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\9ac85486e5ff9586fd9a445227aee289\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\9ac85486e5ff9586fd9a445227aee289\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\27782ad81c21e7c961bb2a5d01985933\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\27782ad81c21e7c961bb2a5d01985933\transformed\lifecycle-viewmodel-2.8.7\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\ba7bd381cd24cca74cf0e6dfd621fc97\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\ba7bd381cd24cca74cf0e6dfd621fc97\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\1195555d296b3409c2d06e61e2dd8851\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\1195555d296b3409c2d06e61e2dd8851\transformed\lifecycle-viewmodel-savedstate-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\7cf00a07e00f28f884c7dd640b9d103c\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\7cf00a07e00f28f884c7dd640b9d103c\transformed\lifecycle-livedata-core-2.8.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\6b16184515dbb51b601fb0a6eaf4274f\transformed\lifecycle-viewmodel-ktx-2.8.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\6b16184515dbb51b601fb0a6eaf4274f\transformed\lifecycle-viewmodel-ktx-2.8.7\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:5:5-44
+MERGED from [id.zelory:compressor:3.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ed4058b152a7a13c75fbf8d72a89098\transformed\compressor-3.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [id.zelory:compressor:3.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ed4058b152a7a13c75fbf8d72a89098\transformed\compressor-3.0.1\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e60adf05a84ce62062c716c79dab5697\transformed\integrity-1.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e60adf05a84ce62062c716c79dab5697\transformed\integrity-1.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ea39972b32519d5ce495754fadf3f832\transformed\firebase-installations-interop-17.1.1\AndroidManifest.xml:17:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ea39972b32519d5ce495754fadf3f832\transformed\firebase-installations-interop-17.1.1\AndroidManifest.xml:17:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\399f9c7c5c1d230ec377dd6789a08320\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\399f9c7c5c1d230ec377dd6789a08320\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [androidx.fragment:fragment:1.5.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\bbc3e54853d19eba2ceefd782a67ff45\transformed\fragment-1.5.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\bbc3e54853d19eba2ceefd782a67ff45\transformed\fragment-1.5.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.10.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ac6897cc9b6c5862341481a3b21b3493\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.10.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ac6897cc9b6c5862341481a3b21b3493\transformed\activity-1.10.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\950324129ddc04900861f97c3f2ae416\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\950324129ddc04900861f97c3f2ae416\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\755e760810ca1594257f6b441e4a46c9\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\755e760810ca1594257f6b441e4a46c9\transformed\core-ktx-1.15.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ed272c68bf8b8b485ad532738964c76\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ed272c68bf8b8b485ad532738964c76\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2dc905437ce09ed8b1b74fbfe190cc7c\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2dc905437ce09ed8b1b74fbfe190cc7c\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\09a3be79fc676ef74b4bfdf2f7312ccb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\09a3be79fc676ef74b4bfdf2f7312ccb\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\89feec73780cfe7510bbf6df5823aa8e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\89feec73780cfe7510bbf6df5823aa8e\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\8c5d6a2e43c79e8295fc226b5ab7c8a9\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\8c5d6a2e43c79e8295fc226b5ab7c8a9\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\4dd6a8752202710a20f023fc055b21fd\transformed\gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\4dd6a8752202710a20f023fc055b21fd\transformed\gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\a34f654b319e6432aa4764b929dcf2bf\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\a34f654b319e6432aa4764b929dcf2bf\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4b38098172e6f7bfb749ddcf575de472\transformed\transport-api-3.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4b38098172e6f7bfb749ddcf575de472\transformed\transport-api-3.1.0\AndroidManifest.xml:18:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9940e67739ba535f2fea4a3c59c06967\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9940e67739ba535f2fea4a3c59c06967\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\951f0948c890de7636c3994a43a7e4f6\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\951f0948c890de7636c3994a43a7e4f6\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\721a470d3c5036be60fe73cebaf7b003\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\721a470d3c5036be60fe73cebaf7b003\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\c6ee238c1c7550f0426b082c5ba2c160\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\c6ee238c1c7550f0426b082c5ba2c160\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\74f2585b672b293253126d9e9e69fc3f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\74f2585b672b293253126d9e9e69fc3f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\38c9c3faf9680d0b96d219c9a5037e0f\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\38c9c3faf9680d0b96d219c9a5037e0f\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2b8ae97b9cc26c2afd623b6db51a20ad\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\2b8ae97b9cc26c2afd623b6db51a20ad\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\8b99634e0be9767d358c29fe6c9525e3\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\8b99634e0be9767d358c29fe6c9525e3\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\569a4f8adde57e8433c83bb516c1567c\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\569a4f8adde57e8433c83bb516c1567c\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\10db39b409b76d53344bf73eddb9d5a2\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\10db39b409b76d53344bf73eddb9d5a2\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\58972421321390adbbb8be6c04adc182\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\58972421321390adbbb8be6c04adc182\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\a08dc7c6db7c50fb48fa15028d2d62b3\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\quang\.gradle\caches\8.10.2\transforms\a08dc7c6db7c50fb48fa15028d2d62b3\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ad255572dbd663b0e5377d8dbee06dcc\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\ad255572dbd663b0e5377d8dbee06dcc\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\d4e9fba02f1ca1b9e23c2801529913ee\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\d4e9fba02f1ca1b9e23c2801529913ee\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e06394a288ae56ae23db26a2c79b1609\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e06394a288ae56ae23db26a2c79b1609\transformed\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:23:9-148
+	android:targetSdkVersion
+		INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from T:\MovieTicketsApp\app\src\main\AndroidManifest.xml
+queries
+ADDED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:9:5-13:15
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:27:5-30:15
+MERGED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:27:5-30:15
+package#vn.com.vng.zalopay.sb1
+ADDED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:9-58
+	android:name
+		ADDED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:18-55
+package#vn.com.vng.zalopay
+ADDED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:9-54
+	android:name
+		ADDED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:18-51
+package#com.zing.zalo
+ADDED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:9-49
+	android:name
+		ADDED from [zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:18-46
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:13:5-76
+	android:name
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:13:22-73
+activity#com.google.android.libraries.places.widget.AutocompleteActivity
+ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:17:9-23:20
+	android:label
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:20:13-62
+	android:windowSoftInputMode
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:22:13-55
+	android:exported
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:19:13-37
+	android:theme
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:21:13-61
+	android:name
+		ADDED from [com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:18:13-91
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:35:13-45:29
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:53:13-63:29
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:12:9-21:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:68:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:67:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:70:17-109
+service#androidx.credentials.playservices.CredentialProviderMetadataHolder
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:28:13-60
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+meta-data#androidx.credentials.CREDENTIAL_PROVIDER_KEY
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+	android:value
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+activity#androidx.credentials.playservices.HiddenActivity
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+	android:fitsSystemWindows
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+	android:configChanges
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+	android:theme
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:34:13-89
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:24:8-31
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:29:7-61
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:29:16-59
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:33:7-86
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:33:59-83
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:33:21-58
+meta-data#com.google.firebase.components:com.google.firebase.functions.FirebaseFunctionsKtxRegistrar
+ADDED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:16:17-122
+meta-data#com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar
+ADDED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:19:17-111
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar
+ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:13:17-125
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:24:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\0b3ff21c7305f84fb02f02e9644973ce\transformed\play-services-cloud-messaging-16.0.0\AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar
+ADDED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9940e67739ba535f2fea4a3c59c06967\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9940e67739ba535f2fea4a3c59c06967\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+permission#com.example.movieticketsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.movieticketsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:22-95
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:26:9-32:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:34:9-36:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:34:9-36:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:27:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:29:13-31:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:31:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:30:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:24:9-28:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:26:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:27:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:25:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:30:9-32:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:31:13-132
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+activity#com.google.android.play.core.common.PlayCoreDialogWrapperActivity
+ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+	android:stateNotNeeded
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:17:13-42
+	android:exported
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:16:13-37
+	android:theme
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:18:13-62
+	android:name
+		ADDED from [com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:15:13-93

@@ -1,0 +1,790 @@
+[
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_date_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_date_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_movie_api_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_movie_api_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-anydpi\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_baseline_circle_24.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\baseline_circle_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_movie_dashboard_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_movie_dashboard_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_custom_border_genre_movie.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\custom_border_genre_movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_get_started_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\get_started_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_food_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_food_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_dia_dao3.jpg.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\dia_dao3.jpg"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_calender_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\calender_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_review.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_review.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_cart_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\cart_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_call_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\call_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_sign_up_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\sign_up_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_boder_top.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\boder_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_frame_border.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\frame_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_seat_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_seat_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_arrow_drop_down.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_arrow_drop_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_cast_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_cast_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_time_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_time_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_food_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\food_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_comic.jpg.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\comic.jpg"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_view_all_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\view_all_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_bottom_sheet_thanks.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\bottom_sheet_thanks.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_popup_sign_in_success_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\popup_sign_in_success_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_seat_available.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_seat_available.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_bottom_sheet_rate.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\bottom_sheet_rate.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_icon_statistic_admin.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\icon_statistic_admin.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_apple_logo.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\apple_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_dia_dao2.jpg.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\dia_dao2.jpg"
+    },
+    {
+        "merged": "com.example.movieticketsapp-debug-47:/layout_item_genre_movie_layout.xml.flat",
+        "source": "com.example.movieticketsapp-main-49:/layout/item_genre_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_food_manager.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_food_manager.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_movie_genre_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_movie_genre_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ticket_movie_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ticket_movie_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_custom_search_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\custom_search_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_homa_page_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\homa_page_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_dash_line_black.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\dash_line_black.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_search_forcus_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\search_forcus_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_bill_details_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\bill_details_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_gener_movie_forcus.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_gener_movie_forcus.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_list_ticket_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\list_ticket_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_bg_waring.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\bg_waring.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_rounded_red_btn.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\rounded_red_btn.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_notification.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_order_detail_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_order_detail_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\baseline_email_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_light_black_bg.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\light_black_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_sign_in_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\sign_in_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_boder_bottom.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\boder_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_dialog_showtime_edit.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\dialog_showtime_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_style_edittext.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\style_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_cinema.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\cinema.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_choose_date_and_time_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\choose_date_and_time_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_statistics_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_statistics_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_bg_walkthrough.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\bg_walkthrough.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_profie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\profie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_timeline_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_timeline_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_seat_unavailable.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_seat_unavailable.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_search_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\search_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_bg_border_btn_pay.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\bg_border_btn_pay.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_login_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\login_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_account.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\account.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_details_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\details_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_cross_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\cross_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_genre_movie_focus.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_genre_movie_focus.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_popup_success_dialog_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\popup_success_dialog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_boder_grey.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\boder_grey.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_delete.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_avatar.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_avatar.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_baseline_calendar_month_24.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\baseline_calendar_month_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_saver_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\saver_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_cast_list.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_cast_list.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_food_bottm_sheet_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\food_bottm_sheet_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_dia_dao1.jpg.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\dia_dao1.jpg"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_img_focused.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\img_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_ticket_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_ticket_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_note_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_note_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_sign_up_successful_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\sign_up_successful_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_waving_hand_emoji.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\waving_hand_emoji.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_demo_api_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\demo_api_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_info.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_genre_movie.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_genre_movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_working.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_working.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_keylock.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_keylock.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_home_icon.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\home_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_visible_focused.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_visible_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_baseline_arrow_forward_ios_16.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\baseline_arrow_forward_ios_16.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_app_bar.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\app_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ins_logo.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ins_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_custom_visible.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\custom_visible.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_gener_movie.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_gener_movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_custom_mail_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\custom_mail_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_account_profile_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\account_profile_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_showtimes_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_showtimes_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_circular_border.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\circular_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_menu.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_img_success.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\img_success.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_top_bg.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_top_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_check_circle_white_64dp.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_check_circle_white_64dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_custom_disible.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\custom_disible.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_lock_icon.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_lock_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_home_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_home_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_walkthrough_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\walkthrough_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_icon_movie_admin.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\icon_movie_admin.png"
+    },
+    {
+        "merged": "com.example.movieticketsapp-debug-47:/layout_item_admin_genre_movie_layout.xml.flat",
+        "source": "com.example.movieticketsapp-main-49:/layout/item_admin_genre_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_star_outline.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_star_outline.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\baseline_arrow_back_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_not_image.jpg.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_not_image.jpg"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_bg_cart_bar.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\bg_cart_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_button_border.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\button_border.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_qr_dialog_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\qr_dialog_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_seat_admin.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_seat_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_custom_pass_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\custom_pass_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_pass.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_pass.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_reset_pass_word_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\reset_pass_word_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_fragment_add_edit_cast_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\fragment_add_edit_cast_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_disable.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_disable.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_fragment_add_edit_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\fragment_add_edit_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_key.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_key.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_bottom_sheet_light_bg.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_bottom_sheet_light_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_create_new_pass_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\create_new_pass_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_timeline.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_timeline.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_lock.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_lock.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_dialog_timeline_edit.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\dialog_timeline_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_security.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_security.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_cast_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_cast_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_notify_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\notify_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_edt_otp_code.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\edt_otp_code.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_btn_book_now.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_btn_book_now.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_google_logo1600.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\google_logo1600.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_disable_focused.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_disable_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_gener_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_gener_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_food_menu_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\food_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_line_bottom.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\line_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_edit.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_photo_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_photo_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\menu_navigation_bottom.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\menu\\navigation_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_manage_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_manage_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_add.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_food_admin.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_food_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_baseline_email_24_focus.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\baseline_email_24_focus.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_border_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\border_bottom_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_genre_list.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_genre_list.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_payment_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\payment_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_movie_admin_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_movie_admin_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_bg_boder.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\bg_boder.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_line_top.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\line_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-anydpi\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_visible.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_visible.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\anim_zoom_in.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\anim\\zoom_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_img.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\img.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_seat_manager_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_seat_manager_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_admin.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_menu.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\raw_gta.mp4.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\raw\\gta.mp4"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_location.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\location.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_dialog_add_edit_food.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\dialog_add_edit_food.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_seat_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\seat_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_seat_selected.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_seat_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_dialog_payment_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\dialog_payment_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_movie_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_movie_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_star_filled.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_star_filled.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_view_rating_section.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\view_rating_section.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_movie_cast_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_movie_cast_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_bottom_sheet_block.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\bottom_sheet_block.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_fb_logo.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\fb_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_line_top_card_view.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\line_top_card_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_white_bg.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\white_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_ticket_detail_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\ticket_detail_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_edit_text_background.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\edit_text_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_icon_logo.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\icon_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_bg_light_line_top.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\bg_light_line_top.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_showtime.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_showtime.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_ic_movie_list.png.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\ic_movie_list.png"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_style_text_food.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\style_text_food.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_otp_code_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\otp_code_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_update_user_info_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\update_user_info_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_item_genre_movie_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\item_genre_movie_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_custom_border_gener_movie.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\custom_border_gener_movie.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\layout_admin_food_manager_layout.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\layout\\admin_food_manager_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\drawable_food_oder_ic.xml.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\drawable\\food_oder_ic.xml"
+    },
+    {
+        "merged": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-debug-47:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\quang\\.gradle\\daemon\\8.10.2\\com.example.movieticketsapp-main-49:\\mipmap-xhdpi\\ic_launcher.webp"
+    }
+]

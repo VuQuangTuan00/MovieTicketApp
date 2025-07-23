@@ -1,0 +1,17 @@
+Index: app/src/main/java/com/tdc/movieticketappadmin/models/Movie.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.tdc.movieticketappadmin.models\r\n\r\ndata class Movie(\r\n    val title: String = \"\",\r\n    val director: String = \"\",\r\n    val duration: Int = 0,\r\n    val gener_movie: List<String> = listOf(),\r\n    val img_movie: String = \"\",\r\n    val list_casts: List<String> = listOf(),\r\n    val list_photos: List<String> = listOf(),\r\n    val trailer: String = \"\",\r\n    val rating: Double = 0.0,\r\n    val synopsis: String = \"\",\r\n\r\n    var genreNames: List<String> = listOf(), // Lưu tên thể loại\r\n    var castNames: List<String> = listOf() // Lưu tên diễn viên\r\n)\r\n
+===================================================================
+diff --git a/app/src/main/java/com/tdc/movieticketappadmin/models/Movie.kt b/app/src/main/java/com/tdc/movieticketappadmin/models/Movie.kt
+--- a/app/src/main/java/com/tdc/movieticketappadmin/models/Movie.kt	(revision cf8911d4ca73cf11d7c3c784c7c8329cc0b9de2d)
++++ b/app/src/main/java/com/tdc/movieticketappadmin/models/Movie.kt	(date 1747151361220)
+@@ -12,6 +12,6 @@
+     val rating: Double = 0.0,
+     val synopsis: String = "",
+ 
+-    var genreNames: List<String> = listOf(), // Lưu tên thể loại
+-    var castNames: List<String> = listOf() // Lưu tên diễn viên
++    var genreNames: List<String> = listOf(),
++    var castNames: List<String> = listOf()
+ )

@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/account_profile_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin_food_manager_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin_home_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin_manage_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin_movie_dashboard_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/admin_movie_movie_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/bill_details_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/choose_date_and_time_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/create_new_pass_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/details_movie_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_payment_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/food_bottm_sheet_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/food_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/food_menu_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/get_started_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/homa_page_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_admin_genre_movie_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_cast_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_date_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_food_admin.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_food_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_genre_movie_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_movie_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_note_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_order_detail_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_photo_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_seat_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_ticket_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_time_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/list_ticket_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/login_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/otp_code_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/payment_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_sign_in_success_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/popup_success_dialog_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/profie_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/qr_dialog_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/reset_pass_word_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/saver_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/seat_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/sign_in_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/sign_up_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/sign_up_successful_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/ticket_detail_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/update_user_info_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/view_all_movie_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/walkthrough_layout.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/navigation_bottom.xml">
+        <config>
+          <theme>@style/Theme.MovieTicketsApp</theme>
+        </config>
+      </layout>
+    </layouts>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d6bba2fe-5f3f-45fd-80a1-4816b2090150" name="Changes" comment="Merge remote-tracking branch 'origin/main'" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\quang\.android\avd\Pixel_8_Pro_API_35.avd)]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MovieTicketsApp" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MovieTicketsApp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MovieTicketsApp" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="Kotlin File" />
+        <option value="Class" />
+        <option value="Kotlin Object" />
+        <option value="layoutResourceFile" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;VuQuangTuan00&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VuQuangTuan00/MovieTicketApp.git&quot;,
+    &quot;accountId&quot;: &quot;deca6805-dd01-45af-874b-8da36927add1&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2vezq4mFr106pDgWNJthUgvFg16" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Android App.app.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;T:/MovieTicketsApp/app/src/main/java/com/example/movieticketsapp&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Dependencies&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="android.template.108955839">
+      <recent name="com.example.movieticketsapp.activity.Admin" />
+    </key>
+    <key name="android.template.1175003549">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-2084044671">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-296476330">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-1088260866">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.242981576">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.movieticketsapp.adapter" />
+    </key>
+    <key name="android.template.258003120">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-1463159660">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.1921035029">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-109784125">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.1370076903">
+      <recent name="com.example.movieticketsapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="T:\MovieTicketsApp\app\src\main\java\com\example\movieticketsapp" />
+      <recent name="T:\MovieTicketsApp\app\src\main\res\drawable" />
+      <recent name="T:\MovieTicketsApp\app\src\main\res\layout" />
+    </key>
+    <key name="android.template.-1691311768">
+      <recent name="com.example.movieticketsapp.activity.User" />
+    </key>
+    <key name="android.template.-1119973684">
+      <recent name="com.example.movieticketsapp.adapter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="T:\MovieTicketsApp\app\src\main\java\com\example\movieticketsapp\QRCode" />
+      <recent name="T:\MovieTicketsApp\app\src\main\res\drawable" />
+      <recent name="T:\MovieTicketsApp\app\src\main\res\layout" />
+      <recent name="T:\MovieTicketsApp\app" />
+    </key>
+    <key name="android.template.838383553">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-647760703">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.movieticketsapp.APIModule.ThemovieAPI.list" />
+      <recent name="com.example.movieticketsapp.APIModule.ThemovieAPI.model" />
+      <recent name="com.example.movieticketsapp.activity.User" />
+      <recent name="com.example.movieticketsapp.activity.Login" />
+      <recent name="com.example.movieticketsapp.activity.Admin" />
+    </key>
+    <key name="android.template.1194786260">
+      <recent name="com.example.movieticketsapp" />
+    </key>
+    <key name="android.template.-1635579867">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-583780005">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+    <key name="android.template.-916529652">
+      <recent name="com.example.movieticketsapp.activity" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="MovieTicketsApp.app" />
+      <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="ALLOW_ASSUME_VERIFIED" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="RESTORE_ENABLED" value="false" />
+      <option name="RESTORE_FILE" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Hybrid>
+      <Java>
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Java>
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+        <option name="ATTACH_ON_WAIT_FOR_DEBUGGER" value="false" />
+        <option name="DEBUG_SANDBOX_SDK" value="false" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6bba2fe-5f3f-45fd-80a1-4816b2090150" name="Changes" comment="" />
+      <created>1744520514558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744520514558</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: Authentication email link">
+      <option name="closed" value="true" />
+      <created>1745836009929</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745836009929</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat:Send email reset password">
+      <option name="closed" value="true" />
+      <created>1745997096609</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745997096609</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat:Send email reset password">
+      <option name="closed" value="true" />
+      <created>1745997159256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745997159256</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat:get data movie and gener realtime">
+      <option name="closed" value="true" />
+      <created>1746384212459</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746384212460</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat:create file item movie layout">
+      <option name="closed" value="true" />
+      <created>1746384270823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746384270823</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat:create file details_movie_layout.xml&#10;DetailsMovieActivity">
+      <option name="closed" value="true" />
+      <created>1746613336469</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746613336469</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat:change activity in file manifes">
+      <option name="closed" value="true" />
+      <created>1746614040199</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746614040199</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: data realtime DetailsMovieActivity">
+      <option name="closed" value="true" />
+      <created>1746848765359</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746848765359</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: send data user and design seat layout">
+      <option name="closed" value="true" />
+      <created>1747093251231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747093251231</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: img bg">
+      <option name="closed" value="true" />
+      <created>1747093350221</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747093350221</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: fetch data showtime">
+      <option name="closed" value="true" />
+      <created>1747137730149</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747137730149</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: creat file ChooseDateAndTimeActivity">
+      <option name="closed" value="true" />
+      <created>1747137934823</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747137934823</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: creat file">
+      <option name="closed" value="true" />
+      <created>1747137963740</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747137963740</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update: ChooseDateAndTimeActivity">
+      <option name="closed" value="true" />
+      <created>1747150813229</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1747150813230</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1747151788630</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1747151788630</updated>
+    </task>
+    <task id="LOCAL-00016" summary="dd">
+      <option name="closed" value="true" />
+      <created>1747151843377</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1747151843377</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: fetch data seat">
+      <option name="closed" value="true" />
+      <created>1747173699606</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1747173699606</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: qr code and upload TicketMovie">
+      <option name="closed" value="true" />
+      <created>1747197473867</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1747197473867</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update: url QR code">
+      <option name="closed" value="true" />
+      <created>1747197817744</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1747197817744</updated>
+    </task>
+    <task id="LOCAL-00020" summary="update: search movie">
+      <option name="closed" value="true" />
+      <created>1747325199782</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1747325199782</updated>
+    </task>
+    <task id="LOCAL-00021" summary="upload file deploy">
+      <option name="closed" value="true" />
+      <created>1747450366907</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1747450366907</updated>
+    </task>
+    <task id="LOCAL-00022" summary="feat: food bottom sheet fragment">
+      <option name="closed" value="true" />
+      <created>1747632465231</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1747632465231</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update: recycleview1.4.0">
+      <option name="closed" value="true" />
+      <created>1747700602700</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1747700602700</updated>
+    </task>
+    <task id="LOCAL-00024" summary="home-&gt;log manifes">
+      <option name="closed" value="true" />
+      <created>1747700851796</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1747700851796</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: tab basket item">
+      <option name="closed" value="true" />
+      <created>1747713415369</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747713415370</updated>
+    </task>
+    <task id="LOCAL-00026" summary="creat: file bill_details_layout.xml and BillDetailsActivity">
+      <option name="closed" value="true" />
+      <created>1747715126811</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1747715126811</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feat: booking ticket movie">
+      <option name="closed" value="true" />
+      <created>1747790696901</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1747790696901</updated>
+    </task>
+    <task id="LOCAL-00028" summary="update: add lib">
+      <option name="closed" value="true" />
+      <created>1747797053023</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1747797053023</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update: aaaaaa">
+      <option name="closed" value="true" />
+      <created>1747807185490</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1747807185490</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: zalopay">
+      <option name="closed" value="true" />
+      <created>1748441952691</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1748441952691</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix: error cannot trade Zalopay">
+      <option name="closed" value="true" />
+      <created>1748597148122</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1748597148123</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: gg map api">
+      <option name="closed" value="true" />
+      <created>1748979037054</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1748979037054</updated>
+    </task>
+    <task id="LOCAL-00033" summary="clean code">
+      <option name="closed" value="true" />
+      <created>1753242207157</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1753242207157</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update main">
+      <option name="closed" value="true" />
+      <created>1753242737841</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1753242737841</updated>
+    </task>
+    <task id="LOCAL-00035" summary="update main">
+      <option name="closed" value="true" />
+      <created>1753243285846</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1753243285846</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1753243683192</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1753243683192</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1753244746269</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1753244746269</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="admin_vantien" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update: gg" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="dd" />
+    <MESSAGE value="feat: fetch data seat" />
+    <MESSAGE value="feat: qr code and upload TicketMovie" />
+    <MESSAGE value="update: url QR code" />
+    <MESSAGE value="update: search movie" />
+    <MESSAGE value="upload file deploy" />
+    <MESSAGE value="feat: food bottom sheet fragment" />
+    <MESSAGE value="update: recycleview1.4.0" />
+    <MESSAGE value="home-&gt;log manifes" />
+    <MESSAGE value="feat: tab basket item" />
+    <MESSAGE value="creat: file bill_details_layout.xml and BillDetailsActivity" />
+    <MESSAGE value="feat: booking ticket movie" />
+    <MESSAGE value="update: add lib" />
+    <MESSAGE value="update: aaaaaa" />
+    <MESSAGE value="feat: zalopay" />
+    <MESSAGE value="fix: error cannot trade Zalopay" />
+    <MESSAGE value="feat: gg map api" />
+    <MESSAGE value="clean code" />
+    <MESSAGE value="aaa" />
+    <MESSAGE value="update main" />
+    <MESSAGE value="j" />
+    <MESSAGE value="fddf" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
+  </component>
+  <component name="play_dynamic_filters_status">
+    <option name="appIdToCheckInfo">
+      <map>
+        <entry key="com.example.movieticketsapp">
+          <value>
+            <CheckInfo lastCheckTimestamp="1753242210118" />
+          </value>
+        </entry>
+        <entry key="com.example.movieticketsapp.test">
+          <value>
+            <CheckInfo lastCheckTimestamp="1753242210118" />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

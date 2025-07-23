@@ -1,0 +1,782 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.movieticketsapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="31"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission
+11-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:5:5-7:38
+12        android:name="android.permission.READ_EXTERNAL_STORAGE"
+12-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:6:9-64
+13        android:maxSdkVersion="32" />
+13-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:7:9-35
+14    <uses-permission
+14-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:5:5-7:38
+15        android:name="android.permission.READ_EXTERNAL_STORAGE"
+15-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:6:9-64
+16        android:maxSdkVersion="32" />
+16-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:7:9-35
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:11:5-67
+17-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:11:22-64
+18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+18-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:12:5-79
+18-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:12:22-76
+19
+20    <queries>
+20-->[zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:9:5-13:15
+21        <package android:name="vn.com.vng.zalopay.sb1" />
+21-->[zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:9-58
+21-->[zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:18-55
+22        <package android:name="vn.com.vng.zalopay" />
+22-->[zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:9-54
+22-->[zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:18-51
+23        <package android:name="com.zing.zalo" />
+23-->[zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:9-49
+23-->[zpdk-release-v3.1.aar] C:\Users\quang\.gradle\caches\8.10.2\transforms\b488e35391317114f61b9782d8753207\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:18-46
+24        <!-- Needs to be explicitly declared on Android R+ -->
+25        <package android:name="com.google.android.apps.maps" />
+25-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:29:7-61
+25-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:29:16-59
+26    </queries>
+27
+28    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+28-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:11:5-81
+28-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:11:22-78
+29    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+29-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:12:5-79
+29-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:12:22-76
+30    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+30-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:13:5-76
+30-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:13:22-73
+31
+32    <uses-feature
+32-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:22:5-24:33
+33        android:glEsVersion="0x00020000"
+33-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:23:8-40
+34        android:required="true" />
+34-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:24:8-31
+35
+36    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+36-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:24:5-68
+36-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:24:22-65
+37    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+37-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:26:5-82
+37-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:26:22-79
+38
+39    <permission
+39-->[androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+40        android:name="com.example.movieticketsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+40-->[androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+41        android:protectionLevel="signature" />
+41-->[androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+42
+43    <uses-permission android:name="com.example.movieticketsapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+43-->[androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+43-->[androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+44    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+44-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:5-98
+44-->[com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\8158e41b889521cdb7d0fda2a2acc1c0\transformed\recaptcha-18.6.1\AndroidManifest.xml:9:22-95
+45
+46    <application
+46-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:14:5-168:19
+47        android:allowBackup="true"
+47-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:15:9-35
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.15.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3dfe4a3b3ada2f64e5948e5f44033dcc\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+49        android:dataExtractionRules="@xml/data_extraction_rules"
+49-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:16:9-65
+50        android:debuggable="true"
+51        android:extractNativeLibs="false"
+52        android:fullBackupContent="@xml/backup_rules"
+52-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:17:9-54
+53        android:icon="@mipmap/ic_launcher"
+53-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:18:9-43
+54        android:label="@string/app_name"
+54-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:19:9-41
+55        android:roundIcon="@mipmap/ic_launcher_round"
+55-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:20:9-54
+56        android:supportsRtl="true"
+56-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:21:9-35
+57        android:testOnly="true"
+58        android:theme="@style/Theme.MovieTicketsApp" >
+58-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:22:9-53
+59        <activity
+59-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:23:9-25:40
+60            android:name="com.example.movieticketsapp.activity.Login.SaverActivity"
+60-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:24:13-57
+61            android:exported="false" />
+61-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:25:13-37
+62        <activity
+62-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:26:9-28:40
+63            android:name="com.example.movieticketsapp.activity.Admin.AdminManageActivity"
+63-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:27:13-63
+64            android:exported="false" />
+64-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:28:13-37
+65        <activity
+65-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:29:9-31:40
+66            android:name="com.example.movieticketsapp.activity.User.UpdateUserInfoActivity"
+66-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:30:13-65
+67            android:exported="false" />
+67-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:31:13-37
+68        <activity
+68-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:32:9-34:39
+69            android:name="com.example.movieticketsapp.activity.Admin.AdminHomeActivity"
+69-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:33:13-61
+70            android:exported="true" />
+70-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:34:13-36
+71        <activity
+71-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:35:9-37:39
+72            android:name="com.example.movieticketsapp.activity.Admin.AdminMovieDashboardActivity"
+72-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:36:13-71
+73            android:exported="true" />
+73-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:37:13-36
+74        <activity
+74-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:38:9-40:39
+75            android:name="com.example.movieticketsapp.activity.Admin.AdminMovieMovieActivity"
+75-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:39:13-67
+76            android:exported="true" />
+76-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:40:13-36
+77        <activity
+77-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:41:9-43:39
+78            android:name="com.example.movieticketsapp.activity.Admin.AdminMovieGenreActivity"
+78-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:42:13-67
+79            android:exported="true" />
+79-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:43:13-36
+80        <activity
+80-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:44:9-46:39
+81            android:name="com.example.movieticketsapp.activity.Admin.AdminMovieCastActivity"
+81-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:45:13-66
+82            android:exported="true" />
+82-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:46:13-36
+83        <activity
+83-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:47:9-49:40
+84            android:name="com.example.movieticketsapp.activity.Admin.AdminShowtimesActivity"
+84-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:48:13-66
+85            android:exported="false" />
+85-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:49:13-37
+86        <activity
+86-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:50:9-52:40
+87            android:name="com.example.movieticketsapp.activity.Admin.AdminTimelineActivity"
+87-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:51:13-65
+88            android:exported="false" />
+88-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:52:13-37
+89        <activity
+89-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:53:9-55:40
+90            android:name="com.example.movieticketsapp.activity.Admin.AdminSeatManagerActivity"
+90-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:54:13-68
+91            android:exported="false" />
+91-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:55:13-37
+92        <activity
+92-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:56:9-58:40
+93            android:name="com.example.movieticketsapp.activity.Admin.AdminFoodManagerActivity"
+93-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:57:13-68
+94            android:exported="false" />
+94-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:58:13-37
+95        <activity
+95-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:59:9-61:40
+96            android:name="com.example.movieticketsapp.activity.Admin.AdminStatisticsActivity"
+96-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:60:13-67
+97            android:exported="false" />
+97-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:61:13-37
+98        <activity
+98-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:62:9-64:40
+99            android:name="com.example.movieticketsapp.activity.User.AccountProfileActivity"
+99-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:63:13-65
+100            android:exported="false" />
+100-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:64:13-37
+101        <activity
+101-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:65:9-67:40
+102            android:name="com.example.movieticketsapp.activity.User.BillDetailsActivity"
+102-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:66:13-62
+103            android:exported="false" />
+103-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:67:13-37
+104        <activity
+104-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:68:9-70:40
+105            android:name="com.example.movieticketsapp.activity.User.TicketDetailActivity"
+105-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:69:13-63
+106            android:exported="false" />
+106-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:70:13-37
+107        <activity
+107-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:71:9-73:40
+108            android:name="com.example.movieticketsapp.activity.User.FoodActivity"
+108-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:72:13-55
+109            android:exported="false" />
+109-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:73:13-37
+110        <activity
+110-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:74:9-76:40
+111            android:name="com.example.movieticketsapp.activity.User.ListTicketActivity"
+111-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:75:13-61
+112            android:exported="false" />
+112-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:76:13-37
+113        <activity
+113-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:77:9-92:20
+114            android:name="com.example.movieticketsapp.activity.User.PaymentActivity"
+114-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:78:13-58
+115            android:exported="true"
+115-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:79:13-36
+116            android:label="Merchant Demo"
+116-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:80:13-42
+117            android:launchMode="singleTask" >
+117-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:81:13-44
+118            <intent-filter>
+118-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:82:13-91:29
+119                <action android:name="android.intent.action.VIEW" />
+119-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:17-69
+119-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:25-66
+120
+121                <category android:name="android.intent.category.DEFAULT" />
+121-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:17-76
+121-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:27-73
+122                <category android:name="android.intent.category.BROWSABLE" />
+122-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:17-78
+122-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:27-75
+123
+124                <data
+124-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:88:17-90:49
+125                    android:host="app"
+125-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:89:21-39
+126                    android:scheme="demozpdk" />
+126-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:90:21-46
+127            </intent-filter>
+128        </activity>
+129        <activity
+129-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:93:9-95:40
+130            android:name="com.example.movieticketsapp.activity.User.HomaPageActivity"
+130-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:94:13-59
+131            android:exported="false" />
+131-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:95:13-37
+132        <activity
+132-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:96:9-98:40
+133            android:name="com.example.movieticketsapp.activity.User.ChooseDateAndTimeActivity"
+133-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:97:13-68
+134            android:exported="false" />
+134-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:98:13-37
+135        <activity
+135-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:99:9-101:40
+136            android:name="com.example.movieticketsapp.activity.User.DetailsMovieActivity"
+136-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:100:13-63
+137            android:exported="false" />
+137-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:101:13-37
+138        <activity
+138-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:102:9-104:40
+139            android:name="com.example.movieticketsapp.activity.User.ViewAllMovie"
+139-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:103:13-55
+140            android:exported="false" />
+140-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:104:13-37
+141        <activity
+141-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:105:9-107:40
+142            android:name="com.example.movieticketsapp.activity.Login.ProfileActivity"
+142-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:106:13-59
+143            android:exported="false" />
+143-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:107:13-37
+144        <activity
+144-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:108:9-110:40
+145            android:name="com.example.movieticketsapp.activity.Login.PopupSignInSuccess"
+145-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:109:13-62
+146            android:exported="false" />
+146-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:110:13-37
+147        <activity
+147-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:111:9-113:40
+148            android:name="com.example.movieticketsapp.activity.Login.ResetPassWordActivity"
+148-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:112:13-65
+149            android:exported="false" />
+149-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:113:13-37
+150        <activity
+150-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:114:9-116:40
+151            android:name="com.example.movieticketsapp.activity.Login.SignUpSuccessfulActivity"
+151-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:115:13-68
+152            android:exported="false" />
+152-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:116:13-37
+153        <activity
+153-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:117:9-119:40
+154            android:name="com.example.movieticketsapp.activity.User.SeatActivity"
+154-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:118:13-55
+155            android:exported="false" />
+155-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:119:13-37
+156        <activity
+156-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:120:9-122:40
+157            android:name="com.example.movieticketsapp.activity.Login.SignUpActivity"
+157-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:121:13-58
+158            android:exported="false" />
+158-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:122:13-37
+159        <activity
+159-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:123:9-125:40
+160            android:name="com.example.movieticketsapp.activity.Login.CreateNewPassActivity"
+160-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:124:13-65
+161            android:exported="false" />
+161-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:125:13-37
+162        <activity
+162-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:126:9-128:40
+163            android:name="com.example.movieticketsapp.activity.User.OTPCodeActivity"
+163-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:127:13-58
+164            android:exported="false" />
+164-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:128:13-37
+165        <activity
+165-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:129:9-131:40
+166            android:name="com.example.movieticketsapp.activity.Login.SignInActivity"
+166-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:130:13-58
+167            android:exported="false" />
+167-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:131:13-37
+168        <activity
+168-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:132:9-134:40
+169            android:name="com.example.movieticketsapp.activity.Login.GetStartedActivity"
+169-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:133:13-62
+170            android:exported="false" />
+170-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:134:13-37
+171        <activity
+171-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:135:9-137:40
+172            android:name="com.example.movieticketsapp.activity.User.DemoAPIctivity"
+172-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:136:13-57
+173            android:exported="false" />
+173-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:137:13-37
+174        <activity
+174-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:138:9-140:40
+175            android:name="com.example.movieticketsapp.activity.User.FoodMenuActivity"
+175-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:139:13-59
+176            android:exported="false" />
+176-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:140:13-37
+177        <activity
+177-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:141:9-159:20
+178            android:name="com.example.movieticketsapp.activity.Login.LoginActivity"
+178-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:142:13-57
+179            android:exported="true" >
+179-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:143:13-36
+180            <intent-filter android:autoVerify="true" >
+180-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:144:13-158:29
+180-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:144:28-53
+181                <action android:name="android.intent.action.MAIN" />
+181-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:145:17-69
+181-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:145:25-66
+182
+183                <category android:name="android.intent.category.LAUNCHER" />
+183-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:147:17-77
+183-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:147:27-74
+184
+185                <action android:name="android.intent.action.VIEW" />
+185-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:17-69
+185-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:25-66
+186
+187                <category android:name="android.intent.category.DEFAULT" />
+187-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:17-76
+187-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:27-73
+188                <category android:name="android.intent.category.BROWSABLE" />
+188-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:17-78
+188-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:27-75
+189
+190                <data
+190-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:88:17-90:49
+191                    android:host="movieticketsapp-9a88f.firebaseapp.com"
+191-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:89:21-39
+192                    android:pathPrefix="/__/auth/links"
+192-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:156:21-56
+193                    android:scheme="https" />
+193-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:90:21-46
+194            </intent-filter>
+195        </activity>
+196
+197        <meta-data
+197-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:161:9-163:59
+198            android:name="com.google.android.geo.API_KEY"
+198-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:162:13-58
+199            android:value="@string/GOOGLE_MAPS_API_KEY" />
+199-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:163:13-56
+200
+201        <activity
+201-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:165:9-167:40
+202            android:name="com.example.movieticketsapp.activity.User.WalkthroughActivity"
+202-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:166:13-62
+203            android:exported="false" />
+203-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:167:13-37
+204        <activity
+204-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:17:9-23:20
+205            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+205-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:18:13-91
+206            android:exported="false"
+206-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:19:13-37
+207            android:label="@string/places_autocomplete_label"
+207-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:20:13-62
+208            android:theme="@style/PlacesAutocompleteOverlay"
+208-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:21:13-61
+209            android:windowSoftInputMode="adjustResize" >
+209-->[com.google.android.libraries.places:places:4.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\12afc8ccf7867f78ba19d838fb32c39a\transformed\places-4.2.0\AndroidManifest.xml:22:13-55
+210        </activity>
+211        <activity
+211-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:29:9-46:20
+212            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+212-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:30:13-80
+213            android:excludeFromRecents="true"
+213-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:31:13-46
+214            android:exported="true"
+214-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:32:13-36
+215            android:launchMode="singleTask"
+215-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:33:13-44
+216            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+216-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:34:13-72
+217            <intent-filter>
+217-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:35:13-45:29
+218                <action android:name="android.intent.action.VIEW" />
+218-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:17-69
+218-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:25-66
+219
+220                <category android:name="android.intent.category.DEFAULT" />
+220-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:17-76
+220-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:27-73
+221                <category android:name="android.intent.category.BROWSABLE" />
+221-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:17-78
+221-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:27-75
+222
+223                <data
+223-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:88:17-90:49
+224                    android:host="firebase.auth"
+224-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:89:21-39
+225                    android:path="/"
+226                    android:scheme="genericidp" />
+226-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:90:21-46
+227            </intent-filter>
+228        </activity>
+229        <activity
+229-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:47:9-64:20
+230            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+230-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:48:13-79
+231            android:excludeFromRecents="true"
+231-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:49:13-46
+232            android:exported="true"
+232-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:50:13-36
+233            android:launchMode="singleTask"
+233-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:51:13-44
+234            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+234-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:52:13-72
+235            <intent-filter>
+235-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:53:13-63:29
+236                <action android:name="android.intent.action.VIEW" />
+236-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:17-69
+236-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:83:25-66
+237
+238                <category android:name="android.intent.category.DEFAULT" />
+238-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:17-76
+238-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:85:27-73
+239                <category android:name="android.intent.category.BROWSABLE" />
+239-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:17-78
+239-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:86:27-75
+240
+241                <data
+241-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:88:17-90:49
+242                    android:host="firebase.auth"
+242-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:89:21-39
+243                    android:path="/"
+244                    android:scheme="recaptcha" />
+244-->T:\MovieTicketsApp\app\src\main\AndroidManifest.xml:90:21-46
+245            </intent-filter>
+246        </activity>
+247
+248        <service
+248-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:66:9-72:19
+249            android:name="com.google.firebase.components.ComponentDiscoveryService"
+249-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:67:13-84
+250            android:directBootAware="true"
+250-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+251            android:exported="false" >
+251-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:68:13-37
+252            <meta-data
+252-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:69:13-71:85
+253                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+253-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:70:17-109
+254                android:value="com.google.firebase.components.ComponentRegistrar" />
+254-->[com.google.firebase:firebase-auth:23.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\1b337fe4a350f1d7586bef080f368826\transformed\firebase-auth-23.2.0\AndroidManifest.xml:71:17-82
+255            <meta-data
+255-->[com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:15:13-17:85
+256                android:name="com.google.firebase.components:com.google.firebase.functions.FirebaseFunctionsKtxRegistrar"
+256-->[com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:16:17-122
+257                android:value="com.google.firebase.components.ComponentRegistrar" />
+257-->[com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:17:17-82
+258            <meta-data
+258-->[com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:18:13-20:85
+259                android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar"
+259-->[com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:19:17-111
+260                android:value="com.google.firebase.components.ComponentRegistrar" />
+260-->[com.google.firebase:firebase-functions:21.2.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\1ab32b0e596f5bd3fbc9899b32232e03\transformed\firebase-functions-21.2.1\AndroidManifest.xml:20:17-82
+261            <meta-data
+261-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:17:13-19:85
+262                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+262-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:18:17-122
+263                android:value="com.google.firebase.components.ComponentRegistrar" />
+263-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:19:17-82
+264            <meta-data
+264-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:20:13-22:85
+265                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+265-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:21:17-111
+266                android:value="com.google.firebase.components.ComponentRegistrar" />
+266-->[com.google.firebase:firebase-firestore:25.1.4] C:\Users\quang\.gradle\caches\8.10.2\transforms\1f7c1f7f0bd1554b4eee6c7593cd4648\transformed\firebase-firestore-25.1.4\AndroidManifest.xml:22:17-82
+267            <meta-data
+267-->[com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:12:13-14:85
+268                android:name="com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar"
+268-->[com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:13:17-125
+269                android:value="com.google.firebase.components.ComponentRegistrar" />
+269-->[com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\9dce04071b0b7827a41b3fda5227832f\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:14:17-82
+270            <meta-data
+270-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:30:13-32:85
+271                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+271-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:31:17-118
+272                android:value="com.google.firebase.components.ComponentRegistrar" />
+272-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:32:17-82
+273            <meta-data
+273-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:33:13-35:85
+274                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+274-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:34:17-107
+275                android:value="com.google.firebase.components.ComponentRegistrar" />
+275-->[com.google.firebase:firebase-storage:21.0.1] C:\Users\quang\.gradle\caches\8.10.2\transforms\82d6a236f4355f29703264682897c64e\transformed\firebase-storage-21.0.1\AndroidManifest.xml:35:17-82
+276            <meta-data
+276-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+277                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+277-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+278                android:value="com.google.firebase.components.ComponentRegistrar" />
+278-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+279            <meta-data
+279-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+280                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+280-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+281                android:value="com.google.firebase.components.ComponentRegistrar" />
+281-->[com.google.firebase:firebase-appcheck:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\69fd4225a2372fc2b1dd1086ae51b8c6\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+282            <meta-data
+282-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:32:13-34:85
+283                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+283-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:33:17-96
+284                android:value="com.google.firebase.components.ComponentRegistrar" />
+284-->[com.google.firebase:firebase-iid:21.1.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4654bb43aad5aee36ec307c9e3dbb0c9\transformed\firebase-iid-21.1.0\AndroidManifest.xml:34:17-82
+285            <meta-data
+285-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:15:13-17:85
+286                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+286-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:16:17-130
+287                android:value="com.google.firebase.components.ComponentRegistrar" />
+287-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:17:17-82
+288            <meta-data
+288-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:18:13-20:85
+289                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+289-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:19:17-127
+290                android:value="com.google.firebase.components.ComponentRegistrar" />
+290-->[com.google.firebase:firebase-installations:18.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\bc53dcd1039f52e95e3eac08c3a3c525\transformed\firebase-installations-18.0.0\AndroidManifest.xml:20:17-82
+291            <meta-data
+291-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+292                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+292-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+293                android:value="com.google.firebase.components.ComponentRegistrar" />
+293-->[com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3574b986179ede5f6fe7bc58fb54339c\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+294            <meta-data
+294-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+295                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+295-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+296                android:value="com.google.firebase.components.ComponentRegistrar" />
+296-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+297        </service>
+298        <service
+298-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+299            android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder"
+299-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+300            android:enabled="true"
+300-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+301            android:exported="false" >
+301-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+302            <meta-data
+302-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+303                android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY"
+303-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+304                android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" />
+304-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+305        </service>
+306
+307        <activity
+307-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+308            android:name="androidx.credentials.playservices.HiddenActivity"
+308-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+309            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+309-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+310            android:enabled="true"
+310-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+311            android:exported="false"
+311-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+312            android:fitsSystemWindows="true"
+312-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+313            android:theme="@style/Theme.Hidden" >
+313-->[androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\quang\.gradle\caches\8.10.2\transforms\bd058391b7dc8e2d227e52f2d723dd6f\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+314        </activity>
+315        <activity
+315-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:23:9-27:75
+316            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+316-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:24:13-93
+317            android:excludeFromRecents="true"
+317-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:25:13-46
+318            android:exported="false"
+318-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:26:13-37
+319            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+319-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:27:13-72
+320        <!--
+321            Service handling Google Sign-In user revocation. For apps that do not integrate with
+322            Google Sign-In, this service will never be started.
+323        -->
+324        <service
+324-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:33:9-37:51
+325            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+325-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:34:13-89
+326            android:exported="true"
+326-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:35:13-36
+327            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+327-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:36:13-107
+328            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
+328-->[com.google.android.gms:play-services-auth:21.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\f3916774f74c8a62a9363adc8fbc89f9\transformed\play-services-auth-21.3.0\AndroidManifest.xml:37:13-48
+329        <uses-library
+329-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:33:7-86
+330            android:name="org.apache.http.legacy"
+330-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:33:21-58
+331            android:required="false" />
+331-->[com.google.android.gms:play-services-maps:19.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dcb3623d223f323f9f752dbf89ae9d5e\transformed\play-services-maps-19.2.0\AndroidManifest.xml:33:59-83
+332
+333        <activity
+333-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+334            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+334-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+335            android:exported="false"
+335-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+336            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+336-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e905bb91999b5944d049f17313d03176\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+337
+338        <provider
+338-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+339            android:name="com.google.firebase.provider.FirebaseInitProvider"
+339-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+340            android:authorities="com.example.movieticketsapp.firebaseinitprovider"
+340-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+341            android:directBootAware="true"
+341-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+342            android:exported="false"
+342-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+343            android:initOrder="100" />
+343-->[com.google.firebase:firebase-common:21.0.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\4589f6a3b18d374466291c43dbf1a05d\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+344        <provider
+344-->[androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+345            android:name="androidx.startup.InitializationProvider"
+345-->[androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+346            android:authorities="com.example.movieticketsapp.androidx-startup"
+346-->[androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+347            android:exported="false" >
+347-->[androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+348            <meta-data
+348-->[androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+349                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+349-->[androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+350                android:value="androidx.startup" />
+350-->[androidx.emoji2:emoji2:1.3.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\e4866b7a0e9fcc01e77f1628b8d0f689\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+351            <meta-data
+351-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+352                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+352-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+353                android:value="androidx.startup" />
+353-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\quang\.gradle\caches\8.10.2\transforms\aedab704c24c63b7d1518429d11c6362\transformed\lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+354            <meta-data
+354-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+355                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+355-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+356                android:value="androidx.startup" />
+356-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+357        </provider>
+358
+359        <meta-data
+359-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+360            android:name="com.google.android.gms.version"
+360-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+361            android:value="@integer/google_play_services_version" />
+361-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\3c46604eb0489ee7c6d04e487058bf64\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+362
+363        <receiver
+363-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+364            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+364-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+365            android:directBootAware="false"
+365-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+366            android:enabled="true"
+366-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+367            android:exported="true"
+367-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+368            android:permission="android.permission.DUMP" >
+368-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+369            <intent-filter>
+369-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+370                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+370-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+370-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+371            </intent-filter>
+372            <intent-filter>
+372-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+373                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+373-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+373-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+374            </intent-filter>
+375            <intent-filter>
+375-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+376                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+376-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+376-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+377            </intent-filter>
+378            <intent-filter>
+378-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+379                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+379-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+379-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\d19657a89e73c4fd2e4cf7bc78be76d7\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+380            </intent-filter>
+381        </receiver>
+382
+383        <service
+383-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:26:9-32:19
+384            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+384-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:27:13-103
+385            android:exported="false" >
+385-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:28:13-37
+386            <meta-data
+386-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:29:13-31:39
+387                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+387-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:30:17-94
+388                android:value="cct" />
+388-->[com.google.android.datatransport:transport-backend-cct:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\87b84ccf81efc19527bf4f5dac4e8fa7\transformed\transport-backend-cct-3.2.0\AndroidManifest.xml:31:17-36
+389        </service>
+390        <service
+390-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:24:9-28:19
+391            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+391-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:25:13-117
+392            android:exported="false"
+392-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:26:13-37
+393            android:permission="android.permission.BIND_JOB_SERVICE" >
+393-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:27:13-69
+394        </service>
+395
+396        <receiver
+396-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:30:9-32:40
+397            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+397-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:31:13-132
+398            android:exported="false" />
+398-->[com.google.android.datatransport:transport-runtime:3.2.0] C:\Users\quang\.gradle\caches\8.10.2\transforms\dc9092b96ad9f254fe7a21331ce99a7c\transformed\transport-runtime-3.2.0\AndroidManifest.xml:32:13-37
+399
+400        <provider
+400-->[com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+401            android:name="com.squareup.picasso.PicassoProvider"
+401-->[com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:9:13-64
+402            android:authorities="com.example.movieticketsapp.com.squareup.picasso"
+402-->[com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:10:13-72
+403            android:exported="false" /> <!-- The activities will be merged into the manifest of the hosting app. -->
+403-->[com.squareup.picasso:picasso:2.71828] C:\Users\quang\.gradle\caches\8.10.2\transforms\c9de642a6145d213755cccab81a917d8\transformed\picasso-2.71828\AndroidManifest.xml:11:13-37
+404        <activity
+404-->[com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:14:9-18:65
+405            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+405-->[com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:15:13-93
+406            android:exported="false"
+406-->[com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:16:13-37
+407            android:stateNotNeeded="true"
+407-->[com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:17:13-42
+408            android:theme="@style/Theme.PlayCore.Transparent" />
+408-->[com.google.android.play:core-common:2.0.3] C:\Users\quang\.gradle\caches\8.10.2\transforms\7ce4e38161358cf3c04fdab02a7fe43d\transformed\core-common-2.0.3\AndroidManifest.xml:18:13-62
+409    </application>
+410
+411</manifest>
