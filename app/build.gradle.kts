@@ -79,10 +79,15 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.commons.codec)
 
-    // GOOGLE
+    // RETROFIT
+    implementation(libs.retrofit)
+    implementation (libs.converter.gson.v290)
 
+    // GOOGLE
     implementation (libs.play.services.maps)
 
+    //COROUTINES
+    implementation(libs.kotlinx.coroutines.android)
     implementation (libs.libraries.bom)
     implementation (libs.compressor)
     implementation(libs.mpandroidchart)

@@ -3,12 +3,19 @@ package com.example.movieticketsapp.activity.User
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Adapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.movieticketsapp.APIModule.ThemovieAPI.list.MovieList
+import com.example.movieticketsapp.APIModule.ThemovieAPI.model.MovieModel
+import com.example.movieticketsapp.APIModule.ThemovieAPI.RetrofitClient
+import com.example.movieticketsapp.APIModule.ThemovieAPI.TMDBANowPlaying
 import com.example.movieticketsapp.R
 import com.example.movieticketsapp.adapter.ItemMovieAdapter
 import com.example.movieticketsapp.databinding.HomaPageLayoutBinding
@@ -17,38 +24,39 @@ import com.example.movieticketsapp.utils.navigateTo
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
+import kotlinx.coroutines.launch
 
 class HomaPageActivity : AppCompatActivity() {
     private lateinit var binding: HomaPageLayoutBinding
     private lateinit var adapterMovie: ItemMovieAdapter
-    private lateinit var listMovie: ArrayList<Movie>
+    private lateinit var listMovie: ArrayList<MovieModel>
     private lateinit var imgList: ArrayList<SlideModel>
     private lateinit var db: FirebaseFirestore
     private lateinit var auth: FirebaseAuth
     private var movieListener: ListenerRegistration? = null
-
-    private lateinit var adapterBestMovie: ItemMovieAdapter
     private lateinit var listBestMovie: ArrayList<Movie>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = HomaPageLayoutBinding.inflate(layoutInflater)
+        initialize()
         setContentView(binding.root)
 
-        initialize()
         setEvent()
-        setAdapterMovie()
-        setAdapterBestMovie()
-        listenToMovieCollectionRealtime()
-        listenToBestRatedMovies()
+//        setAdapterMovie()
+//        setAdapterBestMovie()
+//        listenToBestRatedMovies()
         listenToImgMovieCollectionRealtime()
+        fetchPlayingMovies()
+        fetchUpCommingMovies()
         getUserInfo()
-
         setupBottomNavigationView()
+        listenToMovieCollectionRealtime()
     }
 
     private fun initialize() {
+        binding = HomaPageLayoutBinding.inflate(layoutInflater)
         listMovie = ArrayList()
+        adapterMovie = ItemMovieAdapter(listMovie) {}
         imgList = ArrayList()
         listBestMovie = ArrayList()
         db = FirebaseFirestore.getInstance()
@@ -63,25 +71,59 @@ class HomaPageActivity : AppCompatActivity() {
         }
     }
 
-    private fun setAdapterMovie() {
-        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        binding.rcvMovie.layoutManager = layoutManager
-        adapterMovie = ItemMovieAdapter(listMovie) { event ->
-            val intent = Intent(this, DetailsMovieActivity::class.java)
-            intent.putExtra("movie_id", event.id)
-            startActivity(intent)
+    private fun fetchMovies(
+        apiCall: suspend () -> MovieList,
+        recyclerView: RecyclerView,
+        adapterFactory: (ArrayList<MovieModel>) -> RecyclerView.Adapter<*>,
+
+    ) {
+
+        lifecycleScope.launch {
+            try {
+                val response = apiCall()
+                val movies = response.results
+                val layoutManager = LinearLayoutManager(
+                    this@HomaPageActivity,
+                    LinearLayoutManager.HORIZONTAL,
+                    false
+                )
+                recyclerView.layoutManager = layoutManager
+                recyclerView.adapter = adapterFactory(movies)
+            } catch (e: Exception) {
+                Log.e("TMDB", "Lỗi khi gọi API: ${e.message}")
+            }
         }
-        binding.rcvMovie.adapter = adapterMovie
     }
-    private fun setAdapterBestMovie() {
-        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        binding.rcv.layoutManager = layoutManager
-        adapterBestMovie = ItemMovieAdapter(listBestMovie) { event ->
-            val intent = Intent(this, DetailsMovieActivity::class.java)
-            intent.putExtra("movie_id", event.id)
-            startActivity(intent)
-        }
-        binding.rcv.adapter = adapterBestMovie
+
+    private fun fetchPlayingMovies() {
+        fetchMovies(
+            apiCall = { RetrofitClient.apiMovieNowPlaying.getNowPlayingMovies(TMDBANowPlaying.API_KEY) },
+            recyclerView = binding.rcvMovie,
+            adapterFactory = { movies ->
+                listMovie = movies
+                ItemMovieAdapter(listMovie){
+                    val intent = Intent(this, DetailsMovieActivity::class.java)
+                    intent.putExtra("movie_id", it.id)
+                    startActivity(intent)
+                }
+            }
+        )
+    }
+
+    private fun fetchUpCommingMovies() {
+        fetchMovies(
+            apiCall = { RetrofitClient.apiMovieUpComming.getNowUpCommingMovies(TMDBANowPlaying.API_KEY) },
+            recyclerView = binding.rcvUpComming,
+            adapterFactory = { movies ->
+                listMovie = movies
+                adapterMovie =  ItemMovieAdapter(listMovie) {
+                    val intent = Intent(this, DetailsMovieActivity::class.java)
+                    intent.putExtra("movie_id", it.id)
+                    startActivity(intent)
+                }
+                adapterMovie
+            }
+        )
     }
 
     private fun listenToMovieCollectionRealtime() {
@@ -96,68 +138,24 @@ class HomaPageActivity : AppCompatActivity() {
                     listMovie.clear()
                     for (doc in it) {
                         val data = doc.data
-                        val imgMovie = data["img_movie"] as? String
+                        val idMovie = doc.id.toInt()
+                        val imgMovie = data["poster_path"] as? String
                         val title = data["title"] as? String
 
                         if (!imgMovie.isNullOrEmpty() && !title.isNullOrEmpty()) {
                             listMovie.add(
-                                Movie(
-                                    doc.id,
-                                    title,
-                                    "",
-                                    0,
-                                    listOf(),
-                                    imgMovie,
-                                    listOf(),
-                                    "",
-                                    0.0,
-                                    ""
+                                MovieModel(
+                                   idMovie, title,"", listOf(),"",""
                                 )
                             )
                         }
                     }
+                    Log.d("ListMovie", "ListMovie: ${listMovie.size}")
                     adapterMovie.notifyDataSetChanged()
                 }
             }
     }
-    private fun listenToBestRatedMovies() {
-        db.collection("movie")
-            .get()
-            .addOnSuccessListener { movieDocs ->
-                listBestMovie.clear()
 
-                for (movieDoc in movieDocs) {
-                    val movieId = movieDoc.id
-                    val data = movieDoc.data
-                    val imgMovie = data["img_movie"] as? String
-                    val title = data["title"] as? String
-
-                    if (imgMovie.isNullOrEmpty() || title.isNullOrEmpty()) continue
-
-                    db.collection("movie")
-                        .document(movieId)
-                        .collection("ratings")
-                        .get()
-                        .addOnSuccessListener { ratingDocs ->
-                            val scores = ratingDocs.mapNotNull { it.getDouble("score") }
-                            val avg = if (scores.isNotEmpty()) scores.average() else 0.0
-
-                            if (avg > 8.0) {
-                                listBestMovie.add(
-                                    Movie(
-                                        movieId, title, "", 0, listOf(),
-                                        imgMovie, listOf(), "", avg, ""
-                                    )
-                                )
-                                adapterBestMovie.notifyDataSetChanged()
-                            }
-                        }
-                }
-            }
-            .addOnFailureListener {
-                Log.e("BestMovie", "Error loading best-rated movies", it)
-            }
-    }
 
     private fun listenToImgMovieCollectionRealtime() {
         db.collection("img_slide")
@@ -229,11 +227,13 @@ class HomaPageActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+
                 R.id.account -> {
                     val intent = Intent(this, AccountProfileActivity::class.java)
                     startActivity(intent)
                     true
                 }
+
                 else -> false
             }
         }

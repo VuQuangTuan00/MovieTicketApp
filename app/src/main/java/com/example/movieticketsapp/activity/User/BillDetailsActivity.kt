@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.movieticketsapp.R
-import com.example.movieticketsapp.ZaloPay.ZaloPayHelper
+import com.example.movieticketsapp.APIModule.ZaloPaySDK.ZaloPay.ZaloPayHelper
 import com.example.movieticketsapp.adapter.ItemNoteAdapter
 import com.example.movieticketsapp.adapter.ItemOrderDetailAdapter
 import com.example.movieticketsapp.databinding.BillDetailsLayoutBinding

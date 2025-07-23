@@ -1,4 +1,4 @@
-package com.example.movieticketsapp.Constant;
+package com.example.movieticketsapp.APIModule.ZaloPaySDK.Constant;
 
 public class AppInfo {
     public static final int APP_ID = 2553;

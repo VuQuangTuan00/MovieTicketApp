@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.movieticketsapp.APIModule.ThemovieAPI.model.MovieModel
 import com.example.movieticketsapp.activity.User.ChooseDateAndTimeActivity
 import com.example.movieticketsapp.databinding.ItemMovieLayoutBinding
-import com.example.movieticketsapp.model.Movie
 
 class ItemMovieAdapter(
-    private var listMovie: List<Movie>,
-    private val onItemClick: (Movie) -> Unit
+    private var listMovie: List<MovieModel>,
+    private val onItemClick: (MovieModel) -> Unit
 ) : RecyclerView.Adapter<ItemMovieAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(val binding: ItemMovieLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -38,7 +38,7 @@ class ItemMovieAdapter(
         holder.binding.tvTitleMovie.text = movie.title
 
         Glide.with(context)
-            .load(movie.img_movie)
+            .load("https://image.tmdb.org/t/p/w500/${movie.poster_path}")
             .into(holder.binding.imgMovie)
 
         holder.binding.btnBookNow.setOnClickListener {
@@ -48,7 +48,7 @@ class ItemMovieAdapter(
         }
     }
 
-    fun updateData(newList: List<Movie>) {
+    fun updateData(newList: List<MovieModel>) {
         val diffResult = DiffUtil.calculateDiff(object : DiffUtil.Callback() {
             override fun getOldListSize(): Int = listMovie.size
             override fun getNewListSize(): Int = newList.size

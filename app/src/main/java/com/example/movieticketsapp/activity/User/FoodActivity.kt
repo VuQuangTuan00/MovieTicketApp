@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
-import com.example.movieticketsapp.BottomSheetDialog.FoodBottomSheetFragment
+import com.example.movieticketsapp.CustomView.Dialog.BottomSheetDialog.FoodBottomSheetFragment
 import com.example.movieticketsapp.adapter.ItemFoodAdapter
 import com.example.movieticketsapp.databinding.FoodLayoutBinding
 import com.example.movieticketsapp.model.CartItem

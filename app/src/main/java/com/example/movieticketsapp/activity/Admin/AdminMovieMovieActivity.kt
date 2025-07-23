@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movieticketsapp.R
 import com.example.movieticketsapp.adapter.ItemMovieAdminAdapter
 import com.example.movieticketsapp.databinding.AdminMovieMovieLayoutBinding
-import com.example.movieticketsapp.fragments.AddEditMovieFragment
+import com.example.movieticketsapp.CustomView.Component.fragments.AddEditMovieFragment
 import com.example.movieticketsapp.model.MovieAdmin
 import com.google.android.gms.tasks.Tasks
 import com.google.firebase.firestore.FirebaseFirestore

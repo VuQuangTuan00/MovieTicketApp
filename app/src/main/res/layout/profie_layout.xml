@@ -109,7 +109,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumber" />
 
-        <com.example.movieticketsapp.custom_view.CustomCalendarEditText
+        <com.example.movieticketsapp.CustomView.Component.custom_view.CustomCalendarEditText
             android:id="@+id/edtDateOfBirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

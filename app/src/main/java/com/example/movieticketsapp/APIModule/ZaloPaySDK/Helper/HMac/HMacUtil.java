@@ -1,4 +1,4 @@
-package com.example.movieticketsapp.Helper.HMac;
+package com.example.movieticketsapp.APIModule.ZaloPaySDK.Helper.HMac;
 
 import android.os.Build;
 

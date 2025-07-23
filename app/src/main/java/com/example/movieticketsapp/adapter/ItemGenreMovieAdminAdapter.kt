@@ -3,7 +3,7 @@ package com.example.movieticketsapp.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.movieticketsapp.databinding.ItemGenreMovieLayoutBinding
+import com.example.movieticketsapp.databinding.ItemAdminGenreMovieLayoutBinding
 import com.example.movieticketsapp.model.GenerMovie
 
 class ItemGenreMovieAdminAdapter(
@@ -12,11 +12,11 @@ class ItemGenreMovieAdminAdapter(
     private val onDelete: (GenerMovie) -> Unit
 ) : RecyclerView.Adapter<ItemGenreMovieAdminAdapter.MyViewHolder>() {
 
-    inner class MyViewHolder(val binding: ItemGenreMovieLayoutBinding) :
+    inner class MyViewHolder(val binding: ItemAdminGenreMovieLayoutBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = ItemGenreMovieLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemAdminGenreMovieLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
     }
 

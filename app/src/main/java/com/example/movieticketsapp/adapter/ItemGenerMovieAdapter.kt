@@ -3,15 +3,20 @@ package com.example.movieticketsapp.adapter
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.movieticketsapp.APIModule.ThemovieAPI.model.GenreModel
 import com.example.movieticketsapp.R
-import com.example.movieticketsapp.databinding.ItemGenerMovieLayoutBinding
-import com.example.movieticketsapp.model.GenerMovie
+import com.example.movieticketsapp.databinding.ItemGenreMovieLayoutBinding
 
-class ItemGenerMovieAdapter(private val list: List<GenerMovie>,private val onItemClick: (GenerMovie) -> Unit): RecyclerView.Adapter<ItemGenerMovieAdapter.MyViewHolder>() {
+
+class ItemGenerMovieAdapter(private val list: ArrayList<GenreModel>,val onItemClick: (GenreModel) -> Unit): RecyclerView.Adapter<ItemGenerMovieAdapter.MyViewHolder>() {
     private var selectedPosition = RecyclerView.NO_POSITION
-    inner class MyViewHolder(val binding:ItemGenerMovieLayoutBinding):RecyclerView.ViewHolder(binding.root){
+    init {
+        if (list.none { it.name == "All" }) {
+            list.add(0, GenreModel(0, "All"))
+        }
+    }
+    inner class MyViewHolder(val binding:ItemGenreMovieLayoutBinding):RecyclerView.ViewHolder(binding.root){
         init {
             itemView.setOnClickListener {
                 val previousPosition = selectedPosition
@@ -24,7 +29,7 @@ class ItemGenerMovieAdapter(private val list: List<GenerMovie>,private val onIte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val binding = ItemGenerMovieLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemGenreMovieLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
     }
 

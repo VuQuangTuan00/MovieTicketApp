@@ -87,7 +87,7 @@
                     android:hint="@string/received_at"
                     />
 
-                <com.example.movieticketsapp.custom_view.CustomCalendarEditText
+                <com.example.movieticketsapp.CustomView.Component.custom_view.CustomCalendarEditText
                     android:id="@+id/edtFoodDeliveryDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -1,10 +1,9 @@
-package com.example.movieticketsapp.ZaloPay
+package com.example.movieticketsapp.APIModule.ZaloPaySDK.ZaloPay
 
 import android.app.Activity
-import android.util.Log
 import android.widget.Toast
 
-import com.example.movieticketsapp.Api.CreateOrder
+import com.example.movieticketsapp.APIModule.ZaloPaySDK.Api.CreateOrder
 import vn.zalopay.sdk.ZaloPayError
 import vn.zalopay.sdk.ZaloPaySDK
 import vn.zalopay.sdk.listeners.PayOrderListener
@@ -18,7 +17,8 @@ class ZaloPayHelper(private val activity: Activity) {
             return
         }
 
-        val orderApi = CreateOrder()
+        val orderApi =
+            CreateOrder()
 
         try {
             val data = orderApi.createOrder(priceText)
@@ -28,7 +28,6 @@ class ZaloPayHelper(private val activity: Activity) {
                 ZaloPaySDK.getInstance().payOrder(activity, token, "demozpdk://app",
                     object : PayOrderListener {
                         override fun onPaymentSucceeded(transactionId: String?, transToken: String?, appTransID: String?) {
-                            Log.d("ZALO_PAY", "Payment succeeded: $transactionId")
                             onSuccess()
                         }
 

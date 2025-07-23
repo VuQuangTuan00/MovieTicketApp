@@ -2,21 +2,15 @@ package com.example.movieticketsapp.activity.User
 
 import TicketMovie
 import android.annotation.SuppressLint
-import android.app.ComponentCaller
 import android.app.Dialog
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.StrictMode
 import android.util.Log
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.movieticketsapp.R
-import com.example.movieticketsapp.ZaloPay.ZaloPayHelper
+import com.example.movieticketsapp.APIModule.ZaloPaySDK.ZaloPay.ZaloPayHelper
 import com.example.movieticketsapp.databinding.PaymentLayoutBinding
 import com.example.movieticketsapp.model.Cinema
 import com.example.movieticketsapp.model.GenerMovie
@@ -156,9 +150,9 @@ class PaymentActivity : AppCompatActivity() {
                 }
             }
     }
-   private fun uploadTicketForUser(ticket: TicketMovie, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
+    private fun uploadTicketForUser(ticket: TicketMovie, onSuccess: () -> Unit, onFailure: (Exception) -> Unit) {
         val db = FirebaseFirestore.getInstance()
-       val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
         val userTicketsRef = db.collection("users")
             .document(userId)
             .collection("tickets")
@@ -192,44 +186,7 @@ class PaymentActivity : AppCompatActivity() {
                 binding.tvCinema.text = locationCinema.cinemaName
             }
     }
-
-    private fun showVietQRDialog() {
-        if (isFinishing || isDestroyed) return
-        dialog.setContentView(R.layout.qr_dialog_layout)
-        val imgQRCode = dialog.findViewById<ImageView>(R.id.imgQRCode)
-        val btnPay = dialog.findViewById<Button>(R.id.btnPaid)
-        btnPay.setOnClickListener {
-            uploadTicketForUser(tickets,
-                onSuccess = {
-                    updateSeatStatus(seatIds)
-                },
-                onFailure = { e ->
-                    Toast.makeText(this, "Lỗi: ${e.message}", Toast.LENGTH_SHORT).show()
-                }
-            )
-        }
-        db.collection("bank").limit(1)
-            .addSnapshotListener { snapshot, e ->
-                if (e != null) {
-                    Log.e("Firestore", "Error fetching QR code", e)
-                    return@addSnapshotListener
-                }
-                if (snapshot != null) {
-                    for (doc in snapshot) {
-                        val bank_number = doc.getString("bank_number") ?: ""
-                        val bank_name = doc.getString("bank_name") ?: ""
-                        val bank_account = doc.getString("bank_account") ?: ""
-                        val amount = doc.getLong("amount")?.toInt() ?: 0
-                        Glide.with(this)
-                            .load("https://img.vietqr.io/image/$bank_name-$bank_number-compact2.jpg?amount=${tickets.totalAmounts}&addInfo=dong%20gop%20quy%20vac%20xin&accountName=$bank_account")
-                            .into(imgQRCode)
-                    }
-                }
-            }
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog.show()
-    }
-
+    
     private fun updateSeatStatus(seatIds: List<String>) {
         val db = FirebaseFirestore.getInstance()
         val batch = db.batch()
@@ -251,7 +208,7 @@ class PaymentActivity : AppCompatActivity() {
     }
 
     private fun getIntentExtra() {
-       selectedDate = intent?.getStringExtra("selectedDate") ?: run {
+        selectedDate = intent?.getStringExtra("selectedDate") ?: run {
             Toast.makeText(this, "Date is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
@@ -262,12 +219,12 @@ class PaymentActivity : AppCompatActivity() {
             return
         }
 
-       showTimeId = intent?.getStringExtra("showtimeId") ?: run {
+        showTimeId = intent?.getStringExtra("showtimeId") ?: run {
             Toast.makeText(this, "Showtime ID is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
-       timelineId = intent?.getStringExtra("timelineId") ?: run {
+        timelineId = intent?.getStringExtra("timelineId") ?: run {
             Toast.makeText(this, "Timeline ID is missing!", Toast.LENGTH_SHORT).show()
             finish()
             return

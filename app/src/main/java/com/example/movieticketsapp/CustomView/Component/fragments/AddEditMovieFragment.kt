@@ -1,4 +1,4 @@
-package com.example.movieticketsapp.fragments
+package com.example.movieticketsapp.CustomView.Component.fragments
 
 import android.app.Activity
 import android.content.Intent

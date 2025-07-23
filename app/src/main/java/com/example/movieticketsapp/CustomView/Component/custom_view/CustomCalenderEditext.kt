@@ -1,4 +1,4 @@
-package com.example.movieticketsapp.custom_view
+package com.example.movieticketsapp.CustomView.Component.custom_view
 
 import android.app.DatePickerDialog
 import android.content.Context

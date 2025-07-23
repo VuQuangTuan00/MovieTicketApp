@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MovieTicketsApp</string>
     <string name="GOOGLE_MAPS_API_KEY">AIzaSyDSFcTdcxxcBhxRAfrxcdnYhkqIPNoYqgA</string>
+    <string name="THEMOVIEDB_API_KEY">f9ff8fb064599817d1e3023214924caa</string>
     <string name="logo">LOGO</string>
     <string name="get_started">Get Started</string>
     <string name="tiltle">Movie Recommendations Just for you</string>

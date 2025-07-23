@@ -1,4 +1,4 @@
-package com.example.movieticketsapp.BottomSheetDialog
+package com.example.movieticketsapp.CustomView.Dialog.BottomSheetDialog
 
 import android.annotation.SuppressLint
 import android.os.Bundle

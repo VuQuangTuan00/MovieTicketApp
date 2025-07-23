@@ -1,7 +1,7 @@
-package com.example.movieticketsapp.Api;
+package com.example.movieticketsapp.APIModule.ZaloPaySDK.Api;
 
-import com.example.movieticketsapp.Constant.AppInfo;
-import com.example.movieticketsapp.Helper.Helpers;
+import com.example.movieticketsapp.APIModule.ZaloPaySDK.Constant.AppInfo;
+import com.example.movieticketsapp.APIModule.ZaloPaySDK.Helper.Helpers;
 
 import org.json.JSONObject;
 import java.util.Date;

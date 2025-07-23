@@ -11,4 +11,6 @@ data class Movie(
     val trailer: String = "",
     val rating: Double = 0.0,
     val synopsis: String = ""
+
+
 )

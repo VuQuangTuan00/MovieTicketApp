@@ -86,7 +86,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <com.example.movieticketsapp.custom_view.CustomEditText
+        <com.example.movieticketsapp.CustomView.Component.custom_view.CustomEditText
             android:id="@+id/edtPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
