@@ -3,7 +3,6 @@ package com.example.movieticketsapp.activity.User
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Adapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -40,11 +39,7 @@ class HomaPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         initialize()
         setContentView(binding.root)
-
         setEvent()
-//        setAdapterMovie()
-//        setAdapterBestMovie()
-//        listenToBestRatedMovies()
         listenToImgMovieCollectionRealtime()
         fetchPlayingMovies()
         fetchUpCommingMovies()
@@ -114,8 +109,8 @@ class HomaPageActivity : AppCompatActivity() {
         fetchMovies(
             apiCall = { RetrofitClient.apiMovieUpComming.getNowUpCommingMovies(TMDBANowPlaying.API_KEY) },
             recyclerView = binding.rcvUpComming,
-            adapterFactory = { movies ->
-                listMovie = movies
+            adapterFactory = {
+                listMovie = it
                 adapterMovie =  ItemMovieAdapter(listMovie) {
                     val intent = Intent(this, DetailsMovieActivity::class.java)
                     intent.putExtra("movie_id", it.id)
@@ -125,7 +120,6 @@ class HomaPageActivity : AppCompatActivity() {
             }
         )
     }
-
     private fun listenToMovieCollectionRealtime() {
         movieListener = db.collection("movie")
             .addSnapshotListener { snapshots, e ->
@@ -134,26 +128,46 @@ class HomaPageActivity : AppCompatActivity() {
                     return@addSnapshotListener
                 }
 
-                snapshots?.let {
-                    listMovie.clear()
-                    for (doc in it) {
-                        val data = doc.data
-                        val idMovie = doc.id.toInt()
-                        val imgMovie = data["poster_path"] as? String
-                        val title = data["title"] as? String
+                snapshots?.let { querySnapshot ->
+                    val firebaseMovies = ArrayList<MovieModel>()
 
-                        if (!imgMovie.isNullOrEmpty() && !title.isNullOrEmpty()) {
-                            listMovie.add(
+                    for (doc in querySnapshot) {
+                        val data = doc.data
+                        val idMovie = doc.id.toIntOrNull() ?: continue
+                        val imgMovie = data["poster_path"] as? String ?: ""
+                        val title = data["title"] as? String ?: ""
+                        val overview = data["overview"] as? String ?: ""
+                        val releaseDate = data["release_date"] as? String ?: ""
+
+                        if (title.isNotEmpty()) {
+                            firebaseMovies.add(
                                 MovieModel(
-                                   idMovie, title,"", listOf(),"",""
+                                    id = idMovie,
+                                    title = title,
+                                    poster_path = imgMovie,
+                                    genre_ids = listOf(),
+                                    overview = overview,
+                                    release_date = releaseDate
                                 )
                             )
                         }
                     }
-                    Log.d("ListMovie", "ListMovie: ${listMovie.size}")
-                    adapterMovie.notifyDataSetChanged()
+
+                    // Merge với existing data
+                    updateMovieList(firebaseMovies)
                 }
             }
+    }
+
+    private fun updateMovieList(firebaseMovies: ArrayList<MovieModel>) {
+        // Add Firebase movies vào cuối list
+        val startPosition = listMovie.size
+        listMovie.addAll(firebaseMovies)
+
+        // Notify adapter về việc insert new items
+        adapterMovie.notifyItemRangeInserted(startPosition, firebaseMovies.size)
+
+        Log.d("MovieUpdate", "Added ${listMovie.size} ${ firebaseMovies.size} Firebase movies to existing ${startPosition} API movies")
     }
 
 
@@ -238,7 +252,10 @@ class HomaPageActivity : AppCompatActivity() {
             }
         }
     }
-
+    override fun onDestroy() {
+        super.onDestroy()
+        movieListener?.remove()
+    }
     override fun onStop() {
         super.onStop()
         movieListener?.remove()
